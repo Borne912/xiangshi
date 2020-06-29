@@ -1,0 +1,22 @@
+<!--miniprogram/pages/food/food.wxml-->
+<view>
+  <cover-view class="navigation">
+  <cover-image src="../../images/location.png" class= "navigt-image"></cover-image>
+  <cover-view class = "navigt-font">鸿博园</cover-view>
+  </cover-view>
+  <view class="cover">
+  <view class="search">
+  <input class="search-input">
+  </input>
+  <image src="../../images/search.png" class="search-search-image"></image>
+  <image src="../../images/listening.png" class="search-listen-image"></image>
+  </view>
+  <view class= "font_recommend">
+  <label class="fr fr1">{{font_recommend[0].name}}</label>
+  <label class="fr fr2">{{font_recommend[1].name}}</label>
+  <label class="fr fr3">{{font_recommend[2].name}}</label>
+  <label class="fr fr4">{{font_recommend[3].name}}</label>
+  </view>
+  </view>
+</view>
+

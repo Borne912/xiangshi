@@ -1,20 +1,36 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/userConsole/userConsole",
-    "pages/storageConsole/storageConsole",
-    "pages/databaseGuide/databaseGuide",
-    "pages/addFunction/addFunction",
-    "pages/deployFunctions/deployFunctions",
-    "pages/chooseLib/chooseLib",
-    "pages/openapi/openapi"
+    "pages/food/food",
+    "pages/health/health",
+    "pages/mine/mine"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#FFA155",
+    "navigationBarTitleText": "享食",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": 
+    [
+      {
+        "pagePath": "pages/health/health",
+        "iconPath": "images/health.png",
+        "selectedIconPath": "images/health_selected.png"
+      },
+      {
+        "pagePath": "pages/food/food",
+        "iconPath": "images/food.png",
+        "selectedIconPath": "images/food_selected.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine_selected.png"
+      }
+    ]
+  }
 }
