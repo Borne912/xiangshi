@@ -1,0 +1,89 @@
+/* miniprogram/pages/location/location.wxss */
+/* 背景颜色 #FFF2E8 */
+.bg_1{
+  background: #FFF2E8;
+  position: fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
+/* 按钮总体(3按钮) */
+.button_container{
+  margin-bottom: 10rpx;
+  margin-top: 10rpx;
+  margin-left: 36rpx;
+  margin-right: 36rpx;
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-around */
+}
+.section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  /* margin-left: 16px;
+  margin-right: 16px; */
+  margin-bottom: 10rpx;
+  margin-top: 10rpx;
+}
+/* 段落背景颜色#FFE6D2 */
+.left {
+  background-color: #FFE6D2;
+  width: 320rpx;
+  height: 220rpx;
+  /* margin-left: 10px; */
+  margin-right: 22rpx;
+  border-radius: 20rpx;
+}
+.right {
+  background-color: #FFE6D2;
+  width: 320rpx;
+  height: 220rpx;
+  margin-left: 22rpx;
+  border-radius: 20rpx;
+  /* margin-right: 10px; */
+}
+/* 橘色字体 #FFA155 */
+.font_Orange {
+  color: #FFA155;
+}
+.font_margin {
+  margin-left: 16rpx;
+}
+
+/* 按钮未选中 #FFF2E8 */
+.normal_button{
+  /* 文字左对齐 */
+  margin-left: 0rpx;
+  padding-left: 0rpx;
+  height: 80rpx;
+  background: #FFF2E8;
+  border-radius: 20rpx;
+}
+/* 按钮选中 #FFA155 */
+.checked_button{
+  /* 文字左对齐 */
+  margin-left: 0rpx;
+  padding-left: 0rpx;
+  height: 80rpx;
+  background: #FFA155;
+  border-radius: 20rpx;
+  /* color: white */ 
+}
+/* 确认 */
+.yes {
+  background: #FFA155;
+  color: white;
+  /* margin-bottom: 5px; */
+  margin-left: 36rpx;
+  margin-right: 36rpx;
+  position: fixed;  
+  width: 90%;
+  /* width: 600rpx; */
+  bottom: 2rpx;
+
+  /* left: 18px;
+  right: 18px; */
+}

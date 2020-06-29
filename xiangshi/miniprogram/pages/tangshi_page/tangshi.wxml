@@ -1,0 +1,11 @@
+<!--miniprogram/pages/tangshi_page/tangshi.wxml-->
+<!--  堂食食堂细页 -->
+<view class="bg_2"></view>
+<view class="head">
+  <view class="left">排队速度</view>
+  <view class="right">
+    <view class="each" style="background-color:#B8ECB2">快</view>
+    <view class="each" style="background-color:#FFDB7A">中</view>
+    <view class="each"  style="background-color:#FF867A">慢</view>
+  </view>
+</view>

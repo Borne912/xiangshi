@@ -1,0 +1,32 @@
+<!--miniprogram/pages/location/location.wxml-->
+<view class="bg_1"></view>
+<view class='button_container'>
+   <view> 
+    <block wx:for="{{datas}}" wx:key="datas">
+      <button android:gravity="center_vertical" class='{{item.checked?"checked_button":"normal_button"}}' data-id='{{item.id}}' bindtap='radioButtonTap' ><text style="position: absolute;left:25rpx">{{item.name}}</text></button>
+      <view class='section'>
+        <view class='left'> 
+          <view class="font_margin">
+            <view class="font_Orange"><text>目前人流量</text> </view> 
+            <view><text>{{item.curpeo}}</text> </view> 
+            <view class="font_Orange"><text>平均排队时间</text> </view> 
+            <view><text>{{item.avgtime}}</text> </view> 
+          </view>
+          
+        </view>
+        <view class='right'> 
+          <view class="font_margin">
+            <view class="font_Orange"><text>预估人流量</text> </view> 
+            <view><text>{{item.exppeo}}</text> </view> 
+            <view class="font_Orange"><text>预计排队时间</text> </view> 
+            <view><text>{{item.exptime}}</text> </view>  
+          </view>  
+        </view>
+     </view>
+    </block>
+  </view>
+  
+</view>
+
+<button class="yes">确认</button>
+

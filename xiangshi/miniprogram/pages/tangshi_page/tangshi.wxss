@@ -1,0 +1,43 @@
+/* miniprogram/pages/tangshi_page/tangshi.wxss */
+.bg_2{
+  background: #FFF2E8;
+  position: fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
+
+.head {
+  height: 120rpx;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+
+.left {
+    font-weight: bold;
+    font-size: 35rpx;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    margin-left: 40rpx;
+}
+.right {
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  margin-top: 40rpx;
+  margin-bottom: 20rpx;
+  right: 90rpx;
+  margin-left: 40rpx;
+
+}
+.each {
+  margin-left: 20rpx;
+  text-align: center;
+  height: 40rpx;
+  width: 80rpx;
+  border-radius: 30rpx;
+}
