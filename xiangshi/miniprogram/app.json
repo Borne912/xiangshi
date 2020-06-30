@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/tangshi_page/tangshi",
-    "pages/location/location",
     "pages/food/food",
+    "pages/location/location",
+    "pages/tangshi_page/tangshi",
     "pages/health/health",
     "pages/mine/mine"
   ],
