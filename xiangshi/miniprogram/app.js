@@ -4,5 +4,5 @@ App({
   wx.cloud.init({
     env:"xiangshi-yqpne"
   })
-  }
+},
 })
