@@ -1,11 +1,55 @@
 <!--miniprogram/pages/tangshi_page/tangshi.wxml-->
 <!--  堂食食堂细页 -->
 <view class="bg_2"></view>
+<!-- 头部 -->
 <view class="head">
-  <view class="left">排队速度</view>
-  <view class="right">
+  <view class="block1">排队速度</view>
+  <view class="block2">
     <view class="each" style="background-color:#B8ECB2">快</view>
     <view class="each" style="background-color:#FFDB7A">中</view>
     <view class="each"  style="background-color:#FF867A">慢</view>
+  </view>
+</view>
+<!-- 排队速度 -->
+<view class="speed">
+  <!-- wx:for-index="key"  -->
+  <!-- 经由一个行循环(3行)+一个列循环(4列) -->
+  <view  wx:for="{{3}}" wx:for-index="i" class="everyrow">
+    <view wx:for="{{4}}" wx:for-index="j" class="row-cols">
+     <view class='{{cnts[4*i+j]<5?"quick":cnts[4*i+j]<10?"mid":"slow"}}'>
+      {{4*i+j+1}}</view>
+    </view>
+  </view> 
+  <!-- <view  wx:for="{{windows}}" wx:for-index="i" class="everyrow">
+    <view wx:for="{{item.cnt}}" wx:for-index="j" class="row-cols">
+     <view class='{{item<5?"quick":item<10?"mid":"slow"}}'>
+      {{4*i+j+1}}</view>
+    </view>
+  </view>   -->
+</view>
+<!-- 一行3个按钮 -->
+<view class="buttons_cols">
+  <view wx:for="{{buttons_cols}}">
+    <button bindtap='radioButtonTap' class='{{item.checked?"checked_button":"normal_button"}}' data-id='{{item.id}}'>
+    {{item.name}}</button>
+  </view>
+</view>
+<!-- 以下12个窗口的食物 -->
+<view class="rear">
+  <view class="left_window">
+      <button bindtap='Buttons_rowsTap' wx:for="{{buttons_rows}}" style='{{item.checked || flag == item.id?"background:#FFA155":"background:#FFF2E8"}}' data-id='{{item.id}}' class="buttons_rows">
+        <view class="features">{{item.name}}</view>
+        <view class="windows_num">窗口{{item.id}}</view>
+      </button>
+  </view>
+  <view class="right_window">
+      <view wx:for='{{3}}' class="every_dish">
+        <image class="img" src="../../images/listening.png"  mode="scaleToFill"></image>
+        <view></view>
+        <view></view>
+        <view></view>
+        <view></view>
+        <view></view>
+      </view>
   </view>
 </view>

@@ -28,5 +28,5 @@
   
 </view>
 
-<button class="yes">确认</button>
+<button class="yes" bindtap="submit">确认</button>
 

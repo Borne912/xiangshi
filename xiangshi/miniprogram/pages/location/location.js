@@ -1,6 +1,5 @@
 // miniprogram/pages/location/location.js
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -16,7 +15,7 @@ Page({
     times: [{avg: 2, exp: 3}, {avg: 5, exp: 7}, {avg: 10, exp: 7}],
     // 排队人数:目前, 预估
     counts: [{cur: 323, exp: 456},{cur: 1421, exp: 1700},{cur: 24, exp: 19}],
-    msg:'',
+    curLocation:'鸿博园',
   },
 
   /**
@@ -31,13 +30,13 @@ Page({
     })
   },
   radioButtonTap : function (e){
-    // console.log(e)
     let id = e.currentTarget.dataset.id
-    console.log(id)
+    // console.log(id)
+    console.log(this.data.datas[id-1].name)
     for (let i = 0; i < this.data.datas.length; i++) {
       if (this.data.datas[i].id == id) {
         //当前点击的位置为true即选中
-        this.data.datas[i].checked = true;
+        this.data.datas[i].checked = true;      
       }
       else {//其他的位置为false   
         this.data.datas[i].checked = false;
@@ -46,7 +45,16 @@ Page({
     this.setData({
       // buttons: this.data.buttons,
       datas: this.data.datas,
+      curLocation: this.data.datas[id-1].name
     })
+  },
+  submit: function(e) {
+    var app = getApp();
+    // 全局遍历location
+    app.globalData.location = this.data.curLocation
+    console.log(app.globalData.location)
+    wx.switchTab({ url: '../food/food' })
+    console.log('success')
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

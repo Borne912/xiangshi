@@ -10,20 +10,21 @@
 }
 
 .head {
-  height: 120rpx;
+  margin-top: 20rpx;
+  height: 100rpx;
   display: flex;
   flex-direction: row;
-  background-color: white;
+  /* background-color: blue; */
 }
 
-.left {
+.block1 {
     font-weight: bold;
-    font-size: 35rpx;
+    font-size: 38rpx;
     margin-top: 20rpx;
-    margin-bottom: 20rpx;
+    margin-bottom: 10rpx;
     margin-left: 40rpx;
 }
-.right {
+.block2 {
   font-size: 30rpx;
   display: flex;
   flex-direction: row;
@@ -40,4 +41,127 @@
   height: 40rpx;
   width: 80rpx;
   border-radius: 30rpx;
+}
+.speed {
+  background-color: white;
+  height: 250rpx;
+  margin-left: 55rpx;
+  margin-right: 55rpx;
+  border-radius: 30rpx;
+}
+/* 一整行 */
+.everyrow {
+  top: 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+/* 行中的每一列 */
+.row-cols {
+  text-align: center;
+  background-color:#B8ECB2;
+  margin-right: 30rpx;
+  margin-left: 30rpx;
+  margin-top: 25rpx;
+  width: 100rpx;
+  height: 50rpx;
+  border-radius: 30rpx;
+}
+.quick {
+  background-color:#B8ECB2;
+  border-radius: 30rpx;
+}
+.mid  {
+  background-color:#FFDB7A;
+  border-radius: 30rpx;
+}
+.slow {
+  background-color:#FF867A;
+  border-radius: 30rpx;
+}
+
+.buttons_cols {
+  margin-left: 30rpx;
+  margin-bottom: 10rpx;
+  margin-top: 20rpx;
+  height: 60rpx;
+  display: flex;
+  flex-direction: row;
+  /* background-color: white; */
+}
+
+/* 按钮未选中 #FFF2E8 */
+.normal_button{
+  font-size: 30rpx;
+  height: 55rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFF2E8;
+  border-radius: 50rpx;
+}
+/* 按钮选中 #FFA155 */
+.checked_button{
+  font-size: 30rpx;
+  height: 55rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFA155;
+  border-radius: 50rpx;
+}
+.rear {
+  /* background-color: blue; */
+  flex-direction: column;
+  display: flex;
+}
+.left_window {
+  /* flex-direction: row; */
+  width: 200rpx;
+}
+
+.buttons_rows {
+  height: 100rpx;
+}
+.features {
+  position: relative;
+  top: -10rpx;
+  font-size: 32rpx;
+  /* background-color: red; */
+}
+
+.windows_num {
+  /* height: 30rpx; */
+  /* display: block; */
+  font-size: 25rpx;
+  /* background-color: blue; */
+  position: relative;
+  top: -50rpx;
+}
+
+.right_window {
+  display: flex;
+  width: 600rpx;
+  position: absolute;  
+  /* background: red; */
+  left: 210rpx;
+  flex-direction: column;
+  /* height: 200rpx;
+   */ 
+}
+
+.every_dish {
+  display: flex; 
+  position: relative;
+  background: white;
+  height: 200rpx;
+  margin-left: 0px;
+  left: 2rpx;
+  margin-bottom: 10rpx;
+  margin-top: 10rpx;
+}
+/* 图片 */
+.img {
+  width: 200rpx;
+  height: 200rpx;
 }
