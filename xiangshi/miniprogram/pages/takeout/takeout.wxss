@@ -1,0 +1,104 @@
+/* pages/takeout/takeout.wxss */
+.cover{
+  width: 375px;
+  height: 743px;
+  line-height: 20px;
+  border-radius: 0px;
+  background-color: rgba(255, 242, 232, 1);
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 36rpx;
+  left: 38rpx;
+  width: 448rpx;
+  height: 50rpx;
+}
+
+.list .list-content1{
+  width: 56px;
+  height: 20px;
+}
+
+.list .list-content2,
+.list .list-content3{
+  width: 42px;
+  height: 20px;
+}
+
+.list .list-font{
+  width: 42px;
+  height: 20px;
+  color: rgba(16, 16, 16, 1);
+  font-size: 14px;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+
+.list .selected-item{
+  width: 72px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 15px;
+  background-color: rgba(255, 161, 85, 1);
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.dish{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  top: 116rpx;
+  left: 38rpx;
+  height: 244rpx;
+  width: 658rpx;
+}
+
+.dish .dish-content1{
+  width: 224rpx;
+  height: 214rpx;
+  border-radius: 15px;
+  background-color: yellow;
+}
+
+.dish .dish-content2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 404rpx;
+  height: 214rpx;
+}
+.dish .dish-image{
+  width: 224rpx;
+  height: 214rpx;
+  border-radius: 15px;
+}
+
+.dish .dish-information{
+  width: 310rpx;
+  height: 214rpx;
+  background-color: #ffffff;
+}
+
+.dish .dish-bt{
+  width: 48rpx;
+  height: 214rpx;
+}
+.dish .dish-bt .bt-image{
+  padding: 0 0 0 0;
+  background-repeat:no-repeat;
+  border:none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}

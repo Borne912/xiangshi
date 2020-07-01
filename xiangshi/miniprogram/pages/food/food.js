@@ -18,7 +18,7 @@ Page({
           })
         }
       })
-      db.collection("take-out").get({
+      db.collection("outside-take-out").get({
         success(res){
           //console.log("查询数据成功",res.data[1].name)
           tmp = res.data

@@ -1,0 +1,26 @@
+<!--pages/takeout/takeout.wxml-->
+<view class="cover">
+  <view class="list">
+    <view class="list-content1" hover-class="selected-item">
+      <text class="list-font">综合排序</text>
+    </view>
+    <view class="list-content2" hover-class="selected-item">
+      <text class="list-font">速度快</text>
+    </view>
+    <view class="list-content3" hover-class="selected-item">
+      <text class="list-font">销量高</text>
+    </view>
+  </view>
+  <view class="dish">
+  <view class="dish-content1">
+    <image class="dish-image"></image>
+  </view>
+  <view class="dish-content2">
+    <view class="dish-information"></view>
+    <view class="dish-bt">
+      <!-- <image class="bt-image" src="../../images/add.svg"></image> -->
+      <button class="bt-image" style="background-image:url(../../images/add.svg);"></button>
+    </view>
+  </view>
+  </view>
+</view>
