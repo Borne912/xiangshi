@@ -1,12 +1,12 @@
 /* pages/takeout/takeout.wxss */
 .cover{
-  width: 375px;
-  height: 743px;
-  line-height: 20px;
-  border-radius: 0px;
+  width: 750rpx;
+  height: 1486rpx;
+  line-height: 40rpx;
+  border-radius: 0rpx;
   background-color: rgba(255, 242, 232, 1);
   text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0);
+  border: 2rpx solid rgba(255, 255, 255, 0);
 }
 
 .list{
@@ -22,33 +22,33 @@
 }
 
 .list .list-content1{
-  width: 56px;
-  height: 20px;
+  width: 112rpx;
+  height: 40rpx;
 }
 
 .list .list-content2,
 .list .list-content3{
-  width: 42px;
-  height: 20px;
+  width: 84rpx;
+  height: 40rpx;
 }
 
 .list .list-font{
-  width: 42px;
-  height: 20px;
+  width: 84rpx;
+  height: 40rpx;
   color: rgba(16, 16, 16, 1);
-  font-size: 14px;
+  font-size: 28rpx;
   text-align: left;
   font-family: PingFangSC-regular;
 }
 
 .list .selected-item{
-  width: 72px;
-  height: 20px;
-  line-height: 20px;
-  border-radius: 15px;
+  width: 144rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border-radius: 30rpx;
   background-color: rgba(255, 161, 85, 1);
   text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0);
+  border: 2rpx solid rgba(255, 255, 255, 0);
 }
 
 .dish{
@@ -66,8 +66,8 @@
 .dish .dish-content1{
   width: 224rpx;
   height: 214rpx;
-  border-radius: 15px;
-  background-color: yellow;
+  border-radius: 30rpx;
+  background-color: rgba(255, 161, 85, 1);
 }
 
 .dish .dish-content2{
@@ -81,13 +81,12 @@
 .dish .dish-image{
   width: 224rpx;
   height: 214rpx;
-  border-radius: 15px;
+  border-radius: 30rpx;
 }
 
 .dish .dish-information{
   width: 310rpx;
   height: 214rpx;
-  background-color: #ffffff;
 }
 
 .dish .dish-bt{
@@ -98,7 +97,65 @@
   padding: 0 0 0 0;
   background-repeat:no-repeat;
   border:none;
-  width: 24px;
-  height: 24px;
+  width: 48rpx;
+  height: 48rpx;
   border-radius: 50%;
+}
+
+.dish .dish-content2 .dish-name{
+  text-align: left;
+}
+
+.dish .dish-content2 .dish-name text{
+  width: 240rpx;
+  height: 56rpx;
+  color: rgba(77, 63, 63, 1);
+  font-size: 40rpx;
+  font-family: PingFangSC-regular;
+}
+
+.dish .dish-content2 .dish-type{
+  margin-top: 2rpx;
+  width: 80rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  border-radius: 20rpx;
+  background-color: rgba(255, 161, 85, 1);
+  text-align: center;
+  border: 2rpx solid rgba(255, 255, 255, 0);
+}
+
+.dish .dish-content2 .dish-type text{
+  width: 48rpx;
+  height: 34rpx;
+  opacity: 0.51;
+  color: rgba(77, 63, 63, 1);
+  font-size: 24rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+
+.dish .dish-content2 .dish-message text{
+  margin-right: 18rpx;
+  width: 96rpx;
+  height: 34rpx;
+  color: rgba(77, 63, 63, 1);
+  font-size: 24rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+
+.dish .dish-content2 .dish-element{
+  margin-top: 10rpx;
+  text-align: left;
+}
+
+.dish .dish-content2 .dish-element text{
+  margin-right: 18rpx;
+  width: 152rpx;
+  height: 50rpx;
+  color: rgba(255, 161, 85, 1);
+  font-size: 24rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
 }

@@ -16,10 +16,26 @@
     <image class="dish-image"></image>
   </view>
   <view class="dish-content2">
-    <view class="dish-information"></view>
+    <view class="dish-information">
+      <view class="dish-name">
+        <text>土豆牛肉盖饭</text>
+      </view>
+      <view class="dish-type">
+        <text>海产</text>
+      </view>
+      <view class="dish-message">
+        <text class="sale">月售1202</text>
+        <text class="praise">赞922</text>
+        <text class="price">8.4元/份</text>
+      </view>
+      <view class="dish-element">
+        <text>碳水：0.00g</text>
+        <text>蛋白：0.00g</text>
+        <text>脂肪：0.00g</text>
+      </view>
+    </view>
     <view class="dish-bt">
-      <!-- <image class="bt-image" src="../../images/add.svg"></image> -->
-      <button class="bt-image" style="background-image:url(../../images/add.svg);"></button>
+      <button open-type="share" class="bt-image" style="background-image:url(../../images/add.svg);"></button>
     </view>
   </view>
   </view>
