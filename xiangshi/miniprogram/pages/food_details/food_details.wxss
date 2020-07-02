@@ -1,0 +1,105 @@
+/* miniprogram/pages/food_details/food_details.wxss */
+/* 背景 #FFF2E8 */
+.bg_3{
+  background: #FFF2E8;
+  position: fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
+
+.img {
+  width: 100%;
+  height: 305rpx;
+}
+.head {
+  height: 320rpx;
+  margin-top: 10rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx; 
+  /* background-color: red; */
+}
+
+.btn {
+  background:#FFA155;
+  border-radius:20rpx;
+  position: relative;
+  height:70rpx;
+  /* 下三行均为文字正中央设置 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35rpx;
+}
+
+.main_content {
+  margin-top: 10rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx; 
+  margin-bottom: 20rpx;
+ }
+ 
+/* 标题栏字体大小 */
+ .font_main {
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+  font-size: 38rpx;
+ }
+/* 普通字体 */
+.font_normal {
+  font-size: 35rpx;
+}
+ .font_highlight {
+  font-size: 30rpx;
+  color: #FFA155;
+  margin-top: 5rpx;
+ }
+/* 设置边框 */
+ .border_set {
+  margin-top: 20rpx;
+  border-bottom: 4rpx solid #BBBBBB;
+ }
+
+.right_block {
+  position: absolute;
+  right: 30rpx;
+  /* background-color: blue; */
+}
+
+/* 用餐评价 */
+.rate {
+  margin-left: 30rpx;
+  margin-right: 30rpx; 
+  margin-bottom: 20rpx;
+  height: 340rpx;
+  border-radius: 30rpx;
+  background-color: #FFE6D2;
+  flex-direction: row;
+}
+/* 评论设置 */
+.rates_set {
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+  margin-left: 50rpx;
+}
+/* 匿名字 */
+.niming {
+  position: absolute;
+  right: 40rpx;
+  
+}
+/* 省略号 */
+.threepoints {
+  /* height: 30rpx; */
+  font-size: 50rpx;
+  text-align: center;
+  position: relative;
+  bottom: 30rpx;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* background-color: red; */
+}

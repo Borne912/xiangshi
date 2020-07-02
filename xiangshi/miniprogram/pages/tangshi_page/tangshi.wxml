@@ -42,14 +42,27 @@
         <view class="windows_num">窗口{{item.id}}</view>
       </button>
   </view>
-  <view class="right_window">
-      <view wx:for='{{3}}' class="every_dish">
-        <image class="img" src="../../images/listening.png"  mode="scaleToFill"></image>
-        <view></view>
-        <view></view>
-        <view></view>
-        <view></view>
-        <view></view>
-      </view>
+  <view class="right_window">     
+      <scroll-view scroll-y style="height:{{height}}rpx">
+       <!-- <view wx:for='{{url_Img}}' class="every_dish">
+        <image class="img" src="{{url_Head+item}}"  mode="scaleToFill"></image> -->
+        <view bindtap="food_Jump" wx:for='{{dishes_List}}' class="every_dish">
+          <image class="img" src="{{item.imgurl}}"  mode="scaleToFill"></image>
+          <!-- 介绍部分 -->
+          <view class="intro">
+            <view style="font-size:36rpx;margin-top: 5rpx;">{{item.name}}</view>
+            <view style="background:#FFA155;border-radius:20rpx;width:110rpx;text-align:center;font-size:25rpx">{{item.leixing}}</view>
+            <text style="position:relative;top:-10rpx;font-size:25rpx" space='nbsp'>月售{{item.yueshou}} 赞{{item.zan}}</text>
+            <view style="flex-direction: row;display:flex;">  
+              <view class="price_left">{{item.price}} 元/个</view>
+              <view class="ying_right">
+                <view>碳水: {{item.tanshui}}g</view>
+                <view>蛋白: {{item.danbai}}g</view>
+                <view>脂肪: {{item.zhifang}}g</view>
+              </view>
+            </view>
+          </view>
+       </view>     
+      </scroll-view>
   </view>
 </view>
