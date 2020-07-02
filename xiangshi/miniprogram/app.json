@@ -3,6 +3,7 @@
     
     "pages/tangshi_page/tangshi",
     "pages/food_details/food_details",
+    "pages/takeout/takeout",
     "pages/food/food",
     "pages/location/location",
     "pages/health/health",
@@ -14,8 +15,7 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#FFA155",
     "navigationBarTitleText": "享食",
-    "navigationBarTextStyle": "black",
-    "navigationStyle": "custom"
+    "navigationBarTextStyle": "white"
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {

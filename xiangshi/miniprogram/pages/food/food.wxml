@@ -2,8 +2,14 @@
 <view class="container container-food">
 	<view class="navigation">
 		<navigator url="../location/location">
-			<image src="../../images/location.png" class="navigt-image"></image>
-			<view class="navigt-font">鸿博园</view>
+			<view class="navigt-content">
+				<view>
+					<image src="../../images/location.png" class="navigt-image"></image>
+				</view>
+				<view>
+					<text class="navigt-font">鸿博园</text>
+				</view>
+			</view>
 		</navigator>
 	</view>
 	<view class="cover">
@@ -111,20 +117,172 @@
 			</scroll-view>
 		</view>
 		<view class="week-recommend">
-			<image class="wr-image1"></image>
-			<view class="wr-fontcover">
-				<view class="wr-font1">三层三号窗口</view>
-				<view class="wr-fontcover-imagecover">
-					<image class="wr-image2" src="../../images/star.png"></image>
-					<text class="wr-font-grade">4.9</text>
-					<text class="wr-font-sales">月售2202</text>
+			<view>
+				<image class="wr-image1"></image>
+				<view class="wr-fontcover">
+					<view class="wr-font1">三层三号窗口</view>
+					<view class="wr-fontcover-imagecover">
+						<image class="wr-image2" src="../../images/star.png"></image>
+						<text class="wr-font-grade">4.9</text>
+						<text class="wr-font-sales">月售2202</text>
+					</view>
+				</view>
+				<view class="wr-tag">
+					<text class="wr-tag-font">本周推荐</text>
+				</view>
+				<view class="wr-waitingtime">
+					<text class="wr-waitingtime-font">预计排队5分钟</text>
 				</view>
 			</view>
-			<view class="wr-tag">
-				<text class="wr-tag-font">本周推荐</text>
+			<view class="scroll_image-cover">
+				<scroll-view class="scroll-widget" scroll-x="true">
+					<view class="scroll_image-item">
+						<view>
+							<image class="item-image"></image>
+							<view class="item-content">
+								<view class="item-name">红烧鸡翅</view>
+								<view class="item-price">¥6</view>
+							</view>
+						</view>
+					</view>
+					<view class="scroll_image-item">
+						<view>
+							<image class="item-image"></image>
+							<view class="item-content">
+								<view class="item-name">红烧鸡翅</view>
+								<view class="item-price">¥6</view>
+							</view>
+						</view>
+					</view>
+					<view class="scroll_image-item">
+						<view>
+							<image class="item-image"></image>
+							<view class="item-content">
+								<view class="item-name">红烧鸡翅</view>
+								<view class="item-price">¥6</view>
+							</view>
+						</view>
+					</view>
+					<view class="scroll_image-item">
+						<view>
+							<image class="item-image"></image>
+							<view class="item-content">
+								<view class="item-name">红烧鸡翅</view>
+								<view class="item-price">¥6</view>
+							</view>
+						</view>
+					</view>
+					<view class="scroll_image-item">
+						<view>
+							<image class="item-image"></image>
+							<view class="item-content">
+								<view class="item-name">红烧鸡翅</view>
+								<view class="item-price">¥6</view>
+							</view>
+						</view>
+					</view>
+					<view class="scroll_image-item">
+						<view>
+							<image class="item-image"></image>
+							<view class="item-content">
+								<view class="item-name">红烧鸡翅</view>
+								<view class="item-price">¥6</view>
+							</view>
+						</view>
+					</view>
+				</scroll-view>
 			</view>
-			<view class="wr-waitingtime">
-				<text class="wr-waitingtime-font">预计排队5分钟</text>
+		</view>
+		<view class="star-windows">
+			<view class="star-tag">
+				<text class="star-tag-font">明星窗口</text>
+			</view>
+			<view class="star-item item1">
+				<view class="star-item-content1">
+					<image class="star-item-image"></image>
+				</view>
+				<view class="star-item-content2">
+					<view class="star-item-font1">
+						<view class="font1-left_content">
+							<view class="left_content-name">一层一号窗口</view>
+							<view class="left_content-inform">
+								<image class="inform-image" src="../../images/star.png"></image>
+								<text class="inform-grade">4.9</text>
+								<text class="inform-sale">月售1202</text>
+							</view>
+						</view>
+						<view class="font1-right_content">
+							<view class="window_type">
+								<text class="window_type-font">主食窗口</text>
+							</view>
+							<view class="waitting_time">
+								<text class="waitting_time-font">预计排队5分钟</text>
+							</view>
+						</view>
+					</view>
+					<view class="star-item-font2">
+						<text class="evaluate-font advantage">“阿姨很可爱”“打饭量很多”</text>
+						<text class="evaluate-font disadvantage">“排队较长”</text>
+					</view>
+				</view>
+			</view>
+			<view class="star-item item2">
+				<view class="star-item-content1">
+					<image class="star-item-image"></image>
+				</view>
+				<view class="star-item-content2">
+					<view class="star-item-font1">
+						<view class="font1-left_content">
+							<view class="left_content-name">一层一号窗口</view>
+							<view class="left_content-inform">
+								<image class="inform-image" src="../../images/star.png"></image>
+								<text class="inform-grade">4.9</text>
+								<text class="inform-sale">月售1202</text>
+							</view>
+						</view>
+						<view class="font1-right_content">
+							<view class="window_type">
+								<text class="window_type-font">主食窗口</text>
+							</view>
+							<view class="waitting_time">
+								<text class="waitting_time-font">预计排队5分钟</text>
+							</view>
+						</view>
+					</view>
+					<view class="star-item-font2">
+						<text class="evaluate-font advantage">“阿姨很可爱”“打饭量很多”</text>
+						<text class="evaluate-font disadvantage">“排队较长”</text>
+					</view>
+				</view>
+			</view>
+			<view class="star-item item3">
+				<view class="star-item-content1">
+					<image class="star-item-image"></image>
+				</view>
+				<view class="star-item-content2">
+					<view class="star-item-font1">
+						<view class="font1-left_content">
+							<view class="left_content-name">一层一号窗口</view>
+							<view class="left_content-inform">
+								<image class="inform-image" src="../../images/star.png"></image>
+								<text class="inform-grade">4.9</text>
+								<text class="inform-sale">月售1202</text>
+							</view>
+						</view>
+						<view class="font1-right_content">
+							<view class="window_type">
+								<text class="window_type-font">主食窗口</text>
+							</view>
+							<view class="waitting_time">
+								<text class="waitting_time-font">预计排队5分钟</text>
+							</view>
+						</view>
+					</view>
+					<view class="star-item-font2">
+						<text class="evaluate-font advantage">“阿姨很可爱”“打饭量很多”</text>
+						<text class="evaluate-font disadvantage">“排队较长”</text>
+					</view>
+				</view>
 			</view>
 		</view>
 	</view>
