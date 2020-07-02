@@ -1,5 +1,6 @@
-{ 
+{
   "pages": [
+    "pages/pay/pay",
     "pages/takeout/takeout",
     "pages/food/food",
     "pages/location/location",
@@ -16,8 +17,7 @@
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
-    "list": 
-    [
+    "list": [
       {
         "pagePath": "pages/health/health",
         "iconPath": "images/health.png",

@@ -1,0 +1,34 @@
+<!--miniprogram/pages/pay/pay.wxml-->
+<view class="cover">
+	<view class="adress-content">
+		<view class="adress-div">
+			<view class="adress-block block1">
+				<text class="adress-font">鸿博楼 一层 一号窗口取餐</text>
+			</view>
+			<view class="adress-block block2">
+				<text class="contacts">王女士</text>
+				<text class="tel">18811518026</text>
+			</view>
+		</view>
+		<view class="shopping-basket">
+			<view class="basket-block1">
+				<view class="rd-content">
+					<radio checked="{{checked}}" class="check-all" color="rgba(255, 161, 85, 1)" bindtap="checkTap"></radio>
+          <view>
+            <text class="rd-font">全选</text>
+          </view>
+				</view>
+			</view>
+			<view class="basket-block2">
+        <view class="rd-content">
+          <radio checked="{{checked}}" class="check-all" color="rgba(255, 161, 85, 1)" bindtap="checkTap"></radio>
+        </view>
+        <view class="dish-content">
+          <view class="image-content">
+            <image class="dish-image"></image>
+          </view>
+        </view>
+      </view>
+		</view>
+	</view>
+</view>

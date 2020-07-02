@@ -1,0 +1,141 @@
+/* miniprogram/pages/pay/pay.wxss */
+.cover{
+  width: 750rpx;
+  height: 1486rpx;
+  line-height: 40rpx;
+  border-radius: 0rpx;
+  background-color: rgba(255, 242, 232, 1);
+  text-align: center;
+  overflow: hidden;
+}
+
+.adress-content{
+  width: 750rpx;
+  height: 410rpx;
+  line-height: 40rpx;
+  background-color: rgba(255, 161, 85, 1);
+  text-align: center;
+  border: 2rpx solid rgba(255, 255, 255, 0);
+}
+
+.adress-content .adress-div{
+  position: absolute;
+  top: 74rpx;
+  left: 20rpx;
+  width: 468rpx;
+  height: 112rpx;
+}
+
+.adress-content .adress-div .adress-block{
+  width: 468rpx;
+  height: 56rpx;
+  text-align: left;
+}
+
+.adress-content .adress-div .adress-block .adress-font{
+  width: 468rpx;
+  height: 56rpx;
+  color: rgba(255, 255, 255, 1);
+  font-size: 40rpx;
+  font-family: PingFangSC-regular;
+}
+
+.adress-content .adress-div .block2 text{
+  margin-right: 20rpx;
+  width: 468rpx;
+  height: 40rpx;
+  color: rgba(255, 255, 255, 1);
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+
+.shopping-basket{
+  position: absolute;
+  left: 20rpx;
+  top: 224rpx;
+  width: 710rpx;
+  /* height: 608rpx; */
+  line-height: 40rpx;
+  border-radius: 20rpx;
+  background-color: rgba(255, 255, 255, 1);
+  text-align: center;
+  border: 2rpx solid rgba(255, 255, 255, 0);
+}
+
+.shopping-basket .basket-block1{
+  text-align: left;
+  border-radius: 20rpx 20rpx 0rpx 0rpx;
+  border-bottom: 2rpx solid rgba(232, 232, 232, 1);
+  width: 710rpx;
+  height: 104rpx;
+}
+
+.shopping-basket .basket-block1 .check-all{
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 20rpx;
+}
+
+.shopping-basket .basket-block1 .rd-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  text-align: left;
+  left: 30rpx;
+  top: 28rpx;
+  width: 132rpx;
+  height: 48rpx;
+}
+
+.shopping-basket .basket-block1 .rd-font{
+  width: 64rpx;
+  height: 44rpx;
+  color: rgba(0, 0, 0, 1);
+  font-size: 16px;
+  font-family: PingFangSC-regular;
+}
+
+.shopping-basket .basket-block1 .rd-content view{
+  height: 48rpx;
+  width: 64rpx;
+  line-height: 48rpx;
+}
+
+.shopping-basket .basket-block2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 24rpx;
+  height: 226rpx;
+  width: 710rpx;
+}
+
+.shopping-basket .basket-block2 .rd-content{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 48rpx;
+  height: 226rpx;
+}
+
+.shopping-basket .basket-block2 .dish-content{
+  width: 620rpx;
+  height: 226rpx;
+  background-color: bisque;
+}
+
+.shopping-basket .basket-block2 .dish-content .image-content{
+  width: 224rpx;
+  height: 214rpx;
+  border-radius: 30rpx;
+}
+
+.shopping-basket .basket-block2 .dish-content .dish-image{
+  width: 224rpx;
+  height: 214rpx;
+  border-radius: 30rpx;
+  background-color:  rgba(255, 161, 85, 1);
+}
