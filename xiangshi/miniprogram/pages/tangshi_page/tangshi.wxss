@@ -153,15 +153,46 @@
 .every_dish {
   display: flex; 
   position: relative;
-  background: white;
-  height: 200rpx;
+  /* background: white; */
+  height: 215rpx;
   margin-left: 0px;
   left: 2rpx;
-  margin-bottom: 10rpx;
-  margin-top: 10rpx;
+  margin-bottom: 25rpx;
+  /* margin-top: 5rpx; */
 }
 /* 图片 */
 .img {
-  width: 200rpx;
-  height: 200rpx;
+  width: 210rpx;
+  height: 210rpx;
+  background: #FFA155;
+  border-radius: 30rpx;
+}
+/* 介绍部分(右边) */
+.intro {
+  
+  height: 215rpx;
+  position: relative;
+  width: 400rpx;
+  /* background: red; */
+  margin-left: 10rpx;
+  /* left: 200rpx; */
+}
+.price_left {
+  width: 120rpx;
+  /* position: relative; */
+  /* background: blue; */
+  height: 40rpx;
+  /* text-align: end; */
+  font-size: 25rpx;
+  margin-top: 40rpx;
+}
+.ying_right {
+  /* 字体颜色 */
+  color: #FFA155;
+  font-size: 25rpx;
+  position: relative;
+  /* background: yellow; */
+  top: -15rpx;
+  margin-top: 5rpx;
+  margin-left: 10rpx;
 }

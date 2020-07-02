@@ -1,0 +1,53 @@
+<!--miniprogram/pages/food_details/food_details.wxml-->
+<view class="bg_3"></view>
+<image class="img" src="cloud://xiangshi-yqpne.7869-xiangshi-yqpne-1302514195/image/hongbo/first_floor/window_1/rice.jpg" mode="scaleToFill"></image>
+<!-- 食物介绍 -->
+<view class="head">
+<view style="color:#FFA155;font-size:35rpx;margin-bottom:10rpx;">别名: 水稻、米饭</view>
+<view style="font-size:28rpx">大米(Rice), 是稻谷经清洗、砻谷、碾米、成品整理等工序后制成的成品, 大米含有稻米中近64%的营养物质和90%以上的人体所需的营养元素, 同时是中国大部分地区人民的主要食品。</view>
+<button class="btn" bindtap="addData">添加到饮食记录</button>
+</view>
+
+<!-- 主题含量部分 -->
+<view class="main_content">
+  <!-- 第一部分: 正常营养 -->
+  <view class="part1">
+    <view class="font_main">营养分析:
+     <text class="font_highlight">(每100克可食用部分)</text>
+    </view>
+    <view class="font_normal">
+      <view>热量<text class="right_block">128千卡</text></view>
+      <view>碳水化合物<text class="right_block">67.2克</text></view>
+      <view class="font_highlight">膳食纤维<text class="right_block">18.7克</text></view>
+      <view>蛋白质<text class="right_block">5.6克</text></view>
+      <view>脂肪<text class="right_block">9.3克</text></view>
+      <view class="font_highlight">饱和脂肪酸</view>
+      <view class="font_highlight">不饱和脂肪酸</view>
+      <view class="font_highlight">胆固醇</view>
+      <view class="border_set"></view>
+    </view>
+    
+  </view>
+  <!-- 第2部分: 矿物质 -->
+  <view class="part2">
+    <view class="font_main">矿物质:</view>
+    <view wx:for="{{metal_names}}" wx:for-index="i" class="font_normal">
+     {{item}}<text class="right_block">{{metal_datas[i]}}毫克</text>
+    </view>
+    <view class="border_set"></view>
+  </view>
+  <!-- 第3部分: 维生素 -->
+  <view class="part3">
+    <view class="font_main">维生素:</view>
+     <view wx:for="{{vitamin_names}}" wx:for-index="i" class="font_normal">
+     维生素{{item}}<text class="right_block">{{vitamin_datas[i]}}毫克</text>
+     </view>
+  </view>
+</view>
+<!-- 用餐评价 -->
+<view class="rate">
+  <view class="font_main" style="position:relative;top:10rpx;      margin-left:30rpx">用餐评价:</view>
+  <view wx:for="{{rates}}" class="rates_set">
+  {{item}}<text class="niming">--匿名</text></view>
+  <view class="threepoints">...</view>
+</view>
