@@ -1,42 +1,64 @@
 <!--pages/takeout/takeout.wxml-->
 <view class="cover">
-  <view class="list">
-    <view class="list-content1" hover-class="selected-item">
-      <text class="list-font">综合排序</text>
-    </view>
-    <view class="list-content2" hover-class="selected-item">
-      <text class="list-font">速度快</text>
-    </view>
-    <view class="list-content3" hover-class="selected-item">
-      <text class="list-font">销量高</text>
-    </view>
-  </view>
-  <view class="dish">
-  <view class="dish-content1">
-    <image class="dish-image"></image>
-  </view>
-  <view class="dish-content2">
-    <view class="dish-information">
-      <view class="dish-name">
-        <text>土豆牛肉盖饭</text>
+	<view class="list">
+		<view class="list-content1" hover-class="selected-item">
+			<text class="list-font">综合排序</text>
+		</view>
+		<view class="list-content2" hover-class="selected-item">
+			<text class="list-font">速度快</text>
+		</view>
+		<view class="list-content3" hover-class="selected-item">
+			<text class="list-font">销量高</text>
+		</view>
+	</view>
+	<view class="dish-block">
+		<block wx:for="{{takeout}}" wx:for-index="idx" wx:for-item="take_out">
+			<view class="dish">
+				<view class="dish-content1">
+					<image class="dish-image"></image>
+				</view>
+				<view class="dish-content2">
+					<view class="dish-information">
+						<view class="dish-name">
+							<text>{{take_out.name}}</text>
+						</view>
+						<view class="dish-type">
+							<text>{{take_out.type}}</text>
+						</view>
+						<view class="dish-message">
+							<text class="sale">月售{{take_out.sales}}</text>
+							<text class="praise">赞{{take_out.votes}}</text>
+							<text class="price">{{take_out.price}}元/份</text>
+						</view>
+						<view class="dish-element">
+							<view class="dish-element-block1">
+								<view>
+									<text>碳水：{{take_out.nutrition_facts.carbohydrate}}g</text>
+								</view>
+								<view>
+									<text>蛋白：{{take_out.nutrition_facts.protein}}g</text>
+								</view>
+							</view>
+							<view class="dish-element-block2">
+								<text>脂肪：{{take_out.nutrition_facts.fat}}g</text>
+							</view>
+						</view>
+					</view>
+					<view class="dish-bt">
+						<button class="bt-image" style="background-image:url(../../images/add.svg);"></button>
+					</view>
+				</view>
+			</view>
+		</block>
+	</view>
+  <view class="shopping-icon">
+    <view class="shopping-content">
+      <view class="num-content">
+        <view class="num-icon">1</view>
       </view>
-      <view class="dish-type">
-        <text>海产</text>
-      </view>
-      <view class="dish-message">
-        <text class="sale">月售1202</text>
-        <text class="praise">赞922</text>
-        <text class="price">8.4元/份</text>
-      </view>
-      <view class="dish-element">
-        <text>碳水：0.00g</text>
-        <text>蛋白：0.00g</text>
-        <text>脂肪：0.00g</text>
+      <view class="shopping-cart">
+        <image class="shopping-cart-image" src="../../images/shopping_cart.svg"></image>
       </view>
     </view>
-    <view class="dish-bt">
-      <button open-type="share" class="bt-image" style="background-image:url(../../images/add.svg);"></button>
-    </view>
-  </view>
   </view>
 </view>
