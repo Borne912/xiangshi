@@ -67,12 +67,14 @@
 				<view class="comment-label">
 					<text>订单备注</text>
 				</view>
-				<view class="comment">
+				<navigator url="../comment/comment">
+					<view class="comment">
 					<view class="comment-font"><text>口味、偏好等要求</text></view>
 					<view class="comment-logo">
 						<image src="../../images/arrow.svg"></image>
 					</view>
 				</view>
+				</navigator>
 			</view>
 		</view>
 	</view>

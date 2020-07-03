@@ -1,0 +1,149 @@
+/* miniprogram/pages/comment/comment.wxss */
+.cover{
+  width: 750rpx;
+  height: 1486rpx;
+  line-height: 40rpx;
+  border-radius: 0rpx;
+  background-color: rgba(255, 242, 232, 1);
+  text-align: center;
+  overflow: hidden;
+}
+
+.adress-content{
+  position: absolute;
+  width: 750rpx;
+  height: 410rpx;
+  line-height: 40rpx;
+  background-color: rgba(255, 161, 85, 1);
+  text-align: center;
+  border: 2rpx solid rgba(255, 255, 255, 0);
+}
+
+.adress-content .adress-div{
+  position: absolute;
+  top: 74rpx;
+  left: 20rpx;
+  width: 468rpx;
+  height: 112rpx;
+}
+
+.adress-content .adress-div .adress-block{
+  width: 468rpx;
+  height: 56rpx;
+  text-align: left;
+}
+
+.adress-content .adress-div .adress-block .adress-font{
+  width: 468rpx;
+  height: 56rpx;
+  color: rgba(255, 255, 255, 1);
+  font-size: 40rpx;
+  font-family: PingFangSC-regular;
+}
+
+.adress-content .adress-div .block2 text{
+  margin-right: 20rpx;
+  width: 468rpx;
+  height: 40rpx;
+  color: rgba(255, 255, 255, 1);
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+
+.comment-div{
+  position: absolute;
+  left: 20rpx;
+  top: 224rpx;
+  width: 710rpx;
+  height: 820rpx;
+  line-height: 40rpx;
+  border-radius: 20rpx;
+  background-color: rgba(255, 255, 255, 1);
+  text-align: center;
+  border: 2rpx solid rgba(255, 255, 255, 0);
+}
+
+.comment-div .comment-input{
+  position: absolute;
+  margin: 30rpx 0rpx 0rpx 16rpx;
+  width: 676rpx;
+  height: 244rpx;
+  line-height: 40rpx;
+  border-radius: 20rpx;
+  background-color: rgba(255, 230, 210, 1);
+  text-align: center;
+  border: 2rpx solid rgba(255, 255, 255, 0);
+}
+
+.comment-div .comment-input .comment-rctb{
+  margin: 16rpx 16rpx 16rpx 16rpx;
+  width: 660rpx;
+  height: 228rpx;
+  text-align: left;
+  font-size: 32rpx;
+  color: rgba(77, 63, 63, 1);
+  font-family: PingFangSC-regular;
+}
+.comment-div .recommend-tag-content{
+  position: absolute;
+  text-align: left;
+  left: 18rpx;
+  top: 314rpx;
+  height: 172rpx;
+  width: 676rpx;
+}
+
+.comment-div .customize-tag-content{
+  position: absolute;
+  text-align: left;
+  top: 514rpx;
+  left: 18rpx;
+  height: 172rpx;
+  width: 676rpx;
+}
+
+.comment-div .recommend-tag-name{
+  height: 44rpx;
+  width: 676rpx;
+  text-align: left;
+  color: rgba(77, 63, 63, 1);
+  font-size: 32rpx;
+  font-family: PingFangSC-regular;
+}
+
+.comment-div .recommend-tag-wrap{
+  margin-right: 44rpx;
+  margin-top: 15rpx;
+  display: inline-block;
+  height: 40rpx;
+  line-height: 40rpx;
+  border-radius: 30rpx;
+  background-color: rgba(255, 242, 232, 1);
+  text-align: center;
+  border: 2rpx solid rgba(255, 255, 255, 0);
+}
+
+.comment-div .recommend-tag-wrap text{
+  color: rgba(255, 161, 85, 1);
+  margin: 10rpx 12rpx 8rpx 16rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-regular;
+}
+
+.commit-trap{
+  position: fixed;
+  left: 46rpx;
+  top: 1080rpx;
+  width: 656rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-radius: 20rpx;
+  padding: 0rpx 0rpx 0rpx 0rpx;
+  background-color: rgba(255, 161, 85, 1);
+  text-align: center;
+  font-family: -apple-system;
+  color: rgba(255, 255, 255, 1);
+  font-size: 40rpx;
+  font-family: PingFangSC-regular;
+}
