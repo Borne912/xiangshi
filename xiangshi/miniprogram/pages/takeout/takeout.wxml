@@ -51,14 +51,16 @@
 			</view>
 		</block>
 	</view>
-  <view class="shopping-icon">
-    <view class="shopping-content">
-      <view class="num-content">
-        <view class="num-icon">1</view>
-      </view>
-      <view class="shopping-cart">
-        <image class="shopping-cart-image" src="../../images/shopping_cart.svg"></image>
-      </view>
-    </view>
-  </view>
+	<navigator url="../pay/pay">
+		<view class="shopping-icon">
+			<view class="shopping-content">
+				<view class="num-content">
+					<view class="num-icon">1</view>
+				</view>
+				<view class="shopping-cart">
+					<image class="shopping-cart-image" src="../../images/shopping_cart.svg"></image>
+				</view>
+			</view>
+		</view>
+	</navigator>
 </view>

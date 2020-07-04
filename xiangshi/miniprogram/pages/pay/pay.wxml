@@ -1,0 +1,90 @@
+<!--miniprogram/pages/pay/pay.wxml-->
+<view class="cover">
+	<view class="adress-content">
+		<view class="adress-div">
+			<view class="adress-block block1">
+				<text class="adress-font">鸿博楼 一层 一号窗口取餐</text>
+			</view>
+			<view class="adress-block block2">
+				<text class="contacts">王女士</text>
+				<text class="tel">18811518026</text>
+			</view>
+		</view>
+	</view>
+	<view class="shopping-basket">
+		<view class="basket-block1">
+			<view class="rd-content">
+				<radio checked="{{checked}}" class="check-all" color="rgba(255, 161, 85, 1)" bindtap="checkTap"></radio>
+				<view>
+					<text class="rd-font">全选</text>
+				</view>
+			</view>
+		</view>
+		<view class="basket-block2">
+			<view class="rd-content">
+				<radio checked="{{checked}}" class="check-all" color="rgba(255, 161, 85, 1)" bindtap="checkTap"></radio>
+			</view>
+			<view class="dish-content">
+				<view class="image-content">
+					<image class="dish-image"></image>
+				</view>
+				<view class="dish-message">
+					<view class="dish-name">
+						<text>木须肉盖饭</text>
+					</view>
+					<view class="dish-comment">
+						<text>不辣</text>
+					</view>
+					<view class="dish-sundry">
+						<view class="dish-price">
+							<text>8.4元/份</text>
+						</view>
+						<view class="dish-num">
+							<view class="dish-bt1">
+								<button class="bt bt-add" style="background-image:url(../../images/add.svg);"></button>
+							</view>
+							<view class="number">
+								<text>1</text>
+							</view>
+							<view class="dish-bt2">
+								<button class="bt bt-add" style="background-image:url(../../images/sub.svg);"></button>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="order">
+			<view class="order-time">
+				<view class="time-label">
+					<text>取餐时间</text>
+				</view>
+				<view class="time">
+					<text>12:12</text>
+				</view>
+			</view>
+			<view class="order-comment">
+				<view class="comment-label">
+					<text>订单备注</text>
+				</view>
+				<navigator url="../comment/comment">
+					<view class="comment">
+					<view class="comment-font"><text>口味、偏好等要求</text></view>
+					<view class="comment-logo">
+						<image src="../../images/arrow.svg"></image>
+					</view>
+				</view>
+				</navigator>
+			</view>
+		</view>
+	</view>
+	<view class=" payment">
+		<view class="price-content">
+			<text class="price-label">合计</text>
+			<text class="price">¥18.0</text>
+		</view>
+		<view class="bt-content">
+			<button class="button-pay" color="#FFA155">确认支付</button>
+		</view>
+	</view>
+</view>

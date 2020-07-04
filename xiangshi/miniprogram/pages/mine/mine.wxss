@@ -1,1 +1,266 @@
 /* miniprogram/pages/mine/mine.wxss */
+.cover{
+  width: 750rpx;
+  height: 1486rpx;
+  line-height: 40rpx;
+  border-radius: 0rpx;
+  background-color: rgba(255, 242, 232, 1);
+  text-align: center;
+  overflow: hidden;
+}
+
+.visiting_card-wrapper{
+  height: 424rpx;
+  width: 750rpx;
+  background-color: white;
+}
+
+.visiting_card-wrapper .bk-color{
+  width: 750rpx;
+  height: 296rpx;
+  line-height: 40rpx;
+  border-radius: 0rpx;
+  background-color: rgba(255, 161, 85, 1);
+  color: rgba(77, 63, 63, 1);
+  font-size: 28rpx;
+  text-align: center;
+  font-family: -apple-system;
+  border: 2rpx solid rgba(255, 255, 255, 0);
+}
+
+.visiting_card-wrapper .visiting_card-content{
+  position: absolute;
+  left: 28rpx;
+  top: 126rpx;
+  width: 694rpx;
+  height: 296rpx;
+  line-height: 40rpx;
+  border-radius: 20rpx;
+  background-color: rgba(255, 255, 255, 1);
+  text-align: center;
+  box-shadow: 0rpx 4rpx 6rpx 0rpx rgba(0, 0, 0, 0.4);
+  border: 2rpx solid rgba(255, 255, 255, 0);
+}
+
+.visiting_card-wrapper .head_portrait{
+  position: absolute;
+  top: 20rpx;
+  left: 276rpx;
+  width: 200rpx;
+  height: 200rpx;
+  line-height: 40rpx;
+  background-color: rgba(255, 230, 210, 1);
+  text-align: center;
+  border-radius: 50%;
+  border: 2rpx solid rgba(187, 187, 187, 1);
+}
+
+.visiting_card-wrapper .visiting_card-content .username{
+  position: absolute;
+  left: 20rpx;
+  top: 120rpx;
+  text-align: left;
+}
+
+.visiting_card-wrapper .visiting_card-content .username text{
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 56rpx;
+  font-family: PingFangSC-regular;
+}
+
+.visiting_card-wrapper .visiting_card-content .tel{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 180rpx;
+  left: 20rpx;
+  width: 300rpx;
+  margin-top: 20rpx;
+  height: 40rpx;
+  text-align: left;
+}
+
+.visiting_card-wrapper .visiting_card-content .tel text{
+  color: rgba(179, 177, 177, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+}
+.visiting_card-wrapper .visiting_card-content .tel button{
+  width: 118rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border-radius: 20rpx 20rpx 20rpx 20rpx;
+  text-align: center;
+  border: 2rpx solid rgba(187, 187, 187, 1);
+  color: rgba(179, 177, 177, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+}
+
+.my_inform-wrapper{
+  margin: 50rpx 28rpx 0rpx 28rpx;
+}
+
+.my_inform-wrapper .my_demo{
+  margin-top: 16rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 694rpx;
+  height: 100rpx;
+  line-height: 40rpx;
+  border-radius: 20rpx;
+  background-color: rgba(255, 255, 255, 1);
+  text-align: center;
+}
+
+.my_inform-wrapper .my_demo-front{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 16rpx;
+  width: 168rpx;
+  height: 50rpx;
+}
+
+.my_inform-wrapper .my_demo-front .VerticalBar-icon{
+  width: 2rpx;
+  height: 30rpx;
+  line-height: 40rpx;
+  border-radius: 10rpx;
+  background-color: rgba(255, 161, 85, 1);
+  text-align: center;
+  border: 2rpx solid rgba(255, 255, 255, 0);
+}
+.my_inform-wrapper .my_demo-front .title{
+  width: 144rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 36rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+
+.my_inform-wrapper .my_demo-rear{
+  margin-right: 26rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.my_inform-wrapper .my_demo-rear .arrow-icon{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.my_inform-wrapper .evaluate-wrapper{
+  background-color: #FFFFFF;
+}
+
+.my_inform-wrapper .evaluate-wrapper .history_order{
+  position: relative;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  width: 662rpx;
+  height: 210rpx;
+  line-height: 40rpx;
+  border-radius: 20rpx;
+  background-color: rgba(255, 230, 210, 1);
+  color: rgba(16, 16, 16, 1);
+  font-size: 28rpx;
+  text-align: center;
+  font-family: -apple-system;
+  border: 6rpx solid rgba(255, 255, 255, 0);
+}
+
+.my_inform-wrapper .evaluate-wrapper .bottom-icon{
+  margin-top: 16rpx;
+  height: 48rpx;
+  width: 662rpx;
+}
+
+.my_inform-wrapper .evaluate-wrapper .bottom-icon image{
+  height: 48rpx;
+  width: 48rpx;
+}
+
+.my_inform-wrapper .evaluate-wrapper .history_order .order-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 40rpx;
+  left: 14rpx;
+  width: 628rpx;
+  height: 130rpx;
+}
+
+.my_inform-wrapper .history_order .order-wrapper .image-wrapper{
+  
+  width: 132rpx;
+  height: 130rpx;
+  border-radius: 20rpx;
+}
+
+.my_inform-wrapper .history_order .order-wrapper .image-wrapper image{
+  width: 132rpx;
+  height: 130rpx;
+  border-radius: 20rpx;
+  background-color: rgba(255, 161, 85, 1);
+}
+
+.my_inform-wrapper .history_order .order-wrapper .message-wrapper{
+  width: 468rpx;
+  height: 130rpx;
+  margin-left: 28rpx;
+}
+
+.my_inform-wrapper .order-wrapper .message-wrapper .message-up{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 48rpx;
+  width: 468rpx;
+  text-align: left;
+}
+
+.my_inform-wrapper .order-wrapper .message-wrapper .message-up text{
+  color: rgba(0, 0, 0, 1);
+  font-size: 12px;
+  font-family: PingFangSC-regular;
+}
+
+.my_inform-wrapper .order-wrapper .message-wrapper .message-up image{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.my_inform-wrapper .order-wrapper .message-wrapper .message-down{
+  text-align: left;
+}
+
+.my_inform-wrapper .order-wrapper .message-wrapper .message-down text{
+  color: rgba(0, 0, 0, 1);
+  font-size: 24rpx;
+  font-family: PingFangSC-regular;
+}
+
+.my_inform-wrapper .hint{
+  margin-top: 112rpx;
+  margin-bottom: 126rpx;
+  width: 694rpx;
+  height: 34rpx;
+  text-align: center;
+}
+
+.my_inform-wrapper .hint text{
+  color: rgba(179, 177, 177, 1);
+  font-size: 24rpx;
+  font-family: PingFangSC-regular;
+}

@@ -1,2 +1,84 @@
 <!--miniprogram/pages/mine/mine.wxml-->
-<text>miniprogram/pages/mine/mine.wxml</text>
+<view class="cover">
+	<view class="visiting_card-wrapper">
+		<view class="bk-color"></view>
+		<view class="visiting_card-content">
+			<view class="username">
+				<text>享食每一天</text>
+			</view>
+			<view class="tel">
+				<text>18811518026</text>
+				<button>修改</button>
+			</view>
+		</view>
+		<image class="head_portrait"></image>
+	</view>
+	<view class="my_inform-wrapper">
+		<view class="my_demo bill-wrapper">
+			<view class="my_demo-front">
+				<view class="VerticalBar-icon"></view>
+				<view class="title">我的账单</view>
+			</view>
+			<view class="my_demo-rear">
+				<image class="arrow-icon" src="../../images/arrow_orange.svg"></image>
+			</view>
+		</view>
+		<view class="my_demo adress-wrapper">
+			<view class="my_demo-front">
+				<view class="VerticalBar-icon"></view>
+				<view class="title">我的地址</view>
+			</view>
+			<view class="my_demo-rear">
+				<image class="arrow-icon" src="../../images/arrow_orange.svg"></image>
+			</view>
+		</view>
+		<view class="my_demo service-wrapper">
+			<view class="my_demo-front">
+				<view class="VerticalBar-icon"></view>
+				<view class="title">我的客服</view>
+			</view>
+			<view class="my_demo-rear">
+				<image class="arrow-icon" src="../../images/arrow_orange.svg"></image>
+			</view>
+		</view>
+		<view class="my_demo protocol-wrapper">
+			<view class="my_demo-front">
+				<view class="VerticalBar-icon"></view>
+				<view class="title">我的协议</view>
+			</view>
+			<view class="my_demo-rear">
+				<image class="arrow-icon" src="../../images/arrow_orange.svg"></image>
+			</view>
+		</view>
+		<view class="evaluate-wrapper">
+			<view class="my_demo">
+				<view class="my_demo-front">
+					<view class="VerticalBar-icon"></view>
+					<view class="title">我的评价</view>
+				</view>
+			</view>
+      <view class="history_order">
+        <view class="order-wrapper">
+          <view class="image-wrapper">
+            <image></image>
+          </view>
+          <view class="message-wrapper">
+            <view class="message-up">
+              <text>2020-03-23 12:11 螺蛳粉</text>
+              <image src="../../images/arrow_orange.svg"></image>
+            </view>
+            <view class="message-down">
+              <text>“听我的，不知道吃什么的时候，吃它就对了，敲好次”</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="bottom-icon">
+        <image src="../../images/arrow_down.svg"></image>
+      </view>
+		</view>
+    <view class="hint">
+      <text>到底了别拉了...</text>
+    </view>
+	</view>
+</view>

@@ -1,0 +1,32 @@
+<!--miniprogram/pages/comment/comment.wxml-->
+<view class="cover">
+	<view class="adress-content">
+		<view class="adress-div">
+			<view class="adress-block block1">
+				<text class="adress-font">鸿博楼 一层 一号窗口取餐</text>
+			</view>
+			<view class="adress-block block2">
+				<text class="contacts">王女士</text>
+				<text class="tel">18811518026</text>
+			</view>
+		</view>
+	</view>
+	<view class="comment-div">
+		<view class="comment-input">
+			<textarea class="comment-rctb" auto-focus="true"></textarea>
+		</view>
+		<view class="recommend-tag-content">
+			<view class="recommend-tag-name">推荐标签</view>
+			<view class="recommend-tag-wrap">
+				<text class="recommend-tag">请勿打电话，短信通知即可</text>
+			</view>
+		</view>
+		<view class="customize-tag-content">
+			<view class="recommend-tag-name">自定标签</view>
+			<view class="recommend-tag-wrap" style="background-color:#FFFFFF; border: 2rpx solid rgba(255, 230, 210, 1);">
+				<text class="recommend-tag">多加米饭</text>
+			</view>
+		</view>
+	</view>
+  <button class="commit-trap">确认</button>
+</view>

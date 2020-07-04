@@ -1,15 +1,16 @@
 {
   "pages": [
-    "pages/myService/myService",
-    "pages/myAddress/myAddress",
+    "pages/mine/mine",
+    "pages/pay/pay",
+    "pages/takeout/takeout",
+    "pages/comment/comment",
     "pages/tangshi_page/tangshi",
     "pages/food_details/food_details",
-    "pages/takeout/takeout",
     "pages/food/food",
     "pages/location/location",
     "pages/health/health",
-    "pages/mine/mine"
-    
+     "pages/myService/myService",
+    "pages/myAddress/myAddress"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
