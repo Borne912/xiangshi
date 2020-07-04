@@ -1,6 +1,6 @@
 <!--miniprogram/pages/food_details/food_details.wxml-->
 <view class="bg_3"></view>
-<image class="img" src="cloud://xiangshi-yqpne.7869-xiangshi-yqpne-1302514195/image/hongbo/first_floor/window_1/rice.jpg" mode="scaleToFill"></image>
+<image class="img" src="{{imgUrl}}" mode="scaleToFill"></image>
 <!-- 食物介绍 -->
 <view class="head">
 <view style="color:#FFA155;font-size:35rpx;margin-bottom:10rpx;">别名: 水稻、米饭</view>

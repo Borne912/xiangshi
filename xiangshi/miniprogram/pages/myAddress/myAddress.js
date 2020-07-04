@@ -1,19 +1,11 @@
-// miniprogram/pages/food_details/food_details.js
+// miniprogram/pages/myAddress/myAddress.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgUrl: 'cloud://xiangshi-yqpne.7869-xiangshi-yqpne-1302514195/image/hongbo/first_floor/window_1/rice.jpg',
-    metal_names : ['钙','钠','铁','钾','镁','锌'],
-    metal_datas : [4.5,5.6,1.2,7.4,2.3,9.0],
-    vitamin_names : ['A','B1','B2','B3','C','E'],
-    vitamin_datas : [1.5,2.6,3.2,4.4,5.3,6.0],
-    rates : ['"体验感很好, 能够吃而且便宜"',
-            '"就那样呗, 凑活吃饱"',
-            '"今天有点硬"',
-            '"软软的很好吃"'] 
+    imgUrl : 'cloud://xiangshi-yqpne.7869-xiangshi-yqpne-1302514195/image/icon/pen.png'
   },
 
   /**
@@ -22,9 +14,12 @@ Page({
   onLoad: function (options) {
 
   },
-  // 此函数为按钮事件,将此dish加入饮食记录(全局变量)
-  addData: function(e) {
-    console.log('添加成功!');
+
+  joinAdd : function(e) {
+    console.log('添加成功')
+  },
+  changeAdd : function(e) {
+    console.log('修改成功')
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

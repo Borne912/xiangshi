@@ -59,7 +59,7 @@
 /* 行中的每一列 */
 .row-cols {
   text-align: center;
-  background-color:#B8ECB2;
+  /* background-color:#B8ECB2; */
   margin-right: 30rpx;
   margin-left: 30rpx;
   margin-top: 25rpx;

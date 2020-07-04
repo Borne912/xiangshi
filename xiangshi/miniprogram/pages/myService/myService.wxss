@@ -1,0 +1,201 @@
+/* miniprogram/pages/myService/myService.wxss */
+.bg_5 {
+  background: #FFF2E8;
+  position: fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
+
+.head {
+  background: #FFA155;
+  height: 60rpx;
+}
+
+/* 选择一行 */
+.choice {
+  height: 105rpx;
+  line-height: 105rpx;
+  /* background: green; */
+  display: flex;
+  flex-direction: row;
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  font-size: 28rpx;
+}
+.allChoice {
+  color: #FFA357;
+  position: absolute;
+  right: 30rpx;
+}
+
+.imgSet1 {
+  position: relative;
+  height: 50rpx;
+  width: 50rpx;
+  left: -8rpx;
+  top: 14rpx;
+}
+/* 咨询业务窗口 */
+.window_ques {
+  font-size: 28rpx;
+  background: white;
+  border-radius: 30rpx;
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  margin-top: 35rpx;
+  height: 200rpx;
+}
+
+.three_cols {
+  /**/
+  display: flex;
+  flex-direction: row;
+  /* background: red; */
+  height: 95rpx;
+}
+
+.each_col {
+   background: #FFE6D2; 
+   width: 190rpx;
+   height: 70rpx;
+   margin-left: 25rpx;
+   margin-right: 25rpx;
+   color: #FFA771;
+   border-radius: 20rpx;
+   /* 下三行文字水平垂直居中 */
+   display: flex;
+   justify-content: center; 
+   align-items: center;
+}
+
+/* 常见问题 */
+.window_main {
+  background: white;
+  border-radius: 30rpx;
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  height: 610rpx;
+}
+
+.normal {
+  /* background: red; */
+  height: 120rpx;
+  line-height: 130rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  font-size: 40rpx;
+  border-bottom: 3rpx solid #FFA155;
+}
+.lists {
+  height: 75rpx;
+  /* border-top: 3rpx solid #FFDBBF; */
+  border-bottom: 3rpx solid #FFA155;
+  line-height: 75rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  display: flex;
+  flex-direction: row;
+  /* background: green; */
+
+}
+
+.imgSet2 {
+  position: relative;
+  height: 50rpx;
+  width: 50rpx;
+  left: 0rpx;
+  top: 12rpx;
+  /* line-height: 50rpx; */
+}
+
+.btn_container
+{
+  position: fixed;
+  width: 100%;
+  height: 100rpx;
+  bottom:0px;
+  background-color: white;
+}
+.btn {
+  background-color: #FFA155;
+  color: white;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  margin: 15rpx 15rpx 15rpx 15rpx;
+  border-radius: 20rpx;
+  /* margin-left: 15rpx;
+  margin-right: 15rpx; */
+}
+
+/* 问与答 */
+.A_Q {
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-top: 6.2rpx;
+  /* background-color: blue; */
+}
+.ask {
+  
+  height: 100rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.A_img {
+  position: absolute;
+  
+  right: 30rpx;
+  background: #FFE6D2;
+  height: 85rpx;
+  width: 85rpx;
+  border-radius: 50%;
+}
+
+.A_text {
+  position: absolute;
+  right: 110rpx;
+  background: #FFE6D2;
+  margin-top: 15rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  width: 350rpx;
+  text-align: center;
+  border-radius: 30rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.question {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.Q_img {
+  background: #FFA155;
+  height: 85rpx;
+  width: 85rpx;
+  border-radius: 50%;
+}
+.Q_text {
+  background: #FFA155;
+  height: 70rpx;
+  line-height: 70rpx;
+  width: 350rpx;
+  text-align: center;
+  border-radius: 30rpx;
+  margin-top: 15rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.placeholder{
+  width: 100%;
+  height: 150rpx;
+}

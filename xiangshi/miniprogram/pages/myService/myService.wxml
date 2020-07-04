@@ -1,0 +1,44 @@
+<!--miniprogram/pages/myService/myService.wxml-->
+<view class="bg_5"></view>
+<view class="head">
+  <text style="margin-left:40rpx;">享食很高兴为您服务</text>
+</view>
+<!-- 咨询业务 -->
+<view class="window_ques">
+  <view class="choice">请选择您要咨询的业务
+   <view class="allChoice">全部业务
+    <image class="imgSet1" src="{{imgUrl}}"></image>
+   </view>
+  </view>
+  <!-- 三个选项 -->
+  <view class="three_cols">
+    <view class="each_col" wx:for='{{3}}' wx:for-index='i'>{{services[i]}}</view>
+  </view>
+</view>
+<!-- 常见问题 -->
+<view class="window_main">
+  <view class="normal">
+    <view style="margin-left:110rpx">常见问题</view>
+  </view>
+  <view class="lists" wx:for='{{problems}}' wx:for-index='i'>
+    <view style="width:600rpx">{{item}}</view> 
+    <image data-id="{{i}}" bindtap="proTap" class="imgSet2" src="{{imgUrl}}"></image>   
+  </view>
+</view>
+<scroll-view scroll-y scroll-into-view='{{toLast}}' style="height:435rpx">
+  <view class="A_Q" wx:for='{{curPro}}' wx:for-index='i'>
+    <view class="ask">
+      <view class="A_text">{{item}}</view>
+      <image class="A_img"></image>
+    </view>
+    <view class="question">   
+      <image class="Q_img"></image>
+      <view id='msg-{{i}}' class="Q_text">{{response[i]}}</view>
+    </view>
+  </view>
+</scroll-view>
+<!-- 透明控件防止遮挡 -->
+<view class='placeholder'></view>
+<view class="btn_container">
+  <button bindtap="onlineService" class="btn">在线客服</button>
+</view>

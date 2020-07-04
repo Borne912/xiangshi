@@ -1,6 +1,7 @@
 {
   "pages": [
-    
+    "pages/myService/myService",
+    "pages/myAddress/myAddress",
     "pages/tangshi_page/tangshi",
     "pages/food_details/food_details",
     "pages/takeout/takeout",
