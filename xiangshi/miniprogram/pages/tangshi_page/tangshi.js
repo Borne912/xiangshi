@@ -35,18 +35,13 @@ Page({
     // 菜品集合信息(名称+地点+楼层+窗口+图片地址+类型+月售+赞+价格+碳水+蛋白+脂肪)
     dishes_List:[]
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {   
+  getData: function (e) {
     var that = this;
     db_windows.get({     
       success(res){
-        tmp = res.data
-        that.data.buttons_rows = tmp
-        console.log(tmp)
+        console.log(res.data)
         that.setData({
-          buttons_rows: that.data.buttons_rows,         
+          buttons_rows: res.data         
         })
       }
     })
@@ -55,14 +50,18 @@ Page({
       window : that.data.window_id
     }).get({     
       success(res){
-        food_tmp = res.data
-        that.data.dishes_List = food_tmp
-        console.log(food_tmp)
+        console.log(res.data)
         that.setData({
-          dishes_List: that.data.dishes_List      
+          dishes_List: res.data     
         })
       }
     })
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {   
+    this.getData()
     if(this.data.buttons_cols) {
       this.data.buttons_cols[0].checked = true;      
     }     
@@ -100,10 +99,9 @@ Page({
       window : parseInt(id)
     }).get({     
       success(res){
-        that.data.dishes_List = res.data
         console.log(res.data)
         that.setData({
-          dishes_List: that.data.dishes_List      
+          dishes_List: res.data
         })
       }
     })

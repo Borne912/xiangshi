@@ -1,0 +1,41 @@
+<!--miniprogram/pages/todayDiet/todayPage.wxml-->
+<!-- 今日饮食展开页 -->
+<view class="bg_6"></view>
+<!-- 今天日期 -->
+<view class="date">
+  <view class=".today_text">
+    <text style="position:relative;left:215rpx">今天:</text> </view>
+  <view class=".today_real">{{date}}</view>
+</view>
+<!-- 两个圆圈(饮食/运动) -->
+<view class="percent">
+  <view wx:for='{{percents}}' class="square">
+    <view class="circle">
+      <view class="circle_text">{{item.name}}</view>
+      <view class="circle_other">{{item.num}}%</view>
+    </view>
+  </view>
+</view>
+<!-- 一大截(今日饮食) -->
+<view class="main">
+  <view class="pre">今日饮食</view>
+  <view class="head">
+    <view style="margin-left:12rpx" wx:for='{{yingyang}}' wx:for-index='i'>{{item}}: {{total[i]}}g
+    </view>
+  </view>
+  <!-- 四种餐的营养信息 -->
+  <view class="inform" wx:for='{{classes}}'>
+    <view class="up">
+      <view class="upleft">{{item}}</view>
+      <view class="upmid">热量: 100.00千卡</view>
+      <image class="upright" src="{{imgUrl}}" bindtap="addTap">
+      </image>
+    </view>
+    <view class="down">
+      <view class="each" wx:for="{{yingyang}}" wx:for-index='i'>
+        <view class="withborder">{{item}}</view>
+        <view class="without">100.00g</view>  
+      </view>     
+    </view>
+  </view>
+</view>
