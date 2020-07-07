@@ -1,0 +1,91 @@
+/* miniprogram/pages/myAgreement /myAgreement.wxss */
+.cover{
+  width: 750rpx;
+  height: 1486rpx;
+  line-height: 40rpx;
+  border-radius: 0rpx;
+  background-color: rgba(255, 242, 232, 1);
+  text-align: center;
+  overflow: hidden;
+}
+
+.list-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 750rpx;
+  height: 50rpx;
+  background-color: rgba(255, 161, 85, 1);
+}
+
+.list-wrapper .item-wrapper{
+  width: 160rpx;
+  height: 50rpx;
+  text-align: center;
+}
+
+.list-wrapper .item-wrapper text{
+  color: rgba(255, 242, 232, 1);
+  font-size: 20px;
+  font-family: PingFangSC-regular;
+}
+
+.content-wrapper{
+  margin: 34rpx 28rpx 0rpx 28rpx;
+}
+
+.my_demo{
+  margin-top: 16rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 694rpx;
+  height: 100rpx;
+  line-height: 40rpx;
+  border-radius: 20rpx;
+  background-color: rgba(255, 255, 255, 1);
+  text-align: center;
+}
+
+.my_demo-front{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 16rpx;
+  /* width: 168rpx; */
+  height: 50rpx;
+}
+
+.my_demo-front .VerticalBar-icon{
+  margin-right: 18rpx;
+  width: 2rpx;
+  height: 30rpx;
+  line-height: 40rpx;
+  border-radius: 10rpx;
+  background-color: rgba(255, 161, 85, 1);
+  text-align: center;
+  border: 2rpx solid rgba(255, 255, 255, 0);
+}
+.my_demo-front .title{
+  /* width: 144rpx; */
+  height: 50rpx;
+  line-height: 50rpx;
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 36rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+
+.my_demo-rear{
+  margin-right: 26rpx;
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.my_demo-rear .arrow-icon{
+  width: 48rpx;
+  height: 48rpx;
+}
