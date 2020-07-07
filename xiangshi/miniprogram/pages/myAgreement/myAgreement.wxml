@@ -1,0 +1,61 @@
+<!--miniprogram/pages/myAgreement/myAgreement.wxml-->
+<view class="cover">
+	<view class="list-wrapper">
+		<view class="item-wrapper">
+			<text>平台规则</text>
+		</view>
+		<view class="item-wrapper">
+			<text>公告</text>
+		</view>
+		<view class="item-wrapper">
+			<text>法律法规</text>
+		</view>
+	</view>
+	<view class="content-wrapper">
+		<view class="my_demo">
+			<view class="my_demo-front">
+				<view class="VerticalBar-icon"></view>
+				<view class="title">平台基础规则</view>
+			</view>
+			<view class="my_demo-rear">
+				<image class="arrow-icon" src="../../images/arrow_orange.svg"></image>
+			</view>
+		</view>
+    <view class="my_demo">
+			<view class="my_demo-front">
+				<view class="VerticalBar-icon"></view>
+				<view class="title">业务规则</view>
+			</view>
+			<view class="my_demo-rear">
+				<image class="arrow-icon" src="../../images/arrow_orange.svg"></image>
+			</view>
+		</view>
+    <view class="my_demo">
+			<view class="my_demo-front">
+				<view class="VerticalBar-icon"></view>
+				<view class="title">享食平台规则</view>
+			</view>
+			<view class="my_demo-rear">
+				<image class="arrow-icon" src="../../images/arrow_orange.svg"></image>
+			</view>
+		</view>
+    <view class="my_demo">
+			<view class="my_demo-front">
+				<view class="VerticalBar-icon"></view>
+				<view class="title">消费者保障权益</view>
+			</view>
+			<view class="my_demo-rear">
+				<image class="arrow-icon" src="../../images/arrow_orange.svg"></image>
+			</view>
+		</view>
+    <view class="my_demo">
+			<view class="my_demo-front">
+				<view class="VerticalBar-icon"></view>
+				<view class="title">消费者规则</view>
+			</view>
+			<view class="my_demo-rear">
+				<image class="arrow-icon" src="../../images/arrow_orange.svg"></image>
+			</view>
+		</view>
+	</view>
+</view>

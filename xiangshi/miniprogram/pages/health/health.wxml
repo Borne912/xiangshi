@@ -1,2 +1,192 @@
 <!--miniprogram/pages/health/health.wxml-->
-<text>miniprogram/pages/health/health.wxml</text>
+<view class="cover">
+	<view class="data-wrapper">
+		<view class="label-wrapper">
+			<text>今天：</text>
+		</view>
+		<view class="time-wrapper">
+			<text>2020年6月18日</text>
+		</view>
+	</view>
+	<view class="PieChart-wrapper">
+		<view class="PieChart td-food">
+			<view class="label">
+				<text>今日饮食</text>
+			</view>
+			<view class="percent">
+				<text>0%</text>
+			</view>
+		</view>
+		<view class="PieChart td-body">
+			<view class="label">
+				<text>今日身体</text>
+			</view>
+			<view class="percent">
+				<text>0%</text>
+			</view>
+		</view>
+		<view class="PieChart td-sport">
+			<view class="label">
+				<text>今日运动</text>
+			</view>
+			<view class="percent">
+				<text>0%</text>
+			</view>
+		</view>
+	</view>
+	<view class="td-food-wrapper">
+		<view class="tag">
+			<text>今日饮食</text>
+		</view>
+		<view class="content">
+			<view class="elem">
+				<view class="demo carbohydrate">
+					<view class="lable">
+						<text>碳水化合物</text>
+					</view>
+					<view class="value">
+						<text>0.00g</text>
+					</view>
+				</view>
+				<view class="demo protein">
+					<view class="lable">
+						<text>蛋白质</text>
+					</view>
+					<view class="value">
+						<text>0.00g</text>
+					</view>
+				</view>
+				<view class="demo fat">
+					<view class="lable">
+						<text>脂肪</text>
+					</view>
+					<view class="value">
+						<text>0.00g</text>
+					</view>
+				</view>
+			</view>
+			<view class="icon">
+				<view class="image">
+					<image src="../../images/arrow_orange.svg"></image>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="td-body-wrapper">
+		<view class="tag">
+			<text>今日饮食</text>
+		</view>
+		<view class="content">
+			<view class="box">
+				<view class="label">
+					<text>身体参数监测</text>
+				</view>
+				<view class="demo BFR">
+					<view class="block1 BFR-label">
+						<text>体脂率：</text>
+					</view>
+					<view class="block2 BFR-value">
+						<text>0%</text>
+					</view>
+				</view>
+				<view class="demo weight">
+					<view class="block1 weight-label">
+						<text>体重：</text>
+					</view>
+					<view class="block2 weight-value">
+						<text>0kg</text>
+					</view>
+				</view>
+				<view class="demo heart_rate">
+					<view class="block1 heart_rate-label">
+						<text>心率：</text>
+					</view>
+					<view class="block2 heart_rate-value">
+						<text>0bpm</text>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="td-sport-wrapper">
+		<view class="tag">
+			<text>今日运动</text>
+		</view>
+		<view class="content">
+			<view class="box">
+				<view class="label">
+					<text>运动参数监测</text>
+				</view>
+				<view class="demo step_number">
+					<view class="block1 step_number-label">
+						<text>步行：</text>
+					</view>
+					<view class="block2 step_number-value">
+						<text>0步</text>
+					</view>
+				</view>
+				<view class="demo exercise">
+					<view class="block1 exercise-label">
+						<text>锻炼：</text>
+					</view>
+					<view class="block2 exercise-value">
+						<text></text>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="td-food_recommend-wrapper">
+		<view class="tag">
+			<text>饮食推荐</text>
+		</view>
+		<view class="content">
+			<view class="box">
+				<view class="demo">
+          <view class="block1 time">
+            <text>早餐</text>
+          </view>
+          <view class="block2 food">
+            <text>玉米+豆浆+无花果</text>
+          </view>
+        </view>
+				<view class="demo">
+          <view class="block1 time">
+            <text>午餐</text>
+          </view>
+          <view class="block2 food">
+            <text>黑米饭+甜椒+猪血</text>
+          </view>
+        </view>
+				<view class="demo">
+          <view class="block1 time">
+            <text>晚餐</text>
+          </view>
+          <view class="block2 food">
+            <text>黑米粥+莴笋+鹅肝</text>
+          </view>
+        </view>
+				<view class="demo">
+          <view class="block1 time">
+            <text>加餐</text>
+          </view>
+          <view class="block2 food">
+            <text>牛奶+荔枝</text>
+          </view>
+        </view>
+				<view class="icon">
+					<view class="image">
+						<image src="../../images/arrow_orange.svg"></image>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+  <view class="td-history-wrapper">
+    <view class="tag">
+			<text>历史记录</text>
+		</view>
+		<view class="content">
+		</view>
+  </view>
+</view>

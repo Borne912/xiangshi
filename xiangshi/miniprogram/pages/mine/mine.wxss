@@ -148,13 +148,13 @@
 
 .my_inform-wrapper .my_demo-rear{
   margin-right: 26rpx;
-  width: 40rpx;
-  height: 40rpx;
+  width: 48rpx;
+  height: 48rpx;
 }
 
 .my_inform-wrapper .my_demo-rear .arrow-icon{
-  width: 40rpx;
-  height: 40rpx;
+  width: 48rpx;
+  height: 48rpx;
 }
 
 .my_inform-wrapper .evaluate-wrapper{
@@ -184,6 +184,7 @@
 }
 
 .my_inform-wrapper .evaluate-wrapper .bottom-icon image{
+  transform: rotate(90deg); /*图片旋转90度*/
   height: 48rpx;
   width: 48rpx;
 }
@@ -232,13 +233,13 @@
 
 .my_inform-wrapper .order-wrapper .message-wrapper .message-up text{
   color: rgba(0, 0, 0, 1);
-  font-size: 12px;
+  font-size: 24rpx;
   font-family: PingFangSC-regular;
 }
 
 .my_inform-wrapper .order-wrapper .message-wrapper .message-up image{
-  width: 40rpx;
-  height: 40rpx;
+  width: 48rpx;
+  height: 48rpx;
 }
 
 .my_inform-wrapper .order-wrapper .message-wrapper .message-down{

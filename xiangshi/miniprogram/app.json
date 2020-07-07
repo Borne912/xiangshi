@@ -1,6 +1,8 @@
 {
   "pages": [
+    "pages/health/health",
     "pages/mine/mine",
+    "pages/myAgreement/myAgreement",
     "pages/pay/pay",
     "pages/takeout/takeout",
     "pages/comment/comment",
@@ -8,8 +10,7 @@
     "pages/food_details/food_details",
     "pages/food/food",
     "pages/location/location",
-    "pages/health/health",
-     "pages/myService/myService",
+    "pages/myService/myService",
     "pages/myAddress/myAddress"
   ],
   "window": {
