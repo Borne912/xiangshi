@@ -1,1 +1,176 @@
 /* miniprogram/pages/addFood/addFood.wxss */
+.cover{
+  width: 750rpx;
+  height: 1486rpx;
+  line-height: 40rpx;
+  border-radius: 0rpx;
+  background-color: rgba(255, 242, 232, 1);
+  text-align: center;
+  overflow: hidden;
+}
+
+.search{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 18rpx 31rpx 0rpx 31rpx;
+  height: 90rpx;
+}
+
+.search-input{
+  position: absolute;
+  width: 688rpx;
+  height: 74rpx;
+  line-height: 40rpx;
+  border-radius: 20rpx;
+  background-color: rgba(250, 250, 250, 1);
+  text-align: center;
+  box-shadow: 0rpx 4rpx 4rpx 0rpx rgba(0, 0, 0, 0.24);
+  border: 2rpx solid rgba(255, 0, 0, 0);
+  z-index: 0;
+}
+
+.icon1-wrapper{
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.icon2-wrapper{
+  margin-right: 42rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.search-search-image{
+  position: absolute;
+  width: 36rpx;
+  height: 36rpx;
+  z-index: 1;
+  opacity: 0.5399999618530273;
+}
+
+.search-listen-image{
+  position: absolute;
+  width: 30rpx;
+  height: 30rpx;
+  z-index: 1;
+  opacity: 0.5399999618530273;
+}
+
+.complete-bt-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 8rpx 31rpx 0rpx 31rpx;
+  height: 64rpx;
+}
+
+.complete-bt-wrapper .bt-content button{
+  color: rgba(255, 161, 85, 1);
+  font-size: 32rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+
+.dish-wrapper{
+  margin: 16rpx 30rpx 0rpx 32rpx;
+}
+
+.dish-wrapper .dish-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 688rpx;
+  height: 126rpx;
+  line-height: 40rpx;
+  border-radius: 30rpx;
+  text-align: center;
+  border: 2rpx solid rgba(255, 255, 255, 0);
+  background-color: #FFFFFF;
+}
+
+.dish-wrapper .dish-content .content-left{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 14rpx;
+  width: 208rpx;
+  height: 92rpx;
+}
+
+.dish-wrapper .dish-content .content-right{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 30rpx;
+  width: 148rpx;
+  height: 92rpx;
+}
+
+.dish-wrapper .dish-content .content-left .image-wrapper{
+  width: 122rpx;
+  height: 92rpx;
+  border-radius: 20rpx;
+}
+
+.dish-wrapper .dish-content .content-left .image-wrapper image{
+  width: 122rpx;
+  height: 92rpx;
+  border-radius: 20rpx;
+  background-color: #FFA155;
+}
+
+.dish-wrapper .dish-content .content-left .font-wrapper text{
+  color: rgba(77, 63, 63, 0.75);
+  font-size: 32rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+
+.dish-wrapper .dish-content .content-right .font-wrapper text{
+  font-size: 12px;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+
+.dish-wrapper .dish-content .content-right .font-wrapper .font-value{
+  color: rgba(255, 161, 85, 1);
+}
+
+.upload-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 1112rpx;
+  width: 750rpx;
+  height: 92rpx;
+  background-color: #FFFFFF;
+}
+
+.upload-wrapper .upload-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 226rpx;
+  height: 56rpx;
+}
+
+.upload-wrapper .upload-content .content-bt button{
+  width: 54rpx;
+  height: 54rpx;
+}
+
+.upload-wrapper .upload-content .content-font text{
+  color: rgba(77, 63, 63, 1);
+  font-size: 40rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}

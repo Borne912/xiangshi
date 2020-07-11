@@ -1,5 +1,7 @@
 {
-  "pages": [    
+  "pages": [
+    "pages/addFood/addFood",    
+    "pages/food/food",
     "pages/mine/mine",
     "pages/myAgreement/myAgreement",
     "pages/pay/pay",
@@ -7,7 +9,6 @@
     "pages/comment/comment",
     "pages/tangshi_page/tangshi",
     "pages/food_details/food_details",
-    "pages/food/food",
     "pages/location/location",
     "pages/health/health",
     "pages/myService/myService",
