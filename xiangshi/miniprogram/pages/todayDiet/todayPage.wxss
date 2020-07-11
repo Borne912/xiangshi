@@ -1,0 +1,183 @@
+/* miniprogram/pages/todayDiet/todayPage.wxss */
+/* 今日饮食展开页 */
+.bg_6 {
+  background: #FFF2E8;
+  position: fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
+
+.date {
+  margin-top: 20rpx;
+  height: 100rpx;
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: row;
+}
+.today_text {
+  width: 40%;
+  height: 100rpx;
+  line-height: 100rpx;
+  /* background-color: blanchedalmond; */
+}
+.today_real {
+  width: 60%;
+  margin-top: 25rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 250rpx;
+  border-radius: 18rpx;
+  text-align: center;
+  background-color: #FFA155;
+}
+
+.percent {
+  height: 200rpx;
+  margin-top: 20rpx;  
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  margin-bottom: 55rpx;
+  display: flex;
+  flex-direction: row;
+  /* background-color: red; */
+}
+
+.square {
+  width: 50%;
+  /* background-color: red; */
+}
+
+.circle {
+  height: 200rpx;
+  width: 200rpx;
+  margin-left: 78rpx;
+  margin-right: 78rpx;
+  background-color: #FFA155;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+}
+/* 圈里的文字 */
+.circle_text {
+  position: relative;
+  left: 60rpx;
+  width: 40%;
+  margin-top: 60rpx;
+  font-size: 40rpx;
+  /* background-color: blue; */
+}
+/* 下一行 */
+.circle_other {
+  position: relative;
+  left: 80rpx;
+  width: 20%;
+  font-size: 26rpx;
+  /* background-color: blue; */
+}
+
+/* 今日饮食 */
+.main {
+  height: 830rpx;
+  /* margin-top: -27rpx; */
+  margin-left: 27rpx;
+  margin-right: 27rpx;
+  background: white;
+  border-radius: 30rpx;
+}
+.pre {
+  width: 150rpx;
+  height: 55rpx;
+  position: relative;
+  top: -25rpx;
+  line-height: 55rpx;
+  text-align: center;
+  border-radius: 20rpx;
+  background: #FFA155;
+}
+/* head */
+.head {
+  display: flex;
+  color: #FFA177;
+  flex-direction: row;
+  margin-left: 40rpx;
+  margin-right: 25rpx;
+  font-size: 27rpx;
+  /* width: 100rpx; */
+  /* background: red; */
+}
+/* 营养信息框 */
+.inform { 
+  height: 150rpx;
+  margin-top: 24rpx;
+  background: #FFE6D2;
+  margin-left: 27rpx;
+  margin-right: 27rpx;
+  border-radius: 30rpx;
+}
+/* 上半区 */
+.up {
+  height: 75rpx;
+  display: flex;
+  margin-left: 27rpx;
+  margin-right: 27rpx;
+  line-height: 75rpx;
+  flex-direction: row;
+  /* background: red; */
+}
+
+.upleft {
+  font-size: 35rpx;
+  color: #FFA177;
+  width: 100rpx;
+  /* background: red; */
+}
+
+.upmid {
+  font-size: 25rpx;
+  /* background: blue; */
+  width: 440rpx;
+}
+
+.upright {
+  height: 45rpx;
+  width: 45rpx;
+  margin-top: 18rpx;
+  background: #FFE6D2;
+
+}
+/* 下半区 */
+.down {
+  font-size: 23rpx;
+  height: 75rpx;
+  line-height: 75rpx;
+  display: flex;
+  flex-direction: row;
+  margin-left: 20rpx;
+  /* margin-right: 27rpx; */
+  /* background: green; */
+}
+.each {
+  display: flex;
+  flex-direction: row;
+  /* background: magenta; */
+  /* margin-right: 40rpx; */
+  height: 50rpx;
+  line-height: 50rpx;
+}
+/* 带边框 */
+.withborder {
+  border:3rpx solid #FFA155;
+  border-radius: 20rpx;
+  padding-left: 8rpx;
+  padding-right: 8rpx;
+  text-align: center;
+  margin-right: 5rpx;
+}
+/* 不带边框 */
+.without {
+  margin-top: 3rpx;
+  margin-right: 20rpx;
+}

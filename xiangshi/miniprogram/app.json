@@ -1,7 +1,5 @@
 {
-  "pages": [
-    "pages/addFood/addFood",
-    "pages/health/health",
+  "pages": [    
     "pages/mine/mine",
     "pages/myAgreement/myAgreement",
     "pages/pay/pay",
@@ -11,8 +9,11 @@
     "pages/food_details/food_details",
     "pages/food/food",
     "pages/location/location",
+    "pages/health/health",
     "pages/myService/myService",
-    "pages/myAddress/myAddress"
+    "pages/myAddress/myAddress",
+    "pages/recDiet/recDiet",
+    "pages/todayDiet/todayPage"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
