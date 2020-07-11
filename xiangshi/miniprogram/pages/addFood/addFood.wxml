@@ -1,0 +1,46 @@
+<!--miniprogram/pages/addFood/addFood.wxml-->
+<view class="cover">
+	<view class="search">
+		<input class="search-input">
+		</input>
+		<view class="icon1-wrapper">
+			<image src="../../images/search.svg" class="search-search-image"></image>
+		</view>
+		<view class="icon2-wrapper">
+			<image src="../../images/microphone.svg" class="search-listen-image"></image>
+		</view>
+	</view>
+  <view class="complete-bt-wrapper">
+    <view class="bt-content">
+      <button>完成</button>
+    </view>
+  </view>
+  <view class="dish-wrapper">
+    <view class="dish-content">
+      <view class="content-left">
+        <view class="image-wrapper">
+          <image></image>
+        </view>
+        <view class="font-wrapper">
+          <text>米饭</text>
+        </view>
+      </view>
+      <view class="content-right">
+        <view class="font-wrapper">
+          <text class="font-value">116</text>
+          <text class="font-unit">千卡/100g</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="upload-wrapper">
+    <view class="upload-content">
+      <view class="content-bt">
+        <button style="background-image: url(../../../../images/camera.svg);"></button>
+      </view>
+      <view class="content-font">
+        <text>拍照记录</text>
+      </view>
+    </view>
+  </view>
+</view>

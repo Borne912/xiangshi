@@ -16,8 +16,8 @@
 		<view class="search">
 			<input class="search-input">
 			</input>
-			<image src="../../images/search.png" class="search-search-image"></image>
-			<image src="../../images/listening.png" class="search-listen-image"></image>
+			<image src="../../images/search.svg" class="search-search-image"></image>
+			<image src="../../images/microphone.svg" class="search-listen-image"></image>
 		</view>
 		<view class="font_recommend">
 			<view class="fr fr1">{{font_recommend[0].name}}</view>
