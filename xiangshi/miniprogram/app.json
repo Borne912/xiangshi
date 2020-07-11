@@ -1,5 +1,6 @@
 {
   "pages": [    
+    "pages/health/health",
     "pages/mine/mine",
     "pages/myAgreement/myAgreement",
     "pages/pay/pay",
@@ -9,7 +10,7 @@
     "pages/food_details/food_details",
     "pages/food/food",
     "pages/location/location",
-    "pages/health/health",
+    
     "pages/myService/myService",
     "pages/myAddress/myAddress",
     "pages/recDiet/recDiet",
