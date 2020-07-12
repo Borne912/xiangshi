@@ -14,18 +14,19 @@
 <view class="speed">
   <!-- wx:for-index="key"  -->
   <!-- 经由一个行循环(3行)+一个列循环(4列) -->
-  <view  wx:for="{{3}}" wx:for-index="i" class="everyrow">
+  <view  wx:for="{{2}}" wx:for-index="i" class="everyrow">
     <view wx:for="{{4}}" wx:for-index="j" class="row-cols">
      <view class='{{cnts[4*i+j]<5?"quick":cnts[4*i+j]<10?"mid":"slow"}}'>
       {{4*i+j+1}}</view>
     </view>
   </view> 
-  <!-- <view  wx:for="{{windows}}" wx:for-index="i" class="everyrow">
-    <view wx:for="{{item.cnt}}" wx:for-index="j" class="row-cols">
-     <view class='{{item<5?"quick":item<10?"mid":"slow"}}'>
-      {{4*i+j+1}}</view>
+  <!-- 最后一行只有两个 -->
+   <view  wx:for="{{1}}" wx:for-index="i" class="everyrow">
+    <view wx:for="{{2}}" wx:for-index="j" class="row-cols">
+     <view class='{{cnts[9+j]<5?"quick":cnts[9+j]<10?"mid":"slow"}}'>
+      {{9+j}}</view>
     </view>
-  </view>   -->
+  </view> 
 </view>
 <!-- 一行3个按钮 -->
 <view class="buttons_cols">
@@ -46,7 +47,7 @@
       <scroll-view scroll-y style="height:{{height}}rpx">
        <!-- <view wx:for='{{url_Img}}' class="every_dish">
         <image class="img" src="{{url_Head+item}}"  mode="scaleToFill"></image> -->
-        <view bindtap="food_Jump" wx:for='{{dishes_List}}' class="every_dish">
+        <view bindtap="food_Jump" wx:for='{{dishes_List}}' data-id="{{item.name}}" wx:for-index='i' class="every_dish">
           <image class="img" src="{{item.imgurl}}"  mode="scaleToFill"></image>
           <!-- 介绍部分 -->
           <view class="intro">
@@ -56,9 +57,9 @@
             <view style="flex-direction: row;display:flex;">  
               <view class="price_left">{{item.price}} 元/个</view>
               <view class="ying_right">
-                <view>碳水: {{item.tanshui}}g</view>
-                <view>蛋白: {{item.danbai}}g</view>
-                <view>脂肪: {{item.zhifang}}g</view>
+                <view>碳水: {{item.tanshui}}</view>
+                <view>蛋白: {{item.danbai}}</view>
+                <view>脂肪: {{item.zhifang}}</view>
               </view>
             </view>
           </view>

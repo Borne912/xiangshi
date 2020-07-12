@@ -11,7 +11,7 @@ Page({
    */
   data: {
     // 窗口排队人数(1-12窗口)
-    cnts: [8,3,4,5,2,10,4,11,3,4,5],
+    cnts: [8,3,4,5,2,10,4,11,3],
     // 3个按钮(列)
     window_id: 1,
     buttons_cols: [{id: 1, name: '综合排序'},
@@ -25,11 +25,11 @@ Page({
     // 调取云存储的图片(头+图片名(存储在数据库))
     // 前缀+地点+楼层+窗口+菜名(舍弃方案)
     url_Pre: 'cloud://xiangshi-yqpne.7869-xiangshi-yqpne-1302514195/image/',
-    loc: 'hongbo/',
-    floor: 'first_floor/',
-    win: 'window_',
-    id: 1 ,
-    url_Head: "",
+    // loc: 'hongbo/',
+    // floor: 'first_floor/',
+    // win: 'window_',
+    // id: 1 ,
+    // url_Head: "",
     url_Img: ["蒜蓉生蚝.jpg",'酥肉炸鱼.jpg','水煮鱼.jpg','卤虾.jpg',
               '烤虾.jpg','大头鱼.jpg','鱿鱼圈.jpg'],
     // 菜品集合信息(名称+地点+楼层+窗口+图片地址+类型+月售+赞+价格+碳水+蛋白+脂肪)
@@ -37,6 +37,8 @@ Page({
   },
   getData: function (e) {
     var that = this;
+    var app = getApp();
+
     db_windows.get({     
       success(res){
         console.log(res.data)
@@ -47,6 +49,9 @@ Page({
     })
     // 菜品数据库调取数据
     db_dishes.where({
+      //窗口信息
+      loc: app.globalData.location,
+      floor:app.globalData.floor,
       window : that.data.window_id
     }).get({     
       success(res){
@@ -92,10 +97,13 @@ Page({
   },
   Buttons_rowsTap : function (e){
     let id = e.currentTarget.dataset.id
+    let app = getApp()
     console.log(id)
     let that = this
     db_dishes.where({
       // 转int
+      loc: app.globalData.location,
+      floor:app.globalData.floor,
       window : parseInt(id)
     }).get({     
       success(res){
@@ -122,8 +130,14 @@ Page({
 
   },
   food_Jump: function(e) {
+    let app = getApp()
+   
+    let id = e.currentTarget.dataset.id
+    app.globalData.curDish = id
+    console.log(id)
     wx.navigateTo({
       //目的页面地址
+      
       url: '../food_details/food_details',
       success: function(res){
         console.log("跳转成功")

@@ -15,15 +15,18 @@
   height: 305rpx;
 }
 .head {
-  height: 320rpx;
+  /* height: 320rpx; */
+  height: auto;
   margin-top: 10rpx;
   margin-left: 30rpx;
   margin-right: 30rpx; 
-  /* background-color: red; */
+
+  /* background-color: yellowgreen; */
 }
 
 .btn {
   background:#FFA155;
+  /* background:yellowgreen; */
   border-radius:20rpx;
   position: relative;
   height:70rpx;
@@ -35,7 +38,8 @@
 }
 
 .main_content {
-  margin-top: 10rpx;
+  /* background-color: red; */
+  margin-top: 0rpx;
   margin-left: 30rpx;
   margin-right: 30rpx; 
   margin-bottom: 20rpx;
