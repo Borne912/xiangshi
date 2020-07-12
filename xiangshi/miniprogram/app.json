@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/addFood/addFood",    
     "pages/food/food",
     "pages/mine/mine",
+    "pages/addFood/addFood",    
     "pages/myAgreement/myAgreement",
     "pages/pay/pay",
     "pages/takeout/takeout",

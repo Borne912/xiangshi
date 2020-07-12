@@ -32,14 +32,12 @@
   align-items: center;
   left: 30rpx;
   top: 42rpx;
-  width: 180rpx;
+  /* width: 180rpx; */
   height: 56rpx;
   margin-top: 12rpx;
 }
 
 .navigt-font{
-  width: 120rpx;
-  height: 56rpx;
   color: rgba(255, 242, 232, 1);
   font-size: 40rpx;
   text-align: left;

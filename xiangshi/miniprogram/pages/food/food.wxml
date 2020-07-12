@@ -7,7 +7,7 @@
 					<image src="../../images/location.png" class="navigt-image"></image>
 				</view>
 				<view>
-					<text class="navigt-font">鸿博园</text>
+					<text class="navigt-font">{{location}}</text>
 				</view>
 			</view>
 		</navigator>
