@@ -28,19 +28,19 @@
 		<view class="catalog">
 			<view class="ctl-elem ctl-font font1">堂食</view>
 			<view class="ctl-elem ctl-font font2">打包</view>
-			<view class="ctl-elem elem1">
+			<view class="ctl-elem elem1" bindtap="selectFloor" data-id="1">
 				<image class="ctl-image" src="../../images/first_floor.png"></image>
 				<text class="image-font">一层</text>
 			</view>
-			<view class="ctl-elem elem2">
+			<view class="ctl-elem elem2" bindtap="selectFloor" data-id="2">
 				<image class="ctl-image" src="../../images/second_floor.png"></image>
 				<text class="image-font">二层</text>
 			</view>
-			<view class="ctl-elem elem3">
+			<view class="ctl-elem elem3" bindtap="selectFloor" data-id="3">
 				<image class="ctl-image" src="../../images/third_floor.png"></image>
 				<text class="image-font">三层</text>
 			</view>
-			<view class="ctl-elem elem4">
+			<view class="ctl-elem elem4" bindtap="selectFloor" data-id="4">
 				<image class="ctl-image" src="../../images/fourth_floor.png"></image>
 				<text class="image-font">四层</text>
 			</view>

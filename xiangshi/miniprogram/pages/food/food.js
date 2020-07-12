@@ -31,7 +31,6 @@ Page({
         }
       })
     },
-    
     onShow: function() {
       // 页面出现在前台时执行
       var that =this;
@@ -41,4 +40,17 @@ Page({
       })
       //console.log(that.data.location)
     },
+    selectFloor: function (e) {
+      let id = e.currentTarget.dataset.id
+      let app = getApp()
+      app.globalData.floor = parseInt(id)
+      console.log(typeof(app.globalData.floor))
+      wx.navigateTo({
+        //目的页面地址        
+        url: '../tangshi_page/tangshi',
+        success: function(res){
+          console.log("跳转成功")
+        },
+      })    
+    }
 })
