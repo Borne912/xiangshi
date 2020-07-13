@@ -1,11 +1,11 @@
 <!--miniprogram/pages/food_details/food_details.wxml-->
 <view class="bg_3"></view>
-<image class="img" src="{{cur[0].imgurl}}" mode="aspectFit"></image>
+<image class="img" src="{{cur.imgurl}}" mode="aspectFit"></image>
 <!-- 食物介绍 -->
 <view class="head">
 <view style="color:#FFA155;font-size:35rpx;margin-bottom:10rpx;">菜名: 
-{{cur[0].name}}</view>
-<view style="font-size:28rpx">{{cur[0].introduction}}</view>
+{{cur.name}}</view>
+<view style="font-size:28rpx">{{cur.introduction}}</view>
 <button class="btn" bindtap="addData">添加到饮食记录</button>
 </view>
 
@@ -17,11 +17,11 @@
      <text class="font_highlight">(每100克可食用部分)</text>
     </view>
     <view class="font_normal">
-      <view>热量<text class="right_block">{{cur[0].re}}</text></view>
-      <view>碳水化合物<text class="right_block">{{cur[0].tanshui}}</text></view>
-      <view class="font_highlight">膳食纤维<text class="right_block">{{cur[0].xianwei}}</text></view>
-      <view>蛋白质<text class="right_block">{{cur[0].danbai}}</text></view>
-      <view>脂肪<text class="right_block">{{cur[0].zhifang}}</text></view>
+      <view>热量<text class="right_block">{{ying.re}}</text></view>
+      <view>碳水化合物<text class="right_block">{{ying.tanshui}}</text></view>
+      <view class="font_highlight">膳食纤维<text class="right_block">{{ying.xianwei}}</text></view>
+      <view>蛋白质<text class="right_block">{{ying.danbai}}</text></view>
+      <view>脂肪<text class="right_block">{{ying.zhifang}}</text></view>
       <view class="font_highlight">饱和脂肪酸</view>
       <view class="font_highlight">不饱和脂肪酸</view>
       <view class="font_highlight">胆固醇</view>
@@ -32,43 +32,17 @@
   <!-- 第2部分: 矿物质 -->
   <view class="part2">
     <view class="font_main">矿物质:</view>
-    <!-- <view wx:for="{{metal_names}}" wx:for-index="i" class="font_normal">
-     {{item}}<text class="right_block">{{metal_datas[i]}}毫克</text>
-    </view> -->
-    <!-- 屈服于循环, 直接写6遍 -->
-    <view class="font_normal">
-     {{metal_names[0]}}<text class="right_block">{{cur[0].Ca}}</text>
+    <view wx:for="{{metal_datas}}" wx:for-index="i" class="font_normal">
+     {{metal_names[i]}}<text class="right_block">{{item}}</text>
     </view>
-    <view class="font_normal">
-     {{metal_names[1]}}<text class="right_block">{{cur[0].Na}}</text>
-    </view>
-    <view class="font_normal">
-     {{metal_names[2]}}<text class="right_block">{{cur[0].Fe}}</text>
-    </view>
-    <view class="font_normal">
-     {{metal_names[3]}}<text class="right_block">{{cur[0].Mg}}</text>
-    </view>
-    <view class="font_normal">
-     {{metal_names[4]}}<text class="right_block">{{cur[0].Zn}}</text>
-    </view>
-    <view class="font_normal">
-     {{metal_names[5]}}<text class="right_block">{{cur[0].Ca}}</text>
-    </view>
-    <!-- -->
     <view class="border_set"></view>
   </view>
   <!-- 第3部分: 维生素 -->
   <view class="part3">
     <view class="font_main">维生素:</view>
-     <!-- <view wx:for="{{vitamin_names}}" wx:for-index="i" class="font_normal">
-     维生素{{item}}<text class="right_block">{{vitamin_datas[i]}}毫克</text>
-     </view> -->
-     <view class="font_normal">维生素{{vitamin_names[0]}}<text class="right_block">{{cur[0].VA}}</text></view>
-    <view class="font_normal">维生素{{vitamin_names[1]}}<text class="right_block">{{cur[0].VB1}}</text></view>
-    <view class="font_normal">维生素{{vitamin_names[2]}}<text class="right_block">{{cur[0].VB2}}</text></view>
-    <view class="font_normal">维生素{{vitamin_names[3]}}<text class="right_block">{{cur[0].VB3}}</text></view>
-    <view class="font_normal">维生素{{vitamin_names[4]}}<text class="right_block">{{cur[0].VC}}</text></view>
-    <view class="font_normal">维生素{{vitamin_names[5]}}<text class="right_block">{{cur[0].VE}}</text></view>
+     <view wx:for="{{vitamin_datas}}" wx:for-index="i" class="font_normal">
+     维生素{{vitamin_names[i]}}<text class="right_block">{{item}}</text>
+     </view>
   </view>
 </view>
 <!-- 用餐评价 -->

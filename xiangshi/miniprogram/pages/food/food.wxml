@@ -7,7 +7,7 @@
 					<image src="../../images/location.png" class="navigt-image"></image>
 				</view>
 				<view>
-					<text class="navigt-font">鸿博园</text>
+					<text class="navigt-font">{{loc}}</text>
 				</view>
 			</view>
 		</navigator>
@@ -193,18 +193,19 @@
 				</scroll-view>
 			</view>
 		</view>
+		<!-- 这一部分应该改成3个窗口循环(有函数以及数据库信息(2020.7.13)) -->
 		<view class="star-windows">
 			<view class="star-tag">
 				<text class="star-tag-font">明星窗口</text>
 			</view>
-			<view class="star-item item1">
+			<view class="star-item item1" bindtap="selectStarsWindow" data-id="9">
 				<view class="star-item-content1">
 					<image class="star-item-image"></image>
 				</view>
 				<view class="star-item-content2">
 					<view class="star-item-font1">
 						<view class="font1-left_content">
-							<view class="left_content-name">一层一号窗口</view>
+							<view class="left_content-name">{{floor[stars[0].floor]}}层{{window[stars[0].window]}}号窗口</view>
 							<view class="left_content-inform">
 								<image class="inform-image" src="../../images/star.png"></image>
 								<text class="inform-grade">4.9</text>
