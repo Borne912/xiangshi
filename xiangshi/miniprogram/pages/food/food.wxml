@@ -8,6 +8,7 @@
 				</view>
 				<view>
 					<text class="navigt-font">{{loc}}</text>
+					<!-- <text class="navigt-font">{{location}}</text> -->
 				</view>
 			</view>
 		</navigator>

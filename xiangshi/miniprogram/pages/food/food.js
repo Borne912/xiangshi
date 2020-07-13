@@ -1,5 +1,6 @@
 // miniprogram/pages/food/food.js
 const db = wx.cloud.database()
+const app = getApp()
 var tmp
 Page({
     data:{
@@ -12,10 +13,14 @@ Page({
       stars:[]
       // toView:"green"
     },
+    // onLoad(){
+    //   var that = this
+    //   var app = getApp()
+    //   location:"万秀园",
+    // },
     onLoad(){
-      var that = this;
-      var app = getApp()
-      
+      // 页面创建时执行
+      var that = this; 
       db.collection("font_recommend").get({
         success(res){
           //console.log("查询数据成功",res)
@@ -59,7 +64,15 @@ Page({
         }
       })
     },
-
+    onShow: function() {
+      // 页面出现在前台时执行
+      var that =this;
+      //console.log(app.globalData.location)
+      that.setData({
+        location: app.globalData.location
+      })
+      //console.log(that.data.location)
+    },
     selectFloor: function (e) {
       let id = e.currentTarget.dataset.id
       let app = getApp()
@@ -82,5 +95,4 @@ Page({
       console.log(id)
       
     }
-
 })
