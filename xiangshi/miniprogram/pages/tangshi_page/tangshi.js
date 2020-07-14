@@ -33,7 +33,8 @@ Page({
     url_Img: ["蒜蓉生蚝.jpg",'酥肉炸鱼.jpg','水煮鱼.jpg','卤虾.jpg',
               '烤虾.jpg','大头鱼.jpg','鱿鱼圈.jpg'],
     // 菜品集合信息(名称+地点+楼层+窗口+图片地址+类型+月售+赞+价格+碳水+蛋白+脂肪)
-    dishes_List:[]
+    dishes_List:[],
+    yingyang:[]
   },
   getData: function (e) {
     var that = this;
@@ -57,7 +58,7 @@ Page({
       success(res){
         console.log(res.data)
         that.setData({
-          dishes_List: res.data     
+          dishes_List: res.data,
         })
       }
     })
