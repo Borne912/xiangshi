@@ -76,7 +76,7 @@
   position: absolute;
   top: 180rpx;
   left: 20rpx;
-  width: 300rpx;
+  /* width: 300rpx; */
   margin-top: 20rpx;
   height: 40rpx;
   text-align: left;

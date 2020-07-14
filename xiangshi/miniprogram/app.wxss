@@ -17,3 +17,7 @@ button:focus{
 button::after{
   border: none;
 }
+
+page{
+  background-color: #FFF2E8;
+}

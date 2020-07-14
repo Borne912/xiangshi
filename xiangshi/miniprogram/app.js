@@ -11,10 +11,20 @@ App({
     // 当前选中菜名
     curDish: '',
 
+    /*用户信息*/
+    nickName: '', //用户名
+
+    avatarUrl: '', //用户头像图片地址
+
+    tel: '', //用户手机号码
+
+    openid: '', //用户的唯一标识码
+    
   },
   onLaunch: function () {
   wx.cloud.init({
-    env:"xiangshi-yqpne"
+    env:"xiangshi-yqpne",
+    traceUser: true
   })
 },
 })

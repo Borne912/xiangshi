@@ -4,14 +4,14 @@
 		<view class="bk-color"></view>
 		<view class="visiting_card-content">
 			<view class="username">
-				<text>享食每一天</text>
+				<text>{{nickName}}</text>
 			</view>
 			<view class="tel">
-				<text>18811518026</text>
+				<text>{{tel}}</text>
 				<button>修改</button>
 			</view>
 		</view>
-		<image class="head_portrait"></image>
+		<image class="head_portrait" src="{{avatarUrl}}"></image>
 	</view>
 	<view class="my_inform-wrapper">
 		<view class="my_demo bill-wrapper">

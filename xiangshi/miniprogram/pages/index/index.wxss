@@ -1,0 +1,136 @@
+/* miniprogram/pages/index/index.wxss */
+.user-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 260rpx;
+  width: 750rpx;
+  height: 248rpx;
+}
+
+.user-wrapper .user-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* width: 200rpx; */
+  height: 248rpx;
+}
+
+.user-wrapper .user-content .WeChatHead-wrapper{
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.user-wrapper .user-content .WeChatHead-wrapper image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  background-color: #FFA155;
+}
+
+.user-wrapper .user-content .nickName-wrapper
+ text
+{
+  color: rgba(189, 182, 182, 1);
+  font-size: 32rpx;
+  text-align: center;
+  font-family: PingFangSC-regular;
+}
+
+.WeChatApp_name-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24rpx;
+  width: 750rpx;
+  height: 80rpx;
+}
+
+.WeChatApp_name-wrapper .WeChatApp_name-content text{
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 28px;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+
+.apply_hint-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 36rpx;
+  width: 750rpx;
+  height: 44rpx;
+}
+
+.apply_hint-wrapper .apply_hint-content text{
+  color: rgba(189, 182, 182, 0.75);
+  font-size: 32rpx;
+  text-align: center;
+  font-family: PingFangSC-regular;
+}
+
+.mandate-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50rpx;
+  width: 750rpx;
+  height: 100rpx;
+}
+
+.mandate-wrapper .mandate-content button{
+  width: 494rpx;
+  height: 100rpx;
+  background-color: #FFA155;
+  line-height: 100rpx;
+  border-radius: 20rpx;
+  text-align: center;
+  border: 2rpx solid rgba(255, 255, 255, 0);
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 40rpx;
+  text-align: center;
+  font-family: PingFangSC-regular;
+}
+
+.model_logon-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24rpx;
+  width: 750rpx;
+  height: 40rpx;
+}
+
+.model_logon-wrapper .model_logon-content text{
+  color: rgba(45, 89, 138, 1);
+  font-size: 28rpx;
+  text-align: center;
+  font-family: PingFangSC-regular;
+}
+
+.login_hint-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 750rpx;
+  height: 40rpx;
+  margin-top: 200rpx;
+}
+
+.login_hint-wrapper .login_hint-content text{
+  color: rgba(189, 182, 182, 1);
+  font-size: 28rpx;
+  text-align: center;
+  font-family: PingFangSC-regular;
+} 
+
+.login_hint-wrapper .login_hint-content .agreement{
+  color: #FFC495;
+}

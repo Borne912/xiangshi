@@ -1,11 +1,17 @@
 // miniprogram/pages/mine/mine.js
+const app = getApp()
+const db = wx.cloud.database()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    nickName: '', //用户名
 
+    avatarUrl: '', //用户头像图片地址
+
+    tel: '请添加电话号码', //用户手机号码
   },
 
   /**
@@ -26,7 +32,18 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that = this;
+    db.collection('UsersInfo').where({
+      _openid: app.globalData.openid
+    })
+    .get({
+      success: function(res){
+        that.setData({
+          nickName: res.data[0].nickName,
+          avatarUrl: res.data[0].avatarUrl
+        })
+      }
+    })
   },
 
   /**

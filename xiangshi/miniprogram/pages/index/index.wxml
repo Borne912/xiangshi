@@ -1,0 +1,42 @@
+<!--miniprogram/pages/index/index.wxml-->
+<view class="cover">
+	<view class="user-wrapper">
+		<view class="user-content">
+			<view class="WeChatHead-wrapper">
+				<image src="{{avatarUrl}}"></image>
+			</view>
+			<view class="nickName-wrapper">
+				<text>{{nickName}}</text>
+			</view>
+		</view>
+	</view>
+	<view class="WeChatApp_name-wrapper">
+		<view class="WeChatApp_name-content">
+			<text>享食</text>
+		</view>
+	</view>
+	<view class="apply_hint-wrapper">
+		<view class="apply_hint-content">
+			<text>申请获取你的公开信息（昵称、头像等）</text>
+		</view>
+	</view>
+	<view class="mandate-wrapper">
+		<view class="mandate-content">
+			<button bindtap="userLogin" open-type="getUserInfo">微信授权</button>
+		</view>
+	</view>
+	<view class="model_logon-wrapper">
+		<view class="model_logon-content">
+			<navigator url="../index1/index1">
+				<text>手机号码登录/注册</text>
+			</navigator>
+		</view>
+	</view>
+	<view class="login_hint-wrapper">
+		<view class="login_hint-content">
+			<text>登录代表您已经同意享食</text>
+			<text class="agreement">用户服务协议、</text>
+			<text class="agreement">隐私政策</text>
+		</view>
+	</view>
+</view>
