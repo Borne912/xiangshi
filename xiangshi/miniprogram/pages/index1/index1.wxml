@@ -1,0 +1,51 @@
+<view class="cover">
+	<view class="user-wrapper">
+		<view class="user-content">
+			<view class="WeChatHead-wrapper">
+				<image src="../../images/xiangshi_logo.png"></image>
+			</view>
+			<view class="nickName-wrapper">
+				<text>欢迎您使用</text>
+			</view>
+		</view>
+	</view>
+	<view class="WeChatApp_name-wrapper">
+		<view class="WeChatApp_name-content">
+			<text>享食</text>
+		</view>
+	</view>
+	<view class="tel_login-wrapper">
+		<view class="tel_login-content">
+			<view class="block tel_input-wrapper">
+				<view>
+					<input class="tel_input" value="请输入手机号码"></input>
+				</view>
+				<view>
+					<button class="get_verify">获取验证码</button>
+				</view>
+			</view>
+			<view class="block verify_input-wrapper">
+				<input class="verify_input" value="请输入验证码"></input>
+			</view>
+		</view>
+	</view>
+	<view class="mandate-wrapper">
+		<view class="mandate-content">
+			<button>登录</button>
+		</view>
+	</view>
+	<view class="model_logon-wrapper">
+		<view class="model_logon-content">
+			<navigator url="../index/index">
+				<text>微信登录/注册</text>
+			</navigator>
+		</view>
+	</view>
+	<view class="login_hint-wrapper">
+		<view class="login_hint-content">
+			<text>登录代表您已经同意享食</text>
+			<text class="agreement">用户服务协议、</text>
+			<text class="agreement">隐私政策</text>
+		</view>
+	</view>
+</view>
