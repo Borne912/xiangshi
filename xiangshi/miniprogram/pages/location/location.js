@@ -52,6 +52,10 @@ Page({
     var app = getApp();
     // 全局遍历location
     app.globalData.location = this.data.curLocation
+    var pages = getCurrentPages();
+    var beforePage = pages[pages.length - 2];
+    // 调用列表页的获取数据函数
+    beforePage.onLoad();
     console.log(app.globalData.location)
     wx.switchTab({ url: '../food/food' })
     console.log('success')
