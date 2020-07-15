@@ -71,15 +71,16 @@
 						<text class="rw-elem-tag-font">明星菜品</text>
 					</view>
 					<view class="rw-elem-elem">
-						<view class="rw-elem-image-div elem-image1" wx:for="{{1}}">
+						<!-- 明星菜品 -->
+						<view class="rw-elem-image-div elem-image1">
 							<image class="rw-elem-image" src="{{stars_dishes[0].imgurl}}"></image>
 							<view class="rw-elem-image-font1">{{stars_dishes[0].name}}</view>
 							<view class="rw-elem-image-font2">¥{{stars_dishes[0].price}}</view>
 						</view>
 						<view class="rw-elem-image-div elem-image2">
-							<image class="rw-elem-image" src="../../images/15291593489166_.pic_hd.jpg"></image>
-							<view class="rw-elem-image-font1">丝瓜炖豆腐</view>
-							<view class="rw-elem-image-font2">¥8</view>
+							<image class="rw-elem-image" src="{{stars_dishes[1].imgurl}}"></image>
+							<view class="rw-elem-image-font1">{{stars_dishes[1].name}}</view>
+							<view class="rw-elem-image-font2">¥{{stars_dishes[1].price}}</view>
 						</view>
 					</view>
 				</view>
@@ -88,15 +89,16 @@
 						<text class="rw-elem-tag-font">超值特惠</text>
 					</view>
 					<view class="rw-elem-elem">
+						<!-- 超值特惠 -->
 						<view class="rw-elem-image-div elem-image1">
-							<image class="rw-elem-image" src="../../images/16861593521653_.pic_hd.jpg"></image>
-							<view class="rw-elem-image-font1">酱烧虾</view>
-							<view class="rw-elem-image-font2">¥6</view>
+							<image class="rw-elem-image" src="{{chaozhi_dishes[0].imgurl}}"></image>
+							<view class="rw-elem-image-font1">{{chaozhi_dishes[0].name}}</view>
+							<view class="rw-elem-image-font2">¥{{chaozhi_dishes[0].price}}</view>
 						</view>
 						<view class="rw-elem-image-div elem-image2">
-							<image class="rw-elem-image" src="../../images/15291593489166_.pic_hd.jpg"></image>
-							<view class="rw-elem-image-font1">丝瓜炖豆腐</view>
-							<view class="rw-elem-image-font2">¥8</view>
+							<image class="rw-elem-image" src="{{chaozhi_dishes[1].imgurl}}"></image>
+							<view class="rw-elem-image-font1">{{chaozhi_dishes[1].name}}</view>
+							<view class="rw-elem-image-font2">¥{{chaozhi_dishes[1].price}}</view>
 						</view>
 					</view>
 				</view>
@@ -105,15 +107,16 @@
 						<text class="rw-elem-tag-font">新上菜品</text>
 					</view>
 					<view class="rw-elem-elem">
-						<view class="rw-elem-image-div elem-image1">
-							<image class="rw-elem-image" src="../../images/16861593521653_.pic_hd.jpg"></image>
-							<view class="rw-elem-image-font1">酱烧虾</view>
-							<view class="rw-elem-image-font2">¥6</view>
+						<!-- 新上菜品 -->
+							<view class="rw-elem-image-div elem-image1">
+							<image class="rw-elem-image" src="{{new_dishes[0].imgurl}}"></image>
+							<view class="rw-elem-image-font1">{{new_dishes[0].name}}</view>
+							<view class="rw-elem-image-font2">¥{{new_dishes[0].price}}</view>
 						</view>
 						<view class="rw-elem-image-div elem-image2">
-							<image class="rw-elem-image" src="../../images/15291593489166_.pic_hd.jpg"></image>
-							<view class="rw-elem-image-font1">丝瓜炖豆腐</view>
-							<view class="rw-elem-image-font2">¥8</view>
+							<image class="rw-elem-image" src="{{new_dishes[1].imgurl}}"></image>
+							<view class="rw-elem-image-font1">{{new_dishes[1].name}}</view>
+							<view class="rw-elem-image-font2">¥{{new_dishes[1].price}}</view>
 						</view>
 					</view>
 				</view>
