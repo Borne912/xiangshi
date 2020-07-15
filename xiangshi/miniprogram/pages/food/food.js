@@ -16,6 +16,7 @@ Page({
       new_dishes : [],
       // 本周推荐窗口(就1个)
       week_window: [],
+      week_dishes:[],
       // 明星推荐窗口(3个)
       stars_windows:[],
       // toView:"green"
@@ -91,8 +92,22 @@ Page({
       }).get({
         success(res){
           console.log(res.data)
+          var tf = res.data[0].floor
+          var tw = res.data[0].window
+          db.collection("dishes").where({
+            loc: app.globalData.location,
+            floor: tf,
+            window: tw
+          }).get({
+            success(res){
+              console.log(res.data)
+              that.setData({
+                week_dishes: res.data
+              })
+            }
+          })
           that.setData({
-            week_window : res.data
+            week_window : res.data[0]
           })
         }
       })
@@ -155,7 +170,7 @@ Page({
       let that = this
       console.log(id)
       wx.navigateTo({
-        url: '../window/window',
+        url: '../window/window', 
         success: function(res){
           console.log("跳转成功")
         },

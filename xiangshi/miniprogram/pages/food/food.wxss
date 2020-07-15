@@ -267,6 +267,7 @@
 
 .rolling_window .rw-elem-image-div{
   position: absolute;
+  /* position: relative; */
   width: 194rpx;
   height: 248rpx;
 }
@@ -477,6 +478,8 @@
   text-align: center;
   border: 2rpx solid rgba(255, 255, 255, 0);
   background-color: #FFFFFF;
+/* background-color: red; */
+  margin-bottom: 25rpx;
 }
 
 .star-windows .item2,

@@ -71,7 +71,7 @@
 						<text class="rw-elem-tag-font">明星菜品</text>
 					</view>
 					<view class="rw-elem-elem">
-						<view class="rw-elem-image-div elem-image1">
+						<view class="rw-elem-image-div elem-image1" wx:for="{{1}}">
 							<image class="rw-elem-image" src="{{stars_dishes[0].imgurl}}"></image>
 							<view class="rw-elem-image-font1">{{stars_dishes[0].name}}</view>
 							<view class="rw-elem-image-font2">¥{{stars_dishes[0].price}}</view>
@@ -121,26 +121,36 @@
 		</view>
 		<!-- 本周推荐 -->
 		<view class="week-recommend">
-			<view bindtap="selectWindow" data-id="{{week_window[0]}}">
+			<view bindtap="selectWindow" data-id="{{week_window}}">
 				<image class="wr-image1"></image>
 				<view class="wr-fontcover">
-					<view class="wr-font1">三层三号窗口</view>
+					<view class="wr-font1">{{floors[week_window.floor]}}层{{windows[week_window.window]}}号窗口</view>
 					<view class="wr-fontcover-imagecover">
 						<image class="wr-image2" src="../../images/star.png"></image>
-						<text class="wr-font-grade">4.9</text>
-						<text class="wr-font-sales">月售2202</text>
+						<text class="wr-font-grade">{{week_window.rate}}</text>
+						<text class="wr-font-sales">月售{{week_window.month}}</text>
 					</view>
 				</view>
 				<view class="wr-tag">
 					<text class="wr-tag-font">本周推荐</text>
 				</view>
 				<view class="wr-waitingtime">
-					<text class="wr-waitingtime-font">预计排队5分钟</text>
+					<text class="wr-waitingtime-font">预计排队{{week_window.wait}}分钟</text>
 				</view>
 			</view>
 			<view class="scroll_image-cover">
 				<scroll-view class="scroll-widget" scroll-x="true">
-					<view class="scroll_image-item">
+				<!-- 本周推荐窗口的菜(6个) -->
+					<view class="scroll_image-item" wx:for='{{week_dishes}}'>
+						<view>
+							<image class="item-image" src="{{item.imgurl}}"></image>
+							<view class="item-content">
+								<view class="item-name">{{item.name}}</view>
+								<view class="item-price">¥{{item.price}}</view>
+							</view>
+						</view>
+					</view>
+					<!-- <view class="scroll_image-item">
 						<view>
 							<image class="item-image"></image>
 							<view class="item-content">
@@ -184,16 +194,7 @@
 								<view class="item-price">¥6</view>
 							</view>
 						</view>
-					</view>
-					<view class="scroll_image-item">
-						<view>
-							<image class="item-image"></image>
-							<view class="item-content">
-								<view class="item-name">红烧鸡翅</view>
-								<view class="item-price">¥6</view>
-							</view>
-						</view>
-					</view>
+					</view> -->
 				</scroll-view>
 			</view>
 		</view>
@@ -202,36 +203,36 @@
 			<view class="star-tag">
 				<text class="star-tag-font">明星窗口</text>
 			</view>
-			<view class="star-item item1" bindtap="selectWindow" data-id="9">
+			<view class="star-item item1" wx:for="{{stars_windows}}" bindtap="selectWindow" data-id="{{item}}">
 				<view class="star-item-content1">
 					<image class="star-item-image"></image>
 				</view>
 				<view class="star-item-content2">
 					<view class="star-item-font1">
 						<view class="font1-left_content">
-							<view class="left_content-name">{{floors[stars_windows[0].floor]}}层{{windows[stars_windows[0].window]}}号窗口</view>
+							<view class="left_content-name">{{floors[item.floor]}}层{{windows[item.window]}}号窗口</view>
 							<view class="left_content-inform">
 								<image class="inform-image" src="../../images/star.png"></image>
-								<text class="inform-grade">4.9</text>
-								<text class="inform-sale">月售1202</text>
+								<text class="inform-grade">{{item.rate}}</text>
+								<text class="inform-sale">月售{{item.month}}</text>
 							</view>
 						</view>
 						<view class="font1-right_content">
 							<view class="window_type">
-								<text class="window_type-font">主食窗口</text>
+								<text class="window_type-font">{{item.type}}窗口</text>
 							</view>
 							<view class="waitting_time">
-								<text class="waitting_time-font">预计排队5分钟</text>
+								<text class="waitting_time-font">预计排队{{item.wait}}分钟</text>
 							</view>
 						</view>
 					</view>
 					<view class="star-item-font2">
-						<text class="evaluate-font advantage">“阿姨很可爱”“打饭量很多”</text>
-						<text class="evaluate-font disadvantage">“排队较长”</text>
+						<text class="evaluate-font advantage">“{{item.commit[0]}}”“{{item.commit[1]}}”</text>
+						<text class="evaluate-font disadvantage">“{{item.commit[2]}}”</text>
 					</view>
 				</view>
 			</view>
-			<view class="star-item item2">
+			<!-- <view class="star-item item2">
 				<view class="star-item-content1">
 					<image class="star-item-image"></image>
 				</view>
@@ -288,7 +289,7 @@
 						<text class="evaluate-font disadvantage">“排队较长”</text>
 					</view>
 				</view>
-			</view>
+			</view> -->
 		</view>
 	</view>
 </view>

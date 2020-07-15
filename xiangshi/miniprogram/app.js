@@ -10,7 +10,8 @@ App({
     window : 1,
     // 当前选中菜名
     curDish: '',
-
+    // 饮食记录
+    dishes:[],
     /*用户信息*/
     nickName: '', //用户名
 
