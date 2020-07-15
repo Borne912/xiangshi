@@ -12,6 +12,7 @@ Page({
     tel: '',
     openid: '',
     session_key: '',
+    WeChatChecked: true,
   },
 
   /**
@@ -57,6 +58,17 @@ Page({
         })
       },
     })
+  },
+
+  /**
+   * 登录模式切换
+   */
+  wechat_ISchecked: function(){
+    var that = this;
+    that.setData({
+      WeChatChecked: !that.data.WeChatChecked, 
+    })
+    console.log(that.data.WeChatChecked)
   },
   /**
    * 生命周期函数--监听页面加载

@@ -12,7 +12,6 @@
 .visiting_card-wrapper{
   height: 424rpx;
   width: 750rpx;
-  background-color: white;
 }
 
 .visiting_card-wrapper .bk-color{
@@ -34,6 +33,20 @@
   top: 126rpx;
   width: 694rpx;
   height: 296rpx;
+  line-height: 40rpx;
+  border-radius: 20rpx;
+  background-color: rgba(255, 255, 255, 1);
+  text-align: center;
+  box-shadow: 0rpx 4rpx 6rpx 0rpx rgba(0, 0, 0, 0.4);
+  border: 2rpx solid rgba(255, 255, 255, 0);
+}
+
+.visiting_card-wrapper .visiting_card_special{
+  position: absolute;
+  left: 28rpx;
+  top: 126rpx;
+  width: 694rpx;
+  height: 500rpx;
   line-height: 40rpx;
   border-radius: 20rpx;
   background-color: rgba(255, 255, 255, 1);
@@ -87,15 +100,71 @@
   font-size: 28rpx;
   font-family: PingFangSC-regular;
 }
+
 .visiting_card-wrapper .visiting_card-content .tel button{
   width: 118rpx;
   height: 40rpx;
+  margin-left: 12rpx;
   line-height: 40rpx;
   border-radius: 20rpx 20rpx 20rpx 20rpx;
   text-align: center;
   border: 2rpx solid rgba(187, 187, 187, 1);
   color: rgba(179, 177, 177, 1);
   font-size: 28rpx;
+  font-family: PingFangSC-regular;
+}
+
+.visiting_card-wrapper .visiting_card-content .input-wrapper{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  top: 216rpx;
+  width: 694rpx;
+  height: 68rpx;
+}
+
+.visiting_card-wrapper .visiting_card-content .input-wrapper .input-content{
+  width: 632rpx;
+  height: 68rpx;
+  line-height: 40rpx;
+  border-radius: 30rpx;
+  background-color: rgba(255, 230, 210, 1);
+  border: 2rpx solid rgba(255, 255, 255, 0);
+}
+
+.visiting_card-wrapper .visiting_card-content .input-wrapper input{
+  width: 576rpx;
+  height: 68rpx;
+  margin: 0rpx 28rpx 0rpx 28rpx;
+  color: rgba(179, 177, 177, 1);
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+
+.visiting_card-wrapper .visiting_card-content .commit_bt-wrapper{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  top: 340rpx;
+  width: 694rpx;
+  height: 98rpx;
+}
+
+.visiting_card-wrapper .visiting_card-content .commit_bt-content button{
+  width: 352rpx;
+  height: 98rpx;
+  line-height: 98rpx;
+  border-radius: 30rpx;
+  background-color: rgba(255, 161, 85, 1);
+  text-align: center;
+  border: 2rpx solid rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 1);
+  font-size: 36rpx;
   font-family: PingFangSC-regular;
 }
 

@@ -4,7 +4,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 260rpx;
+  margin-top: 210rpx;
   width: 750rpx;
   height: 248rpx;
 }
@@ -73,6 +73,59 @@
   font-family: PingFangSC-regular;
 }
 
+.tel_login-wrapper{
+  margin-top: 26rpx;
+  width: 750rpx;
+  height: 208rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.tel_login-wrapper .tel_login-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tel_login-wrapper .block{
+  width: 632rpx;
+  height: 92rpx;
+}
+
+.tel_login-wrapper .tel_login-content input{
+  width: 632rpx;
+  height: 90rpx;
+  background-color: rgba(255, 242, 232, 1);
+  color: rgba(136, 136, 136, 0.75);
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFang SC;
+  border-bottom: 2rpx solid rgba(255, 161, 85, 1);
+}
+
+.tel_login-wrapper .tel_login-content .tel_input-wrapper{
+  position: relative;
+}
+
+.tel_login-wrapper .tel_input-wrapper button{
+  position: absolute;
+  top: 18rpx;
+  left: 462rpx;
+  width: 178rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  border-radius: 30rpx;
+  background-color: rgba(255, 230, 210, 1);
+  color: rgba(255, 161, 85, 1);
+  font-size: 24rpx;
+  text-align: center;
+  font-family: -apple-system;
+  z-index: 1;
+}
+
 .mandate-wrapper{
   display: flex;
   flex-direction: row;
@@ -91,6 +144,20 @@
   border-radius: 20rpx;
   text-align: center;
   border: 2rpx solid rgba(255, 255, 255, 0);
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 40rpx;
+  text-align: center;
+  font-family: PingFangSC-regular;
+}
+
+.mandate-wrapper .mandate-content .tel_login{
+  width: 632rpx;
+  height: 84rpx;
+  line-height: 84rpx;
+  border-radius: 20rpx;
+  background-color: rgba(255, 161, 85, 1);
+  text-align: center;
+  border: 2rpx solid rgba(134, 49, 49, 0);
   color: rgba(0, 0, 0, 0.75);
   font-size: 40rpx;
   text-align: center;
@@ -121,7 +188,8 @@
   align-items: center;
   width: 750rpx;
   height: 40rpx;
-  margin-top: 200rpx;
+  position: absolute;
+  top: 1100rpx;
 }
 
 .login_hint-wrapper .login_hint-content text{

@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "dialog-modal": "../dialog-modal/index"
+    }
+}

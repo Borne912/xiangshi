@@ -1,0 +1,19 @@
+<view
+  bind:tap="click"
+  class="{{className}}"
+  hover-class="hover-class"
+>
+  <slot></slot>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+

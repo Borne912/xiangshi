@@ -12,6 +12,84 @@ Page({
     avatarUrl: '', //用户头像图片地址
 
     tel: '请添加电话号码', //用户手机号码
+
+    input_value: '请输入手机号',
+
+    tel_click: false, //电话修改按钮是否点击
+  },
+
+  /**
+   * 输入框聚焦时
+   */
+  bindFocus: function(res){
+    var that = this;
+    if(res.detail.value == "请输入手机号")
+    {
+        that.setData({
+        input_value: ""
+      })
+    }
+  },
+
+  /**
+   * 输入框失去聚焦时
+   */
+  bindBlur: function(res){
+    var that = this;
+    if(res.detail.value == "")
+    {
+      that.setData({
+        input_value: "请输入手机号"
+      })
+    }
+  },
+
+  /**
+   *  提交表单数据
+   */
+  bindSubmit: function(res){
+    var that = this;
+    if(res.detail.value.input!="")
+    {
+      app.globalData.tel = res.detail.value.input;
+      that.setData({
+        tel: res.detail.value.input,
+      })
+  
+      //将电话号码传到云端
+      db.collection('UsersInfo').where({
+        _openid: app.globalData.openid
+      })
+      .update({
+        data:{
+          tel: that.data.tel
+        },
+      })
+
+      wx.showToast({
+        title: '修改成功',
+        icon: 'success',
+        duration: 1000
+      })
+    }
+    else
+    {
+      wx.showToast({
+        title: '修改失败',
+        icon: 'none',
+        duration: 1500
+      })
+    }
+  },
+
+  /**
+   *  电话号码添加完成
+   */
+  tel_Completed: function(){
+    var that = this;
+    that.setData({
+      tel_click: !that.data.tel_click
+    })
   },
 
   /**
