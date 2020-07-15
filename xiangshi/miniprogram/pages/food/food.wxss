@@ -48,10 +48,12 @@
   background-color: #FFF2E8;
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0);
+  /* background-color: red; */
 }
 .search{
   width: auto;
   height: 90rpx;
+  /* background-color: red; */
 }
 .search-input{
   position: absolute;

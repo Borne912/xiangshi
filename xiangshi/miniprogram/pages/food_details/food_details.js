@@ -50,6 +50,7 @@ Page({
     this.getData()
     console.log(this.data.cur)
     console.log(this.data.ying)
+    
   },
   // 此函数为按钮事件,将此dish加入饮食记录(全局变量)
   addData: function(e) {

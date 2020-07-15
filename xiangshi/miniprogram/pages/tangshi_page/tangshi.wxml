@@ -38,7 +38,7 @@
 <!-- 以下12个窗口的食物 -->
 <view class="rear">
   <view class="left_window">
-      <button bindtap='Buttons_rowsTap' wx:for="{{buttons_rows}}" style='{{item.checked || flag == item.id?"background:#FFA155":"background:#FFF2E8"}}' data-id='{{item.id}}' class="buttons_rows">
+      <button bindtap='Buttons_rowsTap' wx:for="{{windows}}" style='{{item.checked?"background:#FFA155":"background:#FFF2E8"}}' data-id='{{item.id}}' class="buttons_rows">
         <view class="features">{{item.name}}</view>
         <view class="windows_num">窗口{{item.id}}</view>
       </button>
@@ -47,7 +47,7 @@
       <scroll-view scroll-y style="height:{{height}}rpx">
        <!-- <view wx:for='{{url_Img}}' class="every_dish">
         <image class="img" src="{{url_Head+item}}"  mode="scaleToFill"></image> -->
-        <view bindtap="food_Jump" wx:for='{{dishes_List}}' data-id="{{item.name}}" wx:for-index='i' class="every_dish">
+        <view bindtap="selectFood" wx:for='{{dishes}}' data-id="{{item.name}}" wx:for-index='i' class="every_dish">
           <image class="img" src="{{item.imgurl}}"  mode="scaleToFill"></image>
           <!-- 介绍部分 -->
           <view class="intro">

@@ -14,9 +14,11 @@
 		</navigator>
 	</view>
 	<view class="cover">
-		<view class="search">
-			<input class="search-input">
-			</input>
+		<view class="search" bindtap="searchJump">
+			<!-- <input class="search-input">
+			</input> -->
+			<view class="search-input">
+			</view>
 			<image src="../../images/search.svg" class="search-search-image"></image>
 			<image src="../../images/microphone.svg" class="search-listen-image"></image>
 		</view>
@@ -70,9 +72,9 @@
 					</view>
 					<view class="rw-elem-elem">
 						<view class="rw-elem-image-div elem-image1">
-							<image class="rw-elem-image" src="../../images/17181593523064_.pic_hd.jpg"></image>
-							<view class="rw-elem-image-font1">酱烧虾</view>
-							<view class="rw-elem-image-font2">¥6</view>
+							<image class="rw-elem-image" src="{{stars_dishes[0].imgurl}}"></image>
+							<view class="rw-elem-image-font1">{{stars_dishes[0].name}}</view>
+							<view class="rw-elem-image-font2">¥{{stars_dishes[0].price}}</view>
 						</view>
 						<view class="rw-elem-image-div elem-image2">
 							<image class="rw-elem-image" src="../../images/15291593489166_.pic_hd.jpg"></image>
@@ -117,8 +119,9 @@
 				</view>
 			</scroll-view>
 		</view>
+		<!-- 本周推荐 -->
 		<view class="week-recommend">
-			<view>
+			<view bindtap="selectWindow" data-id="{{week_window[0]}}">
 				<image class="wr-image1"></image>
 				<view class="wr-fontcover">
 					<view class="wr-font1">三层三号窗口</view>
@@ -199,14 +202,14 @@
 			<view class="star-tag">
 				<text class="star-tag-font">明星窗口</text>
 			</view>
-			<view class="star-item item1" bindtap="selectStarsWindow" data-id="9">
+			<view class="star-item item1" bindtap="selectWindow" data-id="9">
 				<view class="star-item-content1">
 					<image class="star-item-image"></image>
 				</view>
 				<view class="star-item-content2">
 					<view class="star-item-font1">
 						<view class="font1-left_content">
-							<view class="left_content-name">{{floor[stars[0].floor]}}层{{window[stars[0].window]}}号窗口</view>
+							<view class="left_content-name">{{floors[stars_windows[0].floor]}}层{{windows[stars_windows[0].window]}}号窗口</view>
 							<view class="left_content-inform">
 								<image class="inform-image" src="../../images/star.png"></image>
 								<text class="inform-grade">4.9</text>

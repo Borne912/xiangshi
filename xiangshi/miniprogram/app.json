@@ -1,8 +1,11 @@
 {
   "pages": [
+    
+    "pages/food/food",
+    "pages/search/search",
+    "pages/window/window",
     "pages/index/index",
     "pages/index1/index1",
-    "pages/food/food",
     "pages/tangshi_page/tangshi",
     "pages/health/health",
     "pages/addFood/addFood",
