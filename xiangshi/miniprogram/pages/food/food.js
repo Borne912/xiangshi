@@ -6,24 +6,35 @@ Page({
     data:{
       font_recommend:[],
       takeout:[],
+      tangshi:[
+        {name:"一层",imgurl:"../../images/first_floor.png"},
+        {name:"二层",imgurl:"../../images/second_floor.png"},
+        {name:"三层",imgurl:"../../images/third_floor.png"},
+        {name:"四层",imgurl:"../../images/fourth_floor.png"}],
       loc:"鸿博园",
-      floor:{"1":"一","2":"二","3":"三","4":"四"},
-      window:{"1":"一","2":"二","3":"三","4":"四","5":"五",
-              "6":"六","7":"七","8":"八","9":"九","10":"十"},
-      stars:[]
+      floors:["零","一","二","三","四"],
+      windows:["零","一","二","三","四","五",
+              "六","七","八","九","十"],
+      // 界面顺序分别是: [明星菜品,超值特惠,新上菜品]
+      stars_dishes : [],
+      chaozhi_dishes : [],
+      new_dishes : [],
+      // 本周推荐窗口(就1个)
+      week_window: [],
+      week_dishes:[],
+      // 明星推荐窗口(3个)
+      stars_windows:[],
       // toView:"green"
     },
-    // onLoad(){
-    //   var that = this
-    //   var app = getApp()
-    //   location:"万秀园",
-    // },
-    onLoad(){
-      // 页面创建时执行
+
+    // 读取数据库数据
+    readDataBase(){
       var that = this; 
+      /**************************************/
+      // 以下开始读数据库
       db.collection("font_recommend").get({
         success(res){
-          //console.log("查询数据成功",res)
+          console.log("查询数据成功",res)
           tmp = res.data
           that.setData({
             font_recommend: tmp,
@@ -31,38 +42,89 @@ Page({
           })
         }
       })
-      db.collection("outside-take-out").get({
-        success(res){
-          //console.log("查询数据成功",res.data[1].name)
-          tmp = res.data
-          //console.log(tmp[1].name)
-          that.setData({
-            takeout:tmp
-          })
-        }
-      })
-      // 明星窗口的数据库(2020.7.13添加)
-      db.collection("star_window").where({
-        loc: app.globalData.location
-      }).get({
-        success(res){
-          console.log(res.data)
-          that.setData({
-            stars : res.data
-          })
-        }
-      })
-      // 特色菜的数据库(2020.7.13添加)
+      /**************************************/
+      // 1.明星菜品
       db.collection("special_dishes").where({
-        loc: app.globalData.location
+        loc: app.globalData.location,
+        type: "明星菜品"
       }).get({
         success(res){
-          console.log(res.data)
-          // that.setData({
-          //   stars : res.data
-          // })
+          //console.log(res.data)
+          that.setData({
+            stars_dishes : res.data
+          })
         }
       })
+      // 2.超值特惠
+      db.collection("special_dishes").where({
+        loc: app.globalData.location,
+        type: "超值特惠"
+      }).get({
+        success(res){
+          //console.log(res.data)
+          that.setData({
+            chaozhi_dishes : res.data
+          })
+        }
+      })
+      // 3.新上菜品 
+        db.collection("special_dishes").where({
+        loc: app.globalData.location,
+        type: "新上菜品"
+      }).get({
+        success(res){
+          //console.log(res.data)
+          that.setData({
+            new_dishes : res.data
+          })
+        }
+      })
+      /**************************************/
+      // 本周推荐窗口
+      db.collection("main_windows").where({
+        loc: app.globalData.location,
+        mark: "本周推荐"
+      }).get({
+        success(res){
+          //console.log(res.data)
+          var tf = res.data[0].floor
+          var tw = res.data[0].window
+          db.collection("dishes").where({
+            loc: app.globalData.location,
+            floor: tf,
+            window: tw
+          }).get({
+            success(res){
+              //console.log(res.data)
+              that.setData({
+                week_dishes: res.data
+              })
+            }
+          })
+          that.setData({
+            week_window : res.data[0]
+          })
+        }
+      })
+      /**************************************/
+      // 明星窗口的数据库(2020.7.13添加)
+      db.collection("main_windows").where({
+        loc: app.globalData.location,
+        mark: "明星窗口"
+      }).get({
+        success(res){
+          //console.log(res.data)
+          that.setData({
+            stars_windows : res.data
+          })
+        }
+      })
+      /**************************************/
+    },
+    // 页面创建时执行
+    onLoad(){
+      //读取数据库数据
+      this.readDataBase()  
     },
     onShow: function() {
       // 页面出现在前台时执行
@@ -72,7 +134,24 @@ Page({
         location: app.globalData.location
       })
       //console.log(that.data.location)
+      db.collection("outside-take-out").get({
+        success(res){
+          console.log("查询数据成功",res.data[1].name)
+          tmp = res.data
+          console.log(tmp[1].name)
+          that.setData({
+            takeout:tmp
+          })
+        }
+      })
     },
+    // 搜索跳转
+    searchJump:function (e) {
+      wx.navigateTo({
+        url: '../search/search',
+      })
+    },
+    // 楼层跳转
     selectFloor: function (e) {
       let id = e.currentTarget.dataset.id
       let app = getApp()
@@ -86,13 +165,22 @@ Page({
         },
       })    
     },
-
-    // 明星窗口选择
-    selectStarsWindow: function (e) {
+    // 本周推荐/明星窗口选择
+    selectWindow: function (e) {
       var id = e.currentTarget.dataset.id
-      var app = getApp()
+      // 设置当前窗口信息(楼层+号码)
+      app.globalData.floor = id.floor
+      app.globalData.window = id.window
+
       let that = this
       console.log(id)
+      wx.navigateTo({
+        url: '../window/window', 
+        success: function(res){
+          console.log("跳转成功")
+        },
+      })
       
     }
+    // 
 })

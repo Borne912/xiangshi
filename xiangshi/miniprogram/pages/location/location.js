@@ -7,14 +7,16 @@ Page({
     // buttons: [{ id: 1, name: '鸿博园' }, { id: 2, name: '万秀园' }, { id: 3, name: '友谊餐厅' }],
     datas:  
     [{id: 1, name:'鸿博园',avgtime: 2, exptime: 3, curpeo:323, exppeo: 456 }, 
-    {id: 2, name:'万秀园',avgtime: 5, exptime: 7, curpeo:142, exppeo: 170 }, 
-    {id: 3, name:'友谊餐厅',avgtime: 10, exptime: 7, curpeo:24, exppeo: 19 },], 
-
+    {id: 2, name:'万秀园',avgtime: 5, exptime: 7, curpeo:142, exppeo: 170 }], 
+    //{id: 3, name:'友谊餐厅',avgtime: 10, exptime: 7, curpeo:24, exppeo: 19 },
     // 顺序: 鸿博, 万秀, 友谊
     // 排队时间:平均, 预估
-    times: [{avg: 2, exp: 3}, {avg: 5, exp: 7}, {avg: 10, exp: 7}],
+    times: [{avg: 2, exp: 3}, {avg: 5, exp: 7}],
     // 排队人数:目前, 预估
-    counts: [{cur: 323, exp: 456},{cur: 1421, exp: 1700},{cur: 24, exp: 19}],
+    counts: [{cur: 323, exp: 456},{cur: 1421, exp: 1700}],
+    // times: [{avg: 2, exp: 3}, {avg: 5, exp: 7}, {avg: 10, exp: 7}],
+    // // 排队人数:目前, 预估
+    // counts: [{cur: 323, exp: 456},{cur: 1421, exp: 1700},{cur: 24, exp: 19}],
     curLocation:'鸿博园',
   },
 
@@ -52,9 +54,14 @@ Page({
     var app = getApp();
     // 全局遍历location
     app.globalData.location = this.data.curLocation
+    // 将上一个界面效果刷新
+    var pages = getCurrentPages();
+    var beforePage = pages[pages.length - 2];
+    // 调用列表页的获取数据函数
+    beforePage.onLoad();
     console.log(app.globalData.location)
     wx.switchTab({ url: '../food/food' })
-    console.log('success')
+    // console.log('success')
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

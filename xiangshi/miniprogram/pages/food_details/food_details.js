@@ -1,5 +1,6 @@
 // miniprogram/pages/food_details/food_details.js
-const db_dishes= wx.cloud.database().collection("dishes")
+const db= wx.cloud.database()
+const app = getApp()
 Page({
 
   /**
@@ -25,10 +26,9 @@ Page({
    */
   getData: function (e) {
     let that = this
-    let app = getApp()
-    that.data.metal_datas = []
+    // that.data.metal_datas = []
     console.log(app.globalData.curDish)
-    db_dishes.where({
+    db.collection("dishes").where({
       loc: app.globalData.location,
       floor:app.globalData.floor,
     //  window :app.globalData.window,
@@ -50,10 +50,15 @@ Page({
     this.getData()
     console.log(this.data.cur)
     console.log(this.data.ying)
+    
   },
   // 此函数为按钮事件,将此dish加入饮食记录(全局变量)
   addData: function(e) {
+    var dishes = app.globalData.dishes
+    dishes.push(this.data.cur)
     console.log('添加成功!');
+    console.log(app.globalData.dishes)
+    
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

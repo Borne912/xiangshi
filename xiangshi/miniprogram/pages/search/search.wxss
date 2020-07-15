@@ -1,0 +1,125 @@
+/* miniprogram/pages/search/search.wxss */
+/* miniprogram/window/window.wxss */
+.bg_10{
+  background: #FFF2E8;
+  position: fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
+
+.container-food{
+  justify-content: center;
+  overflow-x:hidden;  /*防止界面左右滑动 */
+}
+.container-food::after{
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.search{
+  margin-top :25rpx;
+  width: auto;
+  height: 85rpx;
+  /* background-color: red; */
+}
+.search-input{
+  position: relative;
+  left: 28rpx;
+  /* top: 0rpx; */
+  width: 688rpx;
+  height: 74rpx;
+  line-height: 40rpx;
+  border-radius: 20rpx;
+  background-color: rgba(250, 250, 250, 1);
+  text-align: center;
+  box-shadow: 0rpx 4rpx 4rpx 0rpx rgba(0, 0, 0, 0.24);
+  border: 2rpx solid rgba(255, 0, 0, 0);
+  z-index: 0;
+}
+.search-search-image{
+  position: absolute;
+  left: 68rpx;
+  top: 35rpx;
+  width: 50rpx;
+  height: 50rpx;
+  z-index: 1;
+  opacity: 0.5399999618530273;
+}
+.search-listen-image{
+  position: absolute;
+  left: 644rpx;
+  top: 35rpx;
+  width: 50rpx;
+  height: 50rpx;
+  z-index: 1;
+  opacity: 0.5399999618530273;
+}
+/*  */
+
+.rear {
+  /* background-color: blue; */
+  margin-top: 30rpx;
+  flex-direction: column;
+  display: flex;
+}
+
+.dishes_window {
+  display: flex;
+  width: 600rpx;
+  position: absolute;  
+  /* background: red; */
+  left: 135rpx;
+  flex-direction: column;
+  /* height: 200rpx;
+   */ 
+}
+
+.every_dish {
+  display: flex; 
+  position: relative;
+  /* background: white; */
+  height: 215rpx;
+  margin-left: 0px;
+  left: 2rpx;
+  margin-bottom: 25rpx;
+  /* margin-top: 5rpx; */
+}
+/* 图片 */
+.img {
+  width: 210rpx;
+  height: 210rpx;
+  background: #FFA155;
+  border-radius: 30rpx;
+}
+/* 介绍部分(右边) */
+.intro { 
+  height: 215rpx;
+  position: relative;
+  width: 400rpx;
+  /* background: red; */
+  margin-left: 10rpx;
+  /* left: 200rpx; */
+}
+.price_left {
+  width: 120rpx;
+  /* position: relative; */
+  /* background: blue; */
+  height: 40rpx;
+  /* text-align: end; */
+  font-size: 25rpx;
+  margin-top: 40rpx;
+}
+.ying_right {
+  /* 字体颜色 */
+  color: #FFA155;
+  font-size: 25rpx;
+  position: relative;
+  /* background: yellow; */
+  top: -15rpx;
+  margin-top: 5rpx;
+  margin-left: 10rpx;
+}

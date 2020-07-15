@@ -1,0 +1,38 @@
+<!--miniprogram/pages/search/search.wxml-->
+<!--miniprogram/window/window.wxml-->
+<!--miniprogram/pages/tangshi_page/tangshi.wxml-->
+<!--  搜索窗口 -->
+<view class="bg_10"></view>
+
+<view class="search">
+			<input class="search-input" placeholder="请输入菜名" bindinput="dishInput"></input>
+			<image src="../../images/search.svg" class="search-search-image" bindtap="searchTap"></image>
+			<image src="../../images/microphone.svg" class="search-listen-image"></image>
+</view>
+
+
+<!-- 以下是选中窗口的食物 -->
+<view class="rear">
+  <view class="dishes_window">     
+      <scroll-view scroll-y style="height:1200rpx">
+        <view bindtap="selectFood" wx:for='{{dishes}}' data-id="{{item.name}}" wx:for-index='i' class="every_dish">
+          <image class="img" src="{{item.imgurl}}"  mode="scaleToFill"></image>
+          <!-- 介绍部分 -->
+          <view class="intro">
+            <view style="font-size:36rpx;margin-top: 5rpx;">{{item.name}}</view>
+            <view style="background:#FFA155;border-radius:20rpx;width:110rpx;text-align:center;font-size:25rpx">{{item.leixing}}</view>
+            <text style="position:relative;top:-10rpx;font-size:25rpx" space='nbsp'>月售{{item.yueshou}} 赞{{item.zan}}</text>
+            <view style="flex-direction: row;display:flex;">  
+              <view class="price_left">{{item.price}} 元/个</view>
+              <view class="ying_right">
+                <view>碳水: {{item.yingyang.tanshui}}</view>
+                <view>蛋白: {{item.yingyang.danbai}}</view>
+                <view>脂肪: {{item.yingyang.zhifang}}</view>
+              </view>
+            </view>
+          </view>
+       </view>     
+      </scroll-view>
+  </view>
+</view>
+
