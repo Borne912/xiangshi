@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "collect-fromid": "/components/collect-fromid/index"
+  }
+}

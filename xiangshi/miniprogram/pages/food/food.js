@@ -6,6 +6,11 @@ Page({
     data:{
       font_recommend:[],
       takeout:[],
+      tangshi:[
+        {name:"一层",imgurl:"../../images/first_floor.png"},
+        {name:"二层",imgurl:"../../images/second_floor.png"},
+        {name:"三层",imgurl:"../../images/third_floor.png"},
+        {name:"四层",imgurl:"../../images/fourth_floor.png"}],
       loc:"鸿博园",
       floors:["零","一","二","三","四"],
       windows:["零","一","二","三","四","五",
@@ -29,21 +34,11 @@ Page({
       // 以下开始读数据库
       db.collection("font_recommend").get({
         success(res){
-          //console.log("查询数据成功",res)
+          console.log("查询数据成功",res)
           tmp = res.data
           that.setData({
             font_recommend: tmp,
             loc: app.globalData.location
-          })
-        }
-      })
-      db.collection("outside-take-out").get({
-        success(res){
-          //console.log("查询数据成功",res.data[1].name)
-          tmp = res.data
-          //console.log(tmp[1].name)
-          that.setData({
-            takeout:tmp
           })
         }
       })
@@ -54,7 +49,7 @@ Page({
         type: "明星菜品"
       }).get({
         success(res){
-          console.log(res.data)
+          //console.log(res.data)
           that.setData({
             stars_dishes : res.data
           })
@@ -66,7 +61,7 @@ Page({
         type: "超值特惠"
       }).get({
         success(res){
-          console.log(res.data)
+          //console.log(res.data)
           that.setData({
             chaozhi_dishes : res.data
           })
@@ -78,7 +73,7 @@ Page({
         type: "新上菜品"
       }).get({
         success(res){
-          console.log(res.data)
+          //console.log(res.data)
           that.setData({
             new_dishes : res.data
           })
@@ -91,7 +86,7 @@ Page({
         mark: "本周推荐"
       }).get({
         success(res){
-          console.log(res.data)
+          //console.log(res.data)
           var tf = res.data[0].floor
           var tw = res.data[0].window
           db.collection("dishes").where({
@@ -100,7 +95,7 @@ Page({
             window: tw
           }).get({
             success(res){
-              console.log(res.data)
+              //console.log(res.data)
               that.setData({
                 week_dishes: res.data
               })
@@ -118,7 +113,7 @@ Page({
         mark: "明星窗口"
       }).get({
         success(res){
-          console.log(res.data)
+          //console.log(res.data)
           that.setData({
             stars_windows : res.data
           })
@@ -139,6 +134,16 @@ Page({
         location: app.globalData.location
       })
       //console.log(that.data.location)
+      db.collection("outside-take-out").get({
+        success(res){
+          console.log("查询数据成功",res.data[1].name)
+          tmp = res.data
+          console.log(tmp[1].name)
+          that.setData({
+            takeout:tmp
+          })
+        }
+      })
     },
     // 搜索跳转
     searchJump:function (e) {

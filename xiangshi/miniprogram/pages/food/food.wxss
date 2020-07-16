@@ -3,11 +3,6 @@
   justify-content: center;
   overflow-x:hidden;  /*防止界面左右滑动 */
 }
-.container-food::after{
-  content: "";
-  clear: both;
-  display: block;
-}
 
 .navigation{
   position: relative;
@@ -43,22 +38,31 @@
   text-align: left;
   font-family: PingFangSC-regular;
 }
-.cover{ 
-  height: 100%;
-  background-color: #FFF2E8;
-  text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0);
-  /* background-color: red; */
-}
+
 .search{
-  width: auto;
+  margin-top: 22rpx;
+  width: 750rpx;
   height: 90rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   /* background-color: red; */
 }
-.search-input{
+
+.search .serch-wrapper{
+  width: 688rpx;
+  height: 74rpx;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.serch-wrapper .search-input{
   position: absolute;
-  left: 28rpx;
-  top: 150rpx;
+  left: 0rpx;
+  top: 0rpx;
   width: 688rpx;
   height: 74rpx;
   line-height: 40rpx;
@@ -67,24 +71,33 @@
   text-align: center;
   box-shadow: 0rpx 4rpx 4rpx 0rpx rgba(0, 0, 0, 0.24);
   border: 2rpx solid rgba(255, 0, 0, 0);
-  z-index: 0;
 }
-.search-search-image{
+
+.search .serch-wrapper .search_icon1{
   position: absolute;
-  left: 68rpx;
-  top: 168rpx;
   width: 36rpx;
   height: 36rpx;
-  z-index: 1;
+  left: 40rpx;
+  top: 24rpx;
+}
+
+.search .serch-wrapper .search_icon2{
+  position: absolute;
+  width: 36rpx;
+  height: 36rpx;
+  left: 616rpx;
+  top: 24rpx
+}
+
+.search-search-image{
+  /* position: absolute; */
+  width: 36rpx;
+  height: 36rpx;
   opacity: 0.5399999618530273;
 }
 .search-listen-image{
-  position: absolute;
-  left: 644rpx;
-  top: 172rpx;
   width: 30rpx;
   height: 30rpx;
-  z-index: 1;
   opacity: 0.5399999618530273;
 }
 .font_recommend{
@@ -110,6 +123,7 @@
 
 .catalog{
   margin: 18rpx 31rpx 0 31rpx;
+  /* position: relative; */
   width: 688rpx;
   height: 322rpx;
   line-height: 40rpx;
@@ -117,87 +131,61 @@
   text-align: center;
   border: 2rpx solid rgba(255, 255, 255, 0);
   background-color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
+
+.catalog .label-wrapper{
+  display: flex;
+  flex-direction: column;
+  height: 284rpx;
+  width: 100rpx;
+}
+
+.catalog .items-wrapper{
+  height: 284rpx;
+  width: 490rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
 .ctl-elem{
-  width: 104rpx;
-  height: 140rpx;
+  margin-top: 8rpx;
+  width: 100rpx;
+  height: 138rpx;
 }
+
 .ctl-image{
+  display: block;
   width: 100rpx;
   height: 100rpx;
-  line-height: 40rpx;
   background-color: rgba(255, 161, 85, 1);
   text-align: center;
-  border: 2rpx solid rgba(255, 255, 255, 0);
   border-radius: 50%;
 }
-.catalog .elem1{
-  position: absolute;
-  left: 192rpx;
-  top: 332rpx;
-}
-.catalog .elem2{
-  position: absolute;
-  left: 322rpx;
-  top: 332rpx;
-}
-.catalog .elem3{
-  position: absolute;
-  left: 452rpx;
-  top: 332rpx;
-}
-.catalog .elem4{
-  position: absolute;
-  left: 582rpx;
-  top: 332rpx;
-}
-.catalog .elem5{
-  position: absolute;
-  left: 192rpx;
-  top: 490rpx;
-}
-.catalog .elem6{
-  position: absolute;
-  left: 322rpx;
-  top: 490rpx;
+
+.catalog .label-wrapper .ctl-font{
+  margin-top: 8rpx;
+  width: 100rpx;
+  height: 138rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-.catalog .elem7{
-  position: absolute;
-  left: 452rpx;
-  top: 490rpx;
-}
-
-.catalog .elem8{
-  position: absolute;
-  left: 582rpx;
-  top: 490rpx;
-}
-
-.ctl-font{
-  width: 80rpx;
-  height: 30rpx;
+.catalog .label-wrapper .ctl-font text{
   color: rgba(77, 63, 63, 1);
   font-size: 40rpx;
-  text-align: left;
   font-family: PingFangSC-regular;
 }
 
-.catalog .font1{
-  position: absolute;
-  left: 76rpx;
-  top: 368rpx;
-}
-
-.catalog .font2{
-  position: absolute;
-  left: 80rpx;
-  top: 526rpx;
-}
-
 .catalog .image-font{
-  width: 53rpx;
-  height: 36rpx;
   color: rgba(77, 63, 63, 1);
   font-size: 26rpx;
   text-align: left;

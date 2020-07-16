@@ -1,26 +1,32 @@
 <!--miniprogram/pages/food/food.wxml-->
 <view class="container container-food">
-	<view class="navigation">
-		<navigator url="../location/location">
-			<view class="navigt-content">
-				<view>
-					<image src="../../images/location.png" class="navigt-image"></image>
+	<view class="cover">
+		<view class="navigation">
+			<navigator url="../location/location">
+				<view class="navigt-content">
+					<view>
+						<image src="../../images/location.png" class="navigt-image"></image>
+					</view>
+					<view>
+						<text class="navigt-font">{{loc}}</text>
+						<!-- <text class="navigt-font">{{location}}</text> -->
+					</view>
 				</view>
-				<view>
-					<text class="navigt-font">{{loc}}</text>
-					<!-- <text class="navigt-font">{{location}}</text> -->
+			</navigator>
+		</view>
+		<view class="search" bindtap="searchJump">
+			<!-- <input class="search-input">
+			</input> -->
+			<view class="serch-wrapper">
+				<view class="search-input">
+				</view>
+				<view class="search_icon1">
+					<image src="../../images/search.svg" class="search-search-image"></image>
+				</view>
+				<view class="search_icon2">
+					<image src="../../images/microphone.svg" class="search-listen-image"></image>
 				</view>
 			</view>
-		</navigator>
-	</view>
-	<view class="cover">
-		<view class="search" bindtap="searchJump">
-			<input class="search-input">
-			</input>
-			<!-- <view class="search-input">
-			</view> -->
-			<image src="../../images/search.svg" class="search-search-image"></image>
-			<image src="../../images/microphone.svg" class="search-listen-image"></image>
 		</view>
 		<view class="font_recommend">
 			<view class="fr fr1">{{font_recommend[0].name}}</view>
@@ -29,39 +35,35 @@
 			<view class="fr fr4">{{font_recommend[3].name}}</view>
 		</view>
 		<view class="catalog">
-			<view class="ctl-elem ctl-font font1">堂食</view>
-			<view class="ctl-elem ctl-font font2">打包</view>
-			<view class="ctl-elem elem1" bindtap="selectFloor" data-id="1">
-				<image class="ctl-image" src="../../images/first_floor.png"></image>
-				<text class="image-font">一层</text>
+			<view class="label-wrapper">
+				<view class="ctl-font">
+					<view class="label-content">
+						<text>堂食</text>
+					</view>
+				</view >
+				<view class="ctl-font">
+					<view class="label-content">
+						<text>打包</text>
+					</view>
+				</view>
 			</view>
-			<view class="ctl-elem elem2" bindtap="selectFloor" data-id="2">
-				<image class="ctl-image" src="../../images/second_floor.png"></image>
-				<text class="image-font">二层</text>
-			</view>
-			<view class="ctl-elem elem3" bindtap="selectFloor" data-id="3">
-				<image class="ctl-image" src="../../images/third_floor.png"></image>
-				<text class="image-font">三层</text>
-			</view>
-			<view class="ctl-elem elem4" bindtap="selectFloor" data-id="4">
-				<image class="ctl-image" src="../../images/fourth_floor.png"></image>
-				<text class="image-font">四层</text>
-			</view>
-			<view class="ctl-elem elem5">
-				<image class="ctl-image" src="cloud://xiangshi-yqpne.7869-xiangshi-yqpne-1302514195/image/takeout/first_floor.png"></image>
-				<text class="image-font">{{takeout[0].name}}</text>
-			</view>
-			<view class="ctl-elem elem6">
-				<image class="ctl-image" src="cloud://xiangshi-yqpne.7869-xiangshi-yqpne-1302514195/image/takeout/second_floor.png"></image>
-				<text class="image-font">{{takeout[1].name}}</text>
-			</view>
-			<view class="ctl-elem elem7">
-				<image class="ctl-image" src="cloud://xiangshi-yqpne.7869-xiangshi-yqpne-1302514195/image/takeout/third_floor.png"></image>
-				<text class="image-font">{{takeout[2].name}}</text>
-			</view>
-			<view class="ctl-elem elem8">
-				<image class="ctl-image" src="cloud://xiangshi-yqpne.7869-xiangshi-yqpne-1302514195/image/takeout/fourth_floor.png"></image>
-				<text class="image-font">{{takeout[3].name}}</text>
+			<view class="items-wrapper">
+				<block wx:for="{{tangshi}}"> 
+					<view class="ctl-elem" bindtap="selectFloor" data-id="{{index+1}}">
+						<image class="ctl-image" src="{{item.imgurl}}"></image>
+						<text class="image-font">{{item.name}}</text>
+					</view>
+				</block>
+				<block wx:for="{{takeout}}">
+					<view class="ctl-elem">
+						<view>
+							<image class="ctl-image" src="{{item.imgurl}}"></image>
+						</view>
+						<view>
+							<text class="image-font">{{item.name}}</text>
+						</view>
+					</view>
+				</block>
 			</view>
 		</view>
 		<view class="rolling_window">
@@ -108,7 +110,7 @@
 					</view>
 					<view class="rw-elem-elem">
 						<!-- 新上菜品 -->
-							<view class="rw-elem-image-div elem-image1">
+						<view class="rw-elem-image-div elem-image1">
 							<image class="rw-elem-image" src="{{new_dishes[0].imgurl}}"></image>
 							<view class="rw-elem-image-font1">{{new_dishes[0].name}}</view>
 							<view class="rw-elem-image-font2">¥{{new_dishes[0].price}}</view>
@@ -143,7 +145,7 @@
 			</view>
 			<view class="scroll_image-cover">
 				<scroll-view class="scroll-widget" scroll-x="true">
-				<!-- 本周推荐窗口的菜(6个) -->
+					<!-- 本周推荐窗口的菜(6个) -->
 					<view class="scroll_image-item" wx:for='{{week_dishes}}'>
 						<view>
 							<image class="item-image" src="{{item.imgurl}}"></image>
