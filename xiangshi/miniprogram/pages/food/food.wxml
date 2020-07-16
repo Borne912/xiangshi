@@ -15,10 +15,10 @@
 	</view>
 	<view class="cover">
 		<view class="search" bindtap="searchJump">
-			<!-- <input class="search-input">
-			</input> -->
-			<view class="search-input">
-			</view>
+			<input class="search-input">
+			</input>
+			<!-- <view class="search-input">
+			</view> -->
 			<image src="../../images/search.svg" class="search-search-image"></image>
 			<image src="../../images/microphone.svg" class="search-listen-image"></image>
 		</view>
