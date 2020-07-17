@@ -74,12 +74,12 @@
 					</view>
 					<view class="rw-elem-elem">
 						<!-- 明星菜品 -->
-						<view class="rw-elem-image-div elem-image1">
+						<view class="rw-elem-image-div elem-image1" bindtap="selectFood" data-id="{{stars_dishes[0].name}}">
 							<image class="rw-elem-image" src="{{stars_dishes[0].imgurl}}"></image>
 							<view class="rw-elem-image-font1">{{stars_dishes[0].name}}</view>
 							<view class="rw-elem-image-font2">¥{{stars_dishes[0].price}}</view>
 						</view>
-						<view class="rw-elem-image-div elem-image2">
+						<view class="rw-elem-image-div elem-image2" bindtap="selectFood" data-id="{{stars_dishes[1].name}}">
 							<image class="rw-elem-image" src="{{stars_dishes[1].imgurl}}"></image>
 							<view class="rw-elem-image-font1">{{stars_dishes[1].name}}</view>
 							<view class="rw-elem-image-font2">¥{{stars_dishes[1].price}}</view>
@@ -92,12 +92,12 @@
 					</view>
 					<view class="rw-elem-elem">
 						<!-- 超值特惠 -->
-						<view class="rw-elem-image-div elem-image1">
+						<view class="rw-elem-image-div elem-image1" bindtap="selectFood" data-id="{{chaozhi_dishes[0].name}}">
 							<image class="rw-elem-image" src="{{chaozhi_dishes[0].imgurl}}"></image>
 							<view class="rw-elem-image-font1">{{chaozhi_dishes[0].name}}</view>
 							<view class="rw-elem-image-font2">¥{{chaozhi_dishes[0].price}}</view>
 						</view>
-						<view class="rw-elem-image-div elem-image2">
+						<view class="rw-elem-image-div elem-image2" bindtap="selectFood" data-id="{{chaozhi_dishes[1].name}}">
 							<image class="rw-elem-image" src="{{chaozhi_dishes[1].imgurl}}"></image>
 							<view class="rw-elem-image-font1">{{chaozhi_dishes[1].name}}</view>
 							<view class="rw-elem-image-font2">¥{{chaozhi_dishes[1].price}}</view>
@@ -110,12 +110,12 @@
 					</view>
 					<view class="rw-elem-elem">
 						<!-- 新上菜品 -->
-						<view class="rw-elem-image-div elem-image1">
+						<view class="rw-elem-image-div elem-image1" bindtap="selectFood" data-id="{{new_dishes[0].name}}">
 							<image class="rw-elem-image" src="{{new_dishes[0].imgurl}}"></image>
 							<view class="rw-elem-image-font1">{{new_dishes[0].name}}</view>
 							<view class="rw-elem-image-font2">¥{{new_dishes[0].price}}</view>
 						</view>
-						<view class="rw-elem-image-div elem-image2">
+						<view class="rw-elem-image-div elem-image2" bindtap="selectFood" data-id="{{new_dishes[1].name}}">
 							<image class="rw-elem-image" src="{{new_dishes[1].imgurl}}"></image>
 							<view class="rw-elem-image-font1">{{new_dishes[1].name}}</view>
 							<view class="rw-elem-image-font2">¥{{new_dishes[1].price}}</view>
@@ -146,7 +146,7 @@
 			<view class="scroll_image-cover">
 				<scroll-view class="scroll-widget" scroll-x="true">
 					<!-- 本周推荐窗口的菜(6个) -->
-					<view class="scroll_image-item" wx:for='{{week_dishes}}'>
+					<view class="scroll_image-item" wx:for='{{week_dishes}}' bindtap="selectFood" data-id="{{item.name}}">
 						<view>
 							<image class="item-image" src="{{item.imgurl}}"></image>
 							<view class="item-content">

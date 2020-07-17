@@ -30,7 +30,7 @@ Page({
     console.log(app.globalData.curDish)
     db.collection("dishes").where({
       loc: app.globalData.location,
-      floor:app.globalData.floor,
+    // floor:app.globalData.floor,
     //  window :app.globalData.window,
       name: app.globalData.curDish
     }).get({
@@ -56,8 +56,12 @@ Page({
   addData: function(e) {
     var dishes = app.globalData.dishes
     dishes.push(this.data.cur)
-    console.log('添加成功!');
+    console.log('添加成功!',this.data.cur.name); 
     console.log(app.globalData.dishes)
+    wx.showToast({
+      title: '添加成功',
+      icon: 'success',
+    })
     
   },
   /**

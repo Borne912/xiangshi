@@ -1,8 +1,9 @@
 {
-  "pages": [
-    "pages/mine/mine",
+  "pages": [  
     "pages/food/food",
     "pages/search/search",
+    "pages/mine/mine",
+   
     "pages/window/window",
     "pages/index/index",
     "pages/index1/index1",

@@ -181,6 +181,22 @@ Page({
         },
       })
       
+    },
+    //点击食物跳转
+    selectFood: function (e) {
+      let id = e.currentTarget.dataset.id
+      console.log(id)
+      app.globalData.curDish = id
+      wx.navigateTo({
+        url: '../food_details/food_details',
+      })
+      // db.collection("dishes").where({
+      //   loc: app.globalData.location,
+      //   name: id
+      // }).get({
+      //   success(res) {
+      //     console.log(res)
+      //   }
+      // })
     }
-    // 
 })
