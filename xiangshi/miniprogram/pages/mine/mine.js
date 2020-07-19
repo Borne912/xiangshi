@@ -16,6 +16,11 @@ Page({
     input_value: '请输入手机号',
 
     tel_click: false, //电话修改按钮是否点击
+
+    // 我的账单是否选中(默认不选中)
+    myAccount : 1,
+    accHeight : 240,
+    todayDishes : []
   },
 
   /**
@@ -92,13 +97,40 @@ Page({
     })
   },
 
+  // 读取数据库函数
+  getData: function (e) {
+    var that =this
+    db.collection("history").where({
+      date: app.globalData.date
+    }).get({
+      success(res) {
+        console.log(res.data)
+        var h = 240 * res.data.length + 20
+        that.setData({
+          todayDishes : res.data,
+          accHeight : h
+        })
+      }
+    })
+    
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getData()
   },
-
+  // 点击我的账单
+  selectAccount: function (e) {
+    var that = this
+    // 异或改变状态(是否选中)
+    var tmp = this.data.myAccount^1
+    console.log('点击我的账单',tmp)
+    that.setData({
+      myAccount : tmp
+    })
+    that.onLoad()
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

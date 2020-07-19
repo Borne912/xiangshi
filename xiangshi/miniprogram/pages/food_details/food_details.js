@@ -72,7 +72,10 @@ Page({
   writeData: function (e) {
     var now = new Date()
     var id =  this.structId()
-    var time = now.getHours() + ':' +now.getMinutes()
+    // 小时&分钟
+    var h = now.getHours() 
+    var min = now.getMinutes()
+    var time = (h < 10 ? '0' : '')+ h + ':' + (h < 10 ? '0' : '')+min
     var ying = e.yingyang
     var types = this.judgeType(now.getHours())
     // 历史记录数据库

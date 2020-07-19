@@ -15,15 +15,35 @@
 			<image class="head_portrait" src="{{avatarUrl}}"></image>
 		</view>
 		<view class="my_inform-wrapper">
-			<view class="my_demo bill-wrapper">
-				<view class="my_demo-front">
+			<!-- 我的账单 -->
+			<view class="my_demo bill-wrapper" style="border-bottom-left-radius:{{myAccount?0:20}}rpx;border-bottom-right-radius:{{myAccount?0:20}}rpx;">
+				<view class="my_demo-front" >
 					<view class="VerticalBar-icon"></view>
 					<view class="title">我的账单</view>
 				</view>
-				<view class="my_demo-rear">
-					<image class="arrow-icon" src="../../images/arrow_orange.svg"></image>
-				</view>
+				<view class="my_demo-rear" bindtap="selectAccount">
+					<image class='{{myAccount?"arrow-down":"arrow-icon"}}' src="../../images/arrow_orange.svg"></image>
+				</view>			
 			</view>
+			<scroll-view scroll-y  wx:if='{{myAccount}}' class="main-view" style="height:{{740}}rpx">
+				<view class="unfold" wx:for='{{todayDishes}}'>
+					<view class="unfold-in">
+						<image class="unfold-left" src="{{item.imgurl}}"></image> 
+						<view class="unfold-mid">
+							<view>{{item.loc}} {{item.floor}}楼</view>
+							<view>{{item.date}} {{item.time}}</view>
+						</view>
+						<view class="unfold-right">
+							<view style="margin-top:20rpx">{{item.types}}</view>
+							<view style="margin-top:15rpx">￥{{item.price}}</view>
+						</view>	
+	
+						<image  class='goto' src="../../images/arrow_orange.svg"></image>					
+					</view>
+				
+				</view>
+			</scroll-view>
+
 			<navigator url="../myAddress/myAddress">
 				<view class="my_demo adress-wrapper">
 					<view class="my_demo-front">
@@ -57,6 +77,7 @@
 					</view>
 				</view>
 			</navigator>
+			<!-- 我的评价 -->
 			<view class="evaluate-wrapper">
 				<view class="my_demo">
 					<view class="my_demo-front">
