@@ -5,7 +5,7 @@
 			<text>今天：</text>
 		</view>
 		<view class="time-wrapper">
-			<text>2020年6月18日</text>
+			<text>{{date}}</text>
 		</view>
 	</view>
 	<view class="PieChart-wrapper">
@@ -40,32 +40,35 @@
 		</view>
 		<view class="content">
 			<view class="elem">
+				<!-- 碳水 -->
 				<view class="demo carbohydrate">
 					<view class="lable">
 						<text>碳水化合物</text>
 					</view>
 					<view class="value">
-						<text>0.00g</text>
+						<text>{{tanshui}}g</text>
 					</view>
 				</view>
+				<!-- 蛋白 -->
 				<view class="demo protein">
 					<view class="lable">
 						<text>蛋白质</text>
 					</view>
 					<view class="value">
-						<text>0.00g</text>
+						<text>{{danbai}}g</text>
 					</view>
 				</view>
+				<!-- 脂肪 -->
 				<view class="demo fat">
 					<view class="lable">
 						<text>脂肪</text>
 					</view>
 					<view class="value">
-						<text>0.00g</text>
+						<text>{{zhifang}}g</text>
 					</view>
 				</view>
 			</view>
-			<view class="icon">
+			<view class="icon" bindtap="selectToday">
 				<view class="image">
 					<image src="../../images/arrow_orange.svg"></image>
 				</view>
@@ -74,7 +77,7 @@
 	</view>
 	<view class="td-body-wrapper">
 		<view class="tag">
-			<text>今日饮食</text>
+			<text>今日身体</text>
 		</view>
 		<view class="content">
 			<view class="box">
@@ -147,7 +150,7 @@
             <text>早餐</text>
           </view>
           <view class="block2 food">
-            <text>玉米+豆浆+无花果</text>
+            <text>{{breakfast}}</text>
           </view>
         </view>
 				<view class="demo">
@@ -155,7 +158,8 @@
             <text>午餐</text>
           </view>
           <view class="block2 food">
-            <text>黑米饭+甜椒+猪血</text>
+            <text>{{lunch}}</text>
+						<!-- <text>黑米饭+甜椒+猪血</text> -->
           </view>
         </view>
 				<view class="demo">
@@ -163,7 +167,8 @@
             <text>晚餐</text>
           </view>
           <view class="block2 food">
-            <text>黑米粥+莴笋+鹅肝</text>
+            <text>{{dinner}}</text>
+					  <!-- <text>黑米粥+莴笋+鹅肝</text> -->
           </view>
         </view>
 				<view class="demo">
@@ -171,10 +176,11 @@
             <text>加餐</text>
           </view>
           <view class="block2 food">
-            <text>牛奶+荔枝</text>
+						<text>{{addfood}}</text>
+            <!-- <text>牛奶+荔枝</text> -->
           </view>
         </view>
-				<view class="icon">
+				<view class="icon" bindtap="selectRecommend">
 					<view class="image">
 						<image src="../../images/arrow_orange.svg"></image>
 					</view>

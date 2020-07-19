@@ -1,5 +1,6 @@
 // miniprogram/pages/todayDiet/todayPage.js
 // 今日饮食展开页
+const app = getApp()
 Page({
 
   /**
@@ -39,10 +40,22 @@ Page({
   onLoad: function (options) {
     this.getToday()
   },
+  // 跳转添加界面
   addTap: function(e) {
-    console.log('跳转界面')
+    var id = e.currentTarget.dataset.id
+    console.log('跳转添加界面',id)
+    app.globalData.fourCan = id
+    wx.navigateTo({
+      url: '../addFood/addFood',
+    })
   },
-
+  // 跳转健康界面
+  selectHealth:function(e) {
+    console.log('跳转健康界面')
+    wx.switchTab({
+      url: '../health/health',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -2,23 +2,23 @@
 <!-- 这是饮食推荐页 -->
 <view class="bg_7"></view>
 <!-- 按钮为检测用 -->
-<button bindtap="changeTap">测试</button>
+<!-- <button bindtap="changeTap">测试</button> -->
 <!-- 今天日期 -->
 <view class="date">
   <view class=".today_text">
     <text style="position:relative;left:215rpx">今天:</text> </view>
   <view class=".today_real">{{date}}</view>
 </view>
-<!-- 4餐循环 -->
-<view class="main" wx:for='{{breakfast}}' wx:for-index='i' style="height:{{heights[0]}}rpx">
+<!-- 早餐循环 -->
+<view class="main" style="height:{{heights[0]}}rpx">
   <view class="head">
-    <view class="pre">{{item[0].id}}</view>
-    <view class="hot">总热量488千卡</view>
+    <view class="pre">早餐</view>
+    <view class="hot">总热量{{hot1}}千卡</view>
   </view>
   <!-- 循环信息框 -->
-  <view class="inform" wx:for='{{item}}'>
+  <view class="inform" wx:for='{{breakfast}}'>
     <view class="left">
-      <image class="img" src="{{item.src}}"></image>
+      <image class="img" src="{{item.imgurl}}"></image>
     </view>
     <!-- 右侧介绍(3行) -->
     <view class="right">
@@ -39,16 +39,16 @@
   </view>
 </view>
 
-<!-- 4餐循环 -->
-<view class="main" wx:for='{{lunch}}' wx:for-index='i' style="height:{{heights[1]}}rpx">
+<!-- 午餐循环 -->
+<view class="main" style="height:{{heights[1]}}rpx">
   <view class="head">
-    <view class="pre">{{item[0].id}}</view>
-    <view class="hot">总热量488千卡</view>
+    <view class="pre">午餐</view>
+    <view class="hot">总热量{{hot2}}千卡</view>
   </view>
   <!-- 循环信息框 -->
-  <view class="inform" wx:for='{{item}}'>
+  <view class="inform" wx:for='{{lunch}}'>
     <view class="left">
-      <image class="img" src="{{item.src}}"></image>
+      <image class="img" src="{{item.imgurl}}"></image>
     </view>
     <!-- 右侧介绍(3行) -->
     <view class="right">
@@ -69,16 +69,16 @@
   </view>
 </view>
 
-<!-- 4餐循环 -->
-<view class="main" wx:for='{{dinner}}' wx:for-index='i' style="height:{{heights[2]}}rpx">
+<!-- 晚餐循环 -->
+<view class="main" style="height:{{heights[2]}}rpx">
   <view class="head">
-    <view class="pre">{{item[0].id}}</view>
-    <view class="hot">总热量488千卡</view>
+    <view class="pre">晚餐</view>
+    <view class="hot">总热量{{hot3}}千卡</view>
   </view>
   <!-- 循环信息框 -->
-  <view class="inform" wx:for='{{item}}'>
+  <view class="inform"  wx:for='{{dinner}}'>
     <view class="left">
-      <image class="img" src="{{item.src}}"></image>
+      <image class="img" src="{{item.imgurl}}"></image>
     </view>
     <!-- 右侧介绍(3行) -->
     <view class="right">
@@ -99,16 +99,16 @@
   </view>
 </view>
 
-<!-- 4餐循环 -->
-<view class="main" wx:for='{{addfood}}' wx:for-index='i' style="height:{{heights[3]}}rpx">
+<!-- 加餐循环 -->
+<view class="main" style="height:{{heights[3]}}rpx">
   <view class="head">
-    <view class="pre">{{item[0].id}}</view>
-    <view class="hot">总热量488千卡</view>
+    <view class="pre">加餐</view>
+    <view class="hot">总热量{{hot4}}千卡</view>
   </view>
   <!-- 循环信息框 -->
-  <view class="inform" wx:for='{{item}}'>
+  <view class="inform" wx:for='{{addfood}}'>
     <view class="left">
-      <image class="img" src="{{item.src}}"></image>
+      <image class="img" src="{{item.imgurl}}"></image>
     </view>
     <!-- 右侧介绍(3行) -->
     <view class="right">

@@ -28,7 +28,7 @@
     <view class="up">
       <view class="upleft">{{item}}</view>
       <view class="upmid">热量: 100.00千卡</view>
-      <image class="upright" src="{{imgUrl}}" bindtap="addTap">
+      <image class="upright" src="{{imgUrl}}" bindtap="addTap" data-id="{{item}}">
       </image>
     </view>
     <view class="down">
@@ -37,5 +37,8 @@
         <view class="without">100.00g</view>  
       </view>     
     </view>
+  </view> 
+  <view  bindtap="selectHealth">
+    <image class="image" src="../../images/arrow_orange.svg"></image>
   </view>
 </view>

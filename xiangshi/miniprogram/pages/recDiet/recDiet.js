@@ -49,8 +49,11 @@ Page({
     lunch: [],
     dinner: [],
     addfood: [],
-    total:[],
-    tmp:[],
+    // 以下代表各餐总热量
+    hot1 : 1,
+    hot2: 2,
+    hot3: 3,
+    hot4: 4,
     cnt:[3,3,3,2]
   },
 
@@ -63,23 +66,30 @@ Page({
       date: year + '年' + month + '月' + day + '日'
     })
   },
-  // 从数据库调取数据
+  // 计算各餐热量
+  getKa: function(e) {
+    console.log(e)
+    var hot = 0;
+    for(var i = 0; i<e.length; i++) {
+      hot = hot + e[i].ka
+    }
+    return hot
+  },
+  // 从数据库调取数据(饮食推荐)
   getData: function (e) {
     // 目的是把数据库里的数据分4次拿出来(早餐,午餐,晚餐,加餐的顺序)
     // 最终效果是total=[breakfast, lunch, dinner, addfood]
-    // 其中这4个数据均为数组[], 即total=[ [],[],[],[] ]
-    // push()函数用于向数组添加元素
-    var arr = []
     var that = this
     // 调取数据(4餐)
     DB.where({//早餐
      id : '早餐'
     }).get({     
       success(res){
-        arr.push(res.data)
-        console.log(arr)
+        console.log(res.data)
+        var hot = that.getKa(res.data)
         that.setData({
-          breakfast: [res.data]
+          breakfast: res.data,
+          hot1: hot
         })
       }
     })
@@ -87,9 +97,10 @@ Page({
       id : '午餐'
      }).get({     
        success(res){
-        arr.push(res.data)
+        var hot = that.getKa(res.data)
         that.setData({
-          lunch: [res.data]
+          lunch: res.data,
+          hot2: hot
         })
        }
      }) 
@@ -97,9 +108,10 @@ Page({
     id : '晚餐'
     }).get({     
       success(res){
-        arr.push(res.data)
+        var hot = that.getKa(res.data)
         that.setData({
-          dinner: [res.data]
+          dinner: res.data,
+          hot3: hot
         })
       }
     })
@@ -107,9 +119,10 @@ Page({
       id : '加餐'
       }).get({     
       success(res){
-        arr.push(res.data)
+        var hot = that.getKa(res.data)
         that.setData({
-          addfood: [res.data]
+          addfood: res.data,
+          hot4: hot
         })
       }
      
@@ -134,12 +147,14 @@ Page({
   },
   // 换一换Tap
   changeTap: function(e) {    
+    wx.showToast({
+      title: '暂时没有新的推荐哦!',
+      icon: 'none'
+    })
     console.log(this.data.breakfast)
     console.log(this.data.lunch)
     console.log(this.data.dinner)
     console.log(this.data.addfood)
-    console.log(this.data.tmp)
-    console.log(this.data.total)
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
