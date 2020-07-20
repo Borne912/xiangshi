@@ -27,6 +27,7 @@
 					<image src="../../images/microphone.svg" class="search-listen-image"></image>
 				</view>
 			</view>
+			
 		</view>
 		<view class="font_recommend">
 			<view class="fr fr1">{{font_recommend[0].name}}</view>

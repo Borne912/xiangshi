@@ -29,20 +29,25 @@
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
+    "color": "#b3b1b1",
+    "selectedColor": "#FFA155",
     "list": [
       {
         "pagePath": "pages/health/health",
         "iconPath": "images/health.png",
+        "text": "健康",
         "selectedIconPath": "images/health_selected.png"
       },
       {
         "pagePath": "pages/food/food",
         "iconPath": "images/food.png",
+        "text": "饮食",
         "selectedIconPath": "images/food_selected.png"
       },
       {
         "pagePath": "pages/mine/mine",
         "iconPath": "images/mine.png",
+        "text": "我的",
         "selectedIconPath": "images/mine_selected.png"
       }
     ]
