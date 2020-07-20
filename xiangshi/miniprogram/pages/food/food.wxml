@@ -27,7 +27,6 @@
 					<image src="../../images/microphone.svg" class="search-listen-image"></image>
 				</view>
 			</view>
-			
 		</view>
 		<view class="font_recommend">
 			<view class="fr fr1">{{font_recommend[0].name}}</view>
@@ -56,7 +55,7 @@
 					</view>
 				</block>
 				<block wx:for="{{takeout}}">
-					<view class="ctl-elem">
+					<view class="ctl-elem" bindtap="Change_takeout_food" data-id="{{index+1}}">
 						<view>
 							<image class="ctl-image" src="{{item.imgurl}}"></image>
 						</view>

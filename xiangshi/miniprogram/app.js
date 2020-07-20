@@ -28,7 +28,8 @@ App({
     tel: '', //用户手机号码
 
     openid: '', //用户的唯一标识码
-    
+    /*当前选中的外卖食物类型*/
+    takeout_foodtype:''
   },
   onLaunch: function () {
   wx.cloud.init({

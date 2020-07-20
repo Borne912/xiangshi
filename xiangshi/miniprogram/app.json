@@ -1,11 +1,10 @@
 {
-  "pages": ["pages/health/health",
-    "pages/todayDiet/todayPage",
+  "pages": [
     "pages/food/food",
+    "pages/health/health",
+    "pages/todayDiet/todayPage",
     "pages/myAddress/myAddress",
     "pages/mine/mine",  
-    
-    
     "pages/tangshi_page/tangshi",
     "pages/recDiet/recDiet",
     "pages/addFood/addFood",
@@ -13,7 +12,6 @@
     "pages/window/window",
     "pages/index/index",
     "pages/index1/index1",
-
     "pages/myAgreement/myAgreement",
     "pages/pay/pay",
     "pages/takeout/takeout",

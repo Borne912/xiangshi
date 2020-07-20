@@ -34,7 +34,7 @@ Page({
       // 以下开始读数据库
       db.collection("font_recommend").get({
         success(res){
-          console.log("查询数据成功",res)
+          //console.log("查询数据成功",res)
           tmp = res.data
           that.setData({
             font_recommend: tmp,
@@ -134,11 +134,14 @@ Page({
         location: app.globalData.location
       })
       //console.log(that.data.location)
-      db.collection("outside-take-out").get({
+      db.collection("outside-take-out").where({
+        location:that.data.loc
+      }).get({
         success(res){
-          console.log("查询数据成功",res.data[1].name)
+          app.globalData.takeout_foodtype = res.data[0].name;
+          //console.log("查询数据成功",app.globalData.takeout_foodtype)
           tmp = res.data
-          console.log(tmp[1].name)
+          //console.log(tmp[1].name)
           that.setData({
             takeout:tmp
           })
@@ -156,7 +159,7 @@ Page({
       let id = e.currentTarget.dataset.id
       let app = getApp()
       app.globalData.floor = parseInt(id)
-      console.log(typeof(app.globalData.floor))
+      //console.log(typeof(app.globalData.floor))
       wx.navigateTo({
         //目的页面地址        
         url: '../tangshi_page/tangshi',
@@ -173,7 +176,7 @@ Page({
       app.globalData.window = id.window
 
       let that = this
-      console.log(id)
+      //console.log(id)
       wx.navigateTo({
         url: '../window/window', 
         success: function(res){
@@ -185,7 +188,7 @@ Page({
     //点击食物跳转
     selectFood: function (e) {
       let id = e.currentTarget.dataset.id
-      console.log(id)
+      //console.log(id)
       app.globalData.curDish = id
       wx.navigateTo({
         url: '../food_details/food_details',
@@ -198,5 +201,27 @@ Page({
       //     console.log(res)
       //   }
       // })
+    },
+    
+    //点击打包食物跳转
+
+    Change_takeout_food: function(reg){
+      var that = this;
+      //console.log("在这",reg)
+      if (reg.currentTarget.dataset.id == 1) {
+        app.globalData.takeout_foodtype = "米饭";
+      } 
+      else if (reg.currentTarget.dataset.id == 2) {
+        app.globalData.takeout_foodtype = "汉堡";
+      }
+      else if (reg.currentTarget.dataset.id == 3) {
+        app.globalData.takeout_foodtype = "面条";
+      }
+      else{
+        app.globalData.takeout_foodtype = "包子";
+      }
+      wx.navigateTo({
+        url: '../takeout/takeout',
+      })
     }
 })

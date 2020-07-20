@@ -1,21 +1,23 @@
 <!--pages/takeout/takeout.wxml-->
 <view class="cover">
 	<view class="list">
-		<view class="list-content1" hover-class="selected-item">
-			<text class="list-font">综合排序</text>
-		</view>
-		<view class="list-content2" hover-class="selected-item">
+		<block wx:for="{{navigation}}" >
+			<view class="list-content1 {{Seletctd_Condition==index+1?'selected-item':''}}"  data-id="{{index+1}}" bindtap="ChangeCondition">
+				<text class="list-font">{{item}}</text>
+			</view>
+		</block>
+		<!-- <view class="list-content2" hover-class="selected-item">
 			<text class="list-font">速度快</text>
 		</view>
 		<view class="list-content3" hover-class="selected-item">
 			<text class="list-font">销量高</text>
-		</view>
+		</view> -->
 	</view>
 	<view class="dish-block">
-		<block wx:for="{{takeout}}" wx:for-index="idx" wx:for-item="take_out">
+		<block wx:for="{{takeout}}" wx:key="{{idx}}" wx:for-index="idx" wx:for-item="take_out">
 			<view class="dish">
 				<view class="dish-content1">
-					<image class="dish-image"></image>
+					<image class="dish-image" src="{{take_out.imgUrl}}"></image>
 				</view>
 				<view class="dish-content2">
 					<view class="dish-information">
