@@ -23,13 +23,13 @@ Page({
     }).get({
       success(res){
         if(res.data.length != 0)
-          console.log(res.data)
+          that.showInform('检索成功!')
         else
-          console.log("对不起,没有检索到该菜品")
+          that.showInform('对不起,未检索到该菜品!')
         that.setData({
           dishes: res.data
         })
-      }
+      },
     })
   },
   /**
@@ -46,9 +46,20 @@ Page({
       inputDish: input
     })  
   },
+  showInform: function (e) {
+    wx.showToast({
+      title: e,
+      icon: 'none',
+    })
+  },
   searchTap: function (e) {
     var find = this.data.inputDish
     this.searchDataBase(find)
+    // if(this.data.dishes.length == 0) {
+    //   this.showInform('未检索到关键字!')
+    // }else {
+    //   this.showInform('检索成功!')
+    // }
   },
   selectFood: function(e) {   
     let id = e.currentTarget.dataset.id

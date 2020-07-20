@@ -1,7 +1,13 @@
 //app.js
-
+// 以下计算日期
+const now = new Date()
+var year = now.getFullYear();
+var month = (now.getMonth()+1);
+var day = now.getDate();
 App({
   globalData: {// 全局变量
+    // 今日日期
+    date: year + '-' + month + '-' + day,
     // 默认地点鸿博园
     location : "鸿博园",
     // 楼层
@@ -12,6 +18,8 @@ App({
     curDish: '',
     // 饮食记录
     dishes:[],
+    // 健康界面的今日饮食(4餐信息)
+    fourCan:'早餐',
     /*用户信息*/
     nickName: '', //用户名
 

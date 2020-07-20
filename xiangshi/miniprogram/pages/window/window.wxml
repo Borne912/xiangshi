@@ -21,9 +21,9 @@
             <view style="flex-direction: row;display:flex;">  
               <view class="price_left">{{item.price}} 元/个</view>
               <view class="ying_right">
-                <view>碳水: {{item.yingyang.tanshui}}</view>
-                <view>蛋白: {{item.yingyang.danbai}}</view>
-                <view>脂肪: {{item.yingyang.zhifang}}</view>
+                <view class="ff">碳水: {{item.yingyang.tanshui}}</view>
+                <view class="ff">蛋白: {{item.yingyang.danbai}}</view>
+                <view class="ff">脂肪: {{item.yingyang.zhifang}}</view>
               </view>
             </view>
           </view>

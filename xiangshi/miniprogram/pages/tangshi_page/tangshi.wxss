@@ -155,7 +155,7 @@
   position: relative;
   /* background: white; */
   height: 215rpx;
-  margin-left: 0px;
+  margin-left: 0rpx;
   left: 2rpx;
   margin-bottom: 25rpx;
   /* margin-top: 5rpx; */
@@ -169,12 +169,12 @@
 }
 /* 介绍部分(右边) */
 .intro {
-  
   height: 215rpx;
   position: relative;
   width: 400rpx;
   /* background: red; */
   margin-left: 10rpx;
+  top: -8rpx;
   /* left: 200rpx; */
 }
 .price_left {
@@ -193,6 +193,11 @@
   position: relative;
   /* background: yellow; */
   top: -15rpx;
-  margin-top: 5rpx;
+  margin-top: 1rpx;
   margin-left: 10rpx;
+}
+
+.ff {
+  /* 紧凑 */
+  margin-top: -10rpx;
 }

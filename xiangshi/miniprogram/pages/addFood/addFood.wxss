@@ -95,11 +95,12 @@
 .dish-wrapper .dish-content .content-left{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   margin-left: 14rpx;
-  width: 208rpx;
+  width: 220rpx;
   height: 92rpx;
+  /* background-color:red; */
 }
 
 .dish-wrapper .dish-content .content-right{
@@ -108,8 +109,9 @@
   justify-content: space-between;
   align-items: center;
   margin-right: 30rpx;
-  width: 148rpx;
+  width: 180rpx;
   height: 92rpx;
+  /* background-color: red; */
 }
 
 .dish-wrapper .dish-content .content-left .image-wrapper{
@@ -125,10 +127,13 @@
   background-color: #FFA155;
 }
 
-.dish-wrapper .dish-content .content-left .font-wrapper text{
+.dish-wrapper .dish-content .content-left .font-wrapper {
   color: rgba(77, 63, 63, 0.75);
   font-size: 32rpx;
   text-align: left;
+  position: relative;
+  left: 20rpx;
+  /* background-color: yellow; */
   font-family: PingFangSC-regular;
 }
 

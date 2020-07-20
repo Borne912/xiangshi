@@ -30,7 +30,7 @@ Page({
     console.log(app.globalData.curDish)
     db.collection("dishes").where({
       loc: app.globalData.location,
-      floor:app.globalData.floor,
+    // floor:app.globalData.floor,
     //  window :app.globalData.window,
       name: app.globalData.curDish
     }).get({
@@ -46,6 +46,57 @@ Page({
     })
 
   },
+  // 根据时间判断用餐类别
+  judgeType: function (e) {
+    if(e >= 5 && e <= 8)
+      return '早餐'
+    else if(e >= 11 && e <= 13)
+      return '午餐'
+    else if( e >= 17 && e <= 19)
+      return '晚餐'
+    else 
+      return '加餐'
+  },
+  // 构造_id(根据时间构造)
+  structId: function (e) {
+    var now = new Date()
+    var year = now.getFullYear().toString();
+    var month =(now.getMonth() < 9 ? '0' : '')+(now.getMonth()+1);
+    var day = (now.getDate() < 10 ? '0' : '')+(now.getDate());
+    var time = now.getHours().toString()+ now.getMinutes() + now.getSeconds()
+    var res = year + month + day + time
+    console.log(res)
+    return res
+  },
+  // 写入数据库数据
+  writeData: function (e) {
+    var now = new Date()
+    var id =  this.structId()
+    // 小时&分钟
+    var h = now.getHours() 
+    var min = now.getMinutes()
+    var time = (h < 10 ? '0' : '')+ h + ':' + (min < 10 ? '0' : '')+min
+    var ying = e.yingyang
+    var types = this.judgeType(now.getHours())
+    // 历史记录数据库
+    db.collection('history').add({
+      data:{
+        _id : id,
+        name : e.name,
+        loc : e.loc,
+        floor : e.floor,
+        window : e.window,
+        date : app.globalData.date,
+        time : time,
+        types : types,
+        price : e.price,
+        yingyang : {re : ying.re, tanshui : ying.tanshui, 
+                    danbai : ying.danbai, zhifang: ying.zhifang},
+        commit : "",
+        imgurl : e.imgurl
+      }
+    })
+  },
   onLoad: function (options) {
     this.getData()
     console.log(this.data.cur)
@@ -56,8 +107,12 @@ Page({
   addData: function(e) {
     var dishes = app.globalData.dishes
     dishes.push(this.data.cur)
-    console.log('添加成功!');
-    console.log(app.globalData.dishes)
+    console.log('添加成功!',this.data.cur.name); 
+    this.writeData(this.data.cur)
+    wx.showToast({
+      title: '添加成功',
+      icon: 'success',
+    })
     
   },
   /**

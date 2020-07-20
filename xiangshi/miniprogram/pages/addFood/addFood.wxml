@@ -12,22 +12,23 @@
 	</view>
   <view class="complete-bt-wrapper">
     <view class="bt-content">
-      <button>完成</button>
+      <button bindtap="selectToday">完成</button>
     </view>
   </view>
-  <view class="dish-wrapper">
+  <view class="dish-wrapper" bindtap="selectFood" wx:for="{{dishes}}">
     <view class="dish-content">
       <view class="content-left">
         <view class="image-wrapper">
-          <image></image>
+          <image src="{{item.imgurl}}"></image>
         </view>
         <view class="font-wrapper">
-          <text>米饭</text>
+          <!-- <text>{{item.name}}</text> -->
+          {{item.name}}
         </view>
       </view>
       <view class="content-right">
         <view class="font-wrapper">
-          <text class="font-value">116</text>
+          <text class="font-value">{{item.ka}}</text>
           <text class="font-unit">千卡/100g</text>
         </view>
       </view>

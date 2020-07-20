@@ -69,6 +69,7 @@
   position: relative;
   width: 400rpx;
   /* background: red; */
+  top: -8rpx;
   margin-left: 10rpx;
   /* left: 200rpx; */
 }
@@ -90,4 +91,9 @@
   top: -15rpx;
   margin-top: 5rpx;
   margin-left: 10rpx;
+}
+
+.ff {
+  /* 紧凑 */
+  margin-top: -10rpx;
 }

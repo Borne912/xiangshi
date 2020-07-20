@@ -183,9 +183,77 @@
   line-height: 40rpx;
   border-radius: 20rpx;
   background-color: rgba(255, 255, 255, 1);
+  /* background-color: red; */
   text-align: center;
 }
+/* 展开我的账单 */
+.main-view {
+  background-color: white;
+  border-bottom-left-radius:20rpx;
+  border-bottom-right-radius:20rpx;
+}
+.unfold {
+  position: relative;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  width: 662rpx;
+  height: 210rpx;
+  line-height: 40rpx;
+  border-radius: 20rpx;
+  background-color:#FFE6D2;
+  color: rgb(2, 1, 1);
+  font-size: 28rpx;
+  text-align: center;
+  font-family: -apple-system;
+  border: 6rpx solid rgba(255, 255, 255, 0);
+  margin-bottom: 28rpx;
+}
 
+.unfold-in {
+  /* background-color: green; */
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  height: 170rpx;
+  display: flex;
+  flex-direction: row;
+}
+.unfold-left {
+  height: 140rpx;
+  width: 140rpx;
+  position: relative;
+  margin-left: 15rpx;
+  margin-top: 20rpx;
+  background-color: orange;
+  border-radius: 20rpx;
+}
+.unfold-mid {
+  /* background-color: blue; */
+  height: 140rpx;
+  width: 320rpx;
+  position: relative;
+  margin-left: 20rpx;
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-family: sans-serif;
+}
+.unfold-right {
+  /* background-color: palevioletred; */
+  height: 135rpx;
+  width: 100rpx;
+  margin-left: 15rpx;
+  margin-top: 20rpx;
+  font-size: 30rpx;
+}
+.goto {
+  height: 48rpx;
+  width: 48rpx;
+  margin-top: 35rpx;
+  position: relative;
+  left: -15rpx;
+  /* background-color: blue; */
+}
 .my_inform-wrapper .my_demo-front{
   display: flex;
   flex-direction: row;
@@ -224,6 +292,12 @@
 .my_inform-wrapper .my_demo-rear .arrow-icon{
   width: 48rpx;
   height: 48rpx;
+}
+/* 点击之后(旋转九十度 */
+.arrow-down {
+  width: 48rpx;
+  height: 48rpx;
+  transform: rotate(90deg); /*图片旋转90度*/
 }
 
 .my_inform-wrapper .evaluate-wrapper{
