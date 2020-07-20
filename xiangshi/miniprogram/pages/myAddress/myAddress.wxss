@@ -69,6 +69,7 @@
   width: 540rpx;
   overflow: hidden;
   position: fixed;
+  /* flex-direction: row; */
   top: 20%;
   left: 0;
   z-index: 9999;
@@ -76,12 +77,19 @@
   margin: -180rpx 105rpx;
   border-radius: 36rpx;
 }
+.modal-title-main {
+  display: flex;
+  flex-direction: row;
+  /* background-color: blue; */
+}
 .modal-title {
   padding-top: 40rpx;
   font-size: 36rpx;
   color: #030303;
   text-align: center;
-
+  /* background-color: yellow; */
+  position: relative;
+  left: 180rpx;
 }
 .modal-content {
   padding: 40rpx 32rpx;
@@ -130,4 +138,37 @@ input-holder {
   width: 50%;
   color: #FFA155;
   text-align: center;
+}
+
+/* 删除确认按钮 */
+.modal-dialog-del {
+  width: 540rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 20%;
+  left: 0;
+  z-index: 9999;
+  background: orange;
+  margin: -180rpx 105rpx;
+  border-radius: 36rpx;
+}
+.modal-title-del {
+  padding-top: 40rpx;
+  font-size: 36rpx;
+  color: #030303;
+  text-align: center;
+  margin-bottom:40rpx;
+}
+
+.btn-del {
+  background-color:orange;
+  width: 80rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  top: 30rpx;
+  left: 90rpx;
+  position: relative;
+  font-size: 30rpx;
+  color: #030303;
 }

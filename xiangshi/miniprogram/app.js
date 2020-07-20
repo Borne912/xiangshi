@@ -1,9 +1,9 @@
 //app.js
 // 以下计算日期
 const now = new Date()
-var year = now.getFullYear().toString();
-var month = (now.getMonth()+1).toString();
-var day = now.getDate().toString();
+var year = now.getFullYear();
+var month = (now.getMonth()+1);
+var day = now.getDate();
 App({
   globalData: {// 全局变量
     // 今日日期

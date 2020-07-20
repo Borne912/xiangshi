@@ -162,10 +162,48 @@
 .each {
   display: flex;
   flex-direction: row;
-  /* background: magenta; */
+  background: magenta;
+  width: 260rpx;
   /* margin-right: 40rpx; */
   height: 50rpx;
   line-height: 50rpx;
+  margin-left: 10rpx;
+}
+.each-left {
+  display: flex;
+  flex-direction: row;
+  /* background: magenta; */
+  width: 270rpx;
+  /* margin-right: 40rpx; */
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 10rpx;
+  position: absolute;
+  left: 60rpx;
+}
+.each-mid {
+  display: flex;
+  flex-direction: row;
+  /* background: magenta; */
+  width: 260rpx;
+  /* margin-right: 40rpx; */
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 10rpx;
+  position: absolute;
+  left: 305rpx;
+}
+.each-right {
+  display: flex;
+  flex-direction: row;
+  /* background: magenta; */
+  width: 260rpx;
+  /* margin-right: 40rpx; */
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 10rpx;
+  position: absolute;
+  left: 500rpx;
 }
 /* 带边框 */
 .withborder {
@@ -175,11 +213,14 @@
   padding-right: 8rpx;
   text-align: center;
   margin-right: 5rpx;
+  /* width: 72rpx; */
+  
 }
 /* 不带边框 */
 .without {
   margin-top: 3rpx;
   margin-right: 20rpx;
+  /* background-color: red; */
 }
 
 /* .icon{

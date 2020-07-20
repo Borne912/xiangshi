@@ -12,6 +12,7 @@ Page({
     isAdd : true,
     // 是否显示
     showModal: false,
+    showDel: false,
     // 两大关键字(添加与修改)
     point: '添加',
     holder: {name: '请输入姓名', gender: '请输入性别', address: '请输入详细地址',      tel: '请输入手机号码'},
@@ -31,6 +32,12 @@ Page({
       showModal: true
     })
   },
+  // 删除弹窗
+  showDelBtn: function () {
+    this.setData({
+      showDel: true
+    })
+  },
   /* 弹出框蒙层截断touchmove事件 */
   preventTouchMove: function () {
   },
@@ -38,6 +45,12 @@ Page({
   hideModal: function () {
     this.setData({
       showModal: false
+    });
+  },
+  /* 隐藏删除对话框*/
+  hideDel: function () {
+    this.setData({
+      showDel: false
     });
   },
   /*对话框取消按钮点击事件 */
@@ -58,17 +71,52 @@ Page({
       } else {
         // 数据库update数据
         that.changeAdd()
-      }   
+      }
+      wx.showToast({
+        title:  td.point + '成功!',
+        icon: 'none'
+      })   
     }   
     else {
       wx.showToast({
-        title: '不要输入空白信息哦!',
+        title:'不要输入空白信息哦!',
         icon: 'none'
       })
     }
+
     this.hideModal();
-    this.onLoad()
     console.log('点击确认')
+  },
+  // 删除取消
+  delonCancel: function () {
+    this.hideDel();
+    console.log('点击取消')
+  },
+  // 删除确认
+  delonConfirm: function () {
+    var td = this.data
+    var that = this
+    // 以下执行删除操作
+    db.collection("myAddress").where({
+      _id: td.cur._id,
+      _openid: td.cur._openid
+    }).remove({
+      success(res) {
+       wx.showToast({
+         title: '删除成功!',
+         icon: 'none'
+       })
+       that.getData()
+      }
+    })
+    this.hideDel();
+    console.log('点击确认')
+  },
+  // 点击删除按钮
+  deltap:function (e) {
+    console.log('这里是删除按钮')
+    this.hideModal()
+    this.showDelBtn()
   },
   /* 读取地址数据 */
   getData: function(e) {
@@ -172,9 +220,12 @@ Page({
         gender: td._gender,
         address: td._address,
         tel: td._tel 
-      }       
+      },success(res) {  //回调成功
+        that.getData()
+        console.log('添加成功')
+      }
     })
-    console.log('添加成功')
+    
   },
   // 修改已有数据
   changeAdd : function(e) {
@@ -184,20 +235,18 @@ Page({
     console.log(find)
     db.collection("myAddress").where({
       _id: find._id,
-      _openid: find._openid,
-      name: find.name,
-      gender: find.gender,
-      address: find.address,
-      tel: find.tel 
+      _openid: find._openid, 
     }).update({
       data:{
         name: td._name,
         gender: td._gender,
         address: td._address,
         tel: td._tel 
-      }       
+      },success(res) {//回调成功
+          that.getData()
+          console.log('修改成功')
+      } 
     })
-    console.log('修改成功')
   },
   // 输入改变(4个)
   inputName: function(e) {
@@ -239,7 +288,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.getData()
   },
 
   /**

@@ -4,7 +4,12 @@
 <!--弹窗-->
 <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
 <view class="modal-dialog" wx:if="{{showModal}}">
-  <view class="modal-title">{{point}}地址信息</view>
+  <view class="modal-title-main">
+   <view class="modal-title">{{point}}地址信息</view>
+   <button class="btn-del" wx:if="{{point=='修改'}}" bindtap="deltap">删</button>
+  </view>
+  
+  <!-- 输入弹窗 -->
   <view class="modal-content">
     <view class="modal-input">
       <input placeholder-class="input-holder" bindinput="inputName" class="input" placeholder="{{holder.name}}" value="{{cur.name}}"></input>
@@ -17,6 +22,17 @@
   <view class="modal-footer">
     <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
     <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确认</view>
+  </view>
+</view>
+
+<!-- 删除选项 -->
+<view class="modal-dialog-del" wx:if="{{showDel}}">
+  <view class="modal-title-del">是否确认删除?</view>
+
+  <!-- 删除的确认确定取消 -->
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="delonCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" style="color:red" bindtap="delonConfirm" data-status="confirm">确认</view>
   </view>
 </view>
 

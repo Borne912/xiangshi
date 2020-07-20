@@ -24,20 +24,106 @@
     </view>
   </view>
   <!-- 四种餐的营养信息 -->
-  <view class="inform" wx:for='{{classes}}'>
+  <view class="inform">
     <view class="up">
-      <view class="upleft">{{item}}</view>
-      <view class="upmid">热量: 100.00千卡</view>
+      <!-- 早餐 -->
+      <view class="upleft">早餐</view>
+      <view class="upmid">热量: {{breakfast[0]}}千卡</view>
       <image class="upright" src="{{imgUrl}}" bindtap="addTap" data-id="{{item}}">
       </image>
     </view>
     <view class="down">
-      <view class="each" wx:for="{{yingyang}}" wx:for-index='i'>
-        <view class="withborder">{{item}}</view>
-        <view class="without">100.00g</view>  
-      </view>     
+      <!-- 以下是三种营养 -->
+      <view class="each-left">
+        <view class="withborder">碳水化合物</view>
+        <view class="without">{{breakfast[1]}}g</view>  
+      </view>
+      <view class="each-mid">
+        <view class="withborder" >蛋白质</view>
+        <view class="without">{{breakfast[2]}}g</view>  
+      </view>   
+      <view class="each-right">
+        <view class="withborder" >脂肪</view>
+        <view class="without">{{breakfast[3]}}g</view>  
+      </view>        
     </view>
   </view> 
+  <!-- 四种餐的营养信息 -->
+  <view class="inform">
+    <view class="up">
+      <!-- 午餐 -->
+      <view class="upleft">午餐</view>
+      <view class="upmid">热量: {{lunch[0]}}千卡</view>
+      <image class="upright" src="{{imgUrl}}" bindtap="addTap" data-id="{{item}}">
+      </image>
+    </view>
+    <view class="down">
+      <!-- 以下是三种营养 -->
+      <view class="each-left">
+        <view class="withborder">碳水化合物</view>
+        <view class="without">{{lunch[1]}}g</view>  
+      </view>
+      <view class="each-mid">
+        <view class="withborder">蛋白质</view>
+        <view class="without">{{lunch[2]}}g</view>  
+      </view>   
+      <view class="each-right">
+        <view class="withborder">脂肪</view>
+        <view class="without">{{lunch[3]}}g</view>  
+      </view>        
+    </view>
+  </view> 
+  <!-- 四种餐的营养信息 -->
+  <view class="inform">
+    <view class="up">
+      <!-- 晚餐-->
+      <view class="upleft">晚餐</view>
+      <view class="upmid">热量: {{dinner[0]}}千卡</view>
+      <image class="upright" src="{{imgUrl}}" bindtap="addTap" data-id="{{item}}">
+      </image>
+    </view>
+    <view class="down">
+      <!-- 以下是三种营养 -->
+      <view class="each-left">
+        <view class="withborder">碳水化合物</view>
+        <view class="without">{{dinner[1]}}g</view>  
+      </view>
+      <view class="each-mid">
+        <view class="withborder">蛋白质</view>
+        <view class="without">{{dinner[2]}}g</view>  
+      </view>   
+      <view class="each-right">
+        <view class="withborder">脂肪</view>
+        <view class="without">{{dinner[3]}}g</view>  
+      </view>        
+    </view>
+  </view> 
+  <!-- 四种餐的营养信息 -->
+  <view class="inform">
+    <view class="up">
+      <!-- 加餐{{item}} -->
+      <view class="upleft">加餐</view>
+      <view class="upmid">热量: {{addfood[0]}}千卡</view>
+      <image class="upright" src="{{imgUrl}}" bindtap="addTap" data-id="{{item}}">
+      </image>
+    </view>
+    <view class="down">
+      <!-- 以下是三种营养 -->
+      <view class="each-left">
+        <view class="withborder">碳水化合物</view>
+        <view class="without">{{addfood[1]}}g</view>  
+      </view>
+      <view class="each-mid">
+        <view class="withborder">蛋白质</view>
+        <view class="without">{{addfood[2]}}g</view>  
+      </view>   
+      <view class="each-right">
+        <view class="withborder">脂肪</view>
+        <view class="without">{{addfood[3]}}g</view>  
+      </view>        
+    </view>
+  </view> 
+  <!--  -->
   <view  bindtap="selectHealth">
     <image class="image" src="../../images/arrow_orange.svg"></image>
   </view>

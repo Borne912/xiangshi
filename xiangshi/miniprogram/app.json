@@ -1,15 +1,15 @@
 {
-  "pages": [
+  "pages": ["pages/health/health",
+    "pages/todayDiet/todayPage",
+    "pages/food/food",
     "pages/myAddress/myAddress",
     "pages/mine/mine",  
-    "pages/health/health",
-    "pages/food/food",
+    
+    
     "pages/tangshi_page/tangshi",
     "pages/recDiet/recDiet",
     "pages/addFood/addFood",
     "pages/search/search",
-    
-    "pages/todayDiet/todayPage",
     "pages/window/window",
     "pages/index/index",
     "pages/index1/index1",

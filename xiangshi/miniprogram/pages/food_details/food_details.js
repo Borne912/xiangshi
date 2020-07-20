@@ -75,7 +75,7 @@ Page({
     // 小时&分钟
     var h = now.getHours() 
     var min = now.getMinutes()
-    var time = (h < 10 ? '0' : '')+ h + ':' + (h < 10 ? '0' : '')+min
+    var time = (h < 10 ? '0' : '')+ h + ':' + (min < 10 ? '0' : '')+min
     var ying = e.yingyang
     var types = this.judgeType(now.getHours())
     // 历史记录数据库
