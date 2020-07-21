@@ -3,9 +3,14 @@
     "pages/food/food",
     "pages/health/health",
     "pages/todayDiet/todayPage",
+<<<<<<< HEAD
     
     "pages/myAddress/myAddress",
     "pages/mine/mine",    
+=======
+    "pages/myAddress/myAddress",
+    "pages/mine/mine",  
+>>>>>>> afe7d741d9c9b1e6f457c2b1e55a22c96324a71e
     "pages/tangshi_page/tangshi",
     "pages/recDiet/recDiet",
     "pages/addFood/addFood",
@@ -13,7 +18,6 @@
     "pages/window/window",
     "pages/index/index",
     "pages/index1/index1",
-
     "pages/myAgreement/myAgreement",
     "pages/pay/pay",
     "pages/takeout/takeout",
@@ -31,20 +35,25 @@
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
+    "color": "#b3b1b1",
+    "selectedColor": "#FFA155",
     "list": [
       {
         "pagePath": "pages/health/health",
         "iconPath": "images/health.png",
+        "text": "健康",
         "selectedIconPath": "images/health_selected.png"
       },
       {
         "pagePath": "pages/food/food",
         "iconPath": "images/food.png",
+        "text": "饮食",
         "selectedIconPath": "images/food_selected.png"
       },
       {
         "pagePath": "pages/mine/mine",
         "iconPath": "images/mine.png",
+        "text": "我的",
         "selectedIconPath": "images/mine_selected.png"
       }
     ]

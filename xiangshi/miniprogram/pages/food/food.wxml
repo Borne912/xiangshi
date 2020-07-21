@@ -55,7 +55,7 @@
 					</view>
 				</block>
 				<block wx:for="{{takeout}}">
-					<view class="ctl-elem">
+					<view class="ctl-elem" bindtap="Change_takeout_food" data-id="{{index+1}}">
 						<view>
 							<image class="ctl-image" src="{{item.imgurl}}"></image>
 						</view>
