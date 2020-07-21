@@ -134,7 +134,9 @@ Page({
         location: app.globalData.location
       })
       //console.log(that.data.location)
-      db.collection("outside-take-out").get({
+      db.collection("outside-take-out").where({
+        location: app.globalData.location 
+      }).get({
         success(res){
           console.log("查询数据成功",res.data[1].name)
           tmp = res.data
