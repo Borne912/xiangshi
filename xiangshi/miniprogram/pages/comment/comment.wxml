@@ -16,16 +16,27 @@
 			<textarea class="comment-rctb" auto-focus="true"></textarea>
 		</view>
 		<view class="recommend-tag-content">
-			<view class="recommend-tag-name">推荐标签</view>
+			<view class="recommend-tag-name">
+			<text>推荐标签</text>
+			</view>
 			<view class="recommend-tag-wrap">
 				<text class="recommend-tag">请勿打电话，短信通知即可</text>
 			</view>
 		</view>
 		<view class="customize-tag-content">
-			<view class="recommend-tag-name">自定标签</view>
-			<view class="recommend-tag-wrap" style="background-color:#FFFFFF; border: 2rpx solid rgba(255, 230, 210, 1);">
-				<text class="recommend-tag">多加米饭</text>
+			<view class="recommend-tag-name">
+				<view class="recommend-tag-font">
+					<text>自定标签</text>
+				</view> 
+				<view class="recommend-tag-image">
+					<image src="../../images/update.svg"></image>
+				</view>
 			</view>
+			<block wx:for="{{custom_tag}}">
+				<view class="recommend-tag-wrap" style="background-color:#FFFFFF; border: 2rpx solid rgba(255, 230, 210, 1);">
+					<text class="recommend-tag">{{item.content}}</text>
+				</view>
+			</block>
 		</view>
 	</view>
   <button class="commit-trap">确认</button>

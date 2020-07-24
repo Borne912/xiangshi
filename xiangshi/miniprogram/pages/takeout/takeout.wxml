@@ -47,7 +47,7 @@
 						</view>
 					</view>
 					<view class="dish-bt">
-						<button class="bt-image" style="background-image:url(../../images/add.svg);" bindtap="Add_dishes" data-name="{{take_out.name}}" data-id="{{idx+1}}" data-price="{{take_out.price}}" data-imgurl="{{take_out.imgurl}}"></button>
+						<button class="bt-image" style="background-image:url(https://7869-xiangshi-yqpne-1302514195.tcb.qcloud.la/image/icon/add.svg?sign=a6d64d0f38e7bdd9cee5d5291dd4112d&t=1595604191);" bindtap="Add_dishes" data-name="{{take_out.name}}" data-id="{{idx+1}}" data-price="{{take_out.price}}" data-imgurl="{{take_out.imgurl}}" ></button>
 					</view>
 				</view>
 			</view>

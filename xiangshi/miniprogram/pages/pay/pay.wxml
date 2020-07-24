@@ -14,7 +14,7 @@
 	<view class="shopping-basket">
 		<view class="basket-block1">
 			<view class="rd-content">
-				<radio checked="{{checked}}" class="check-all" color="rgba(255, 161, 85, 1)" bindtap="checkTap"></radio>
+				<radio checked="{{checked}}" class="check-all" color="rgba(255, 161, 85, 1)" bindtap="checkTap" data-id="0"></radio>
 				<view>
 					<text class="rd-font">全选</text>
 				</view>
@@ -23,7 +23,7 @@
 		<block wx:for="{{food_list}}" wx:if="{{item.numb>0}}">
 			<view class="basket-block2">
 				<view class="rd-content">
-					<radio checked="{{checked}}" class="check-all" color="rgba(255, 161, 85, 1)" bindtap="checkTap"></radio>
+					<radio checked="{{item.checked}}" class="check-all" color="rgba(255, 161, 85, 1)" bindtap="checkTap" data-id="{{index+1}}"></radio>
 				</view>
 				<view class="dish-content">
 					<view class="image-content">
@@ -42,13 +42,13 @@
 							</view>
 							<view class="dish-num">
 								<view class="dish-bt1">
-									<button class="bt bt-add" style="background-image:url(../../images/add.svg);" bindtap="Addfood" data-name="{{item.name}}"></button>
+									<button class="bt bt-add" style="background-image:url(https://7869-xiangshi-yqpne-1302514195.tcb.qcloud.la/image/icon/add.svg?sign=a6d64d0f38e7bdd9cee5d5291dd4112d&t=1595604191);" bindtap="Addfood" data-name="{{item.name}}"></button>
 								</view>
 								<view class="number">
 									<text>{{item.numb}}</text>
 								</view>
 								<view class="dish-bt2">
-									<button class="bt bt-add" style="background-image:url(../../images/sub.svg);" bindtap="Subfood" data-name="{{item.name}}"></button>
+									<button class="bt bt-add" style="background-image:url(https://7869-xiangshi-yqpne-1302514195.tcb.qcloud.la/image/icon/sub.svg?sign=e941654dbadc5c8a477019e86145410b&t=1595605049);" bindtap="Subfood" data-name="{{item.name}}"></button>
 								</view>
 							</view>
 						</view>

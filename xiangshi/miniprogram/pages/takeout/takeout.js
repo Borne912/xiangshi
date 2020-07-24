@@ -148,7 +148,7 @@ Page({
   Add_dishes:function(res){
     var that = this;
     var flag = false;
-    var tmp = {name:"",numb:0,price:"",imgurl:""};
+    var tmp = {name:"",numb:0,price:"",imgurl:"",checked:true};
     const date = app.globalData.takeout_addfood;
     app.globalData.takeout_numb = app.globalData.takeout_numb+1;
     that.setData({
