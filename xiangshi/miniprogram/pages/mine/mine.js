@@ -8,17 +8,12 @@ Page({
    */
   data: {
     nickName: '', //用户名
-
     avatarUrl: '', //用户头像图片地址
-
     tel: '请添加电话号码', //用户手机号码
-
     input_value: '请输入手机号',
-
     tel_click: false, //电话修改按钮是否点击
-
     // 我的账单是否选中(默认不选中)
-    myAccount : 1,
+    myAccount : 0,
     accHeight : 240,
     todayDishes : []
   },

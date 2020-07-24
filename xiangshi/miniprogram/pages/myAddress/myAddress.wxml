@@ -39,19 +39,23 @@
 <!-- 添加新地址 -->
 <view class="join_add">
   <view style="top:18rpx;" class="show_block">添加新地址
-    <image bindtap="datatap" data-id="0" class="img" src="{{imgUrl}}"></image> 
+    <image bindtap="datatap" data-id="0" class="img1" src="{{imgUrl}}"></image> 
   </view> 
 </view>
+<!-- style="background-color:{{item.default==true?'orange':''}}" -->
 <!-- 修改地址 -->
 <view class="window_bg" wx:for="{{information}}" wx:for-index='i'>
-  <view class="window_add">
-    <image bindtap="datatap" data-id="{{item}}" class="img" style="margin-top:30rpx" src="{{imgUrl}}"></image> 
-    <view class="show_block">{{item.address}}</view>     
-    <view class="show_block">
-      <text style="font-size:30rpx" space='ensp'>{{item.name}}    {{item.gender}}     {{item.tel}}</text>
-      
+
+  <view style="width:610rpx;height:100%;" bindtap="selectDefault" data-id="{{item._id}}">   
+    <view class="window_add">
+      <!-- <image bindtap="datatap" data-id="{{item}}" class="img" style="margin-top:30rpx" src="{{imgUrl}}"></image>  -->
+      <view class="show_block">{{item.address}}</view>     
+      <view class="show_block">
+        <text style="font-size:30rpx" space='ensp'>{{item.name}}    {{item.gender}}     {{item.tel}}</text>   
+      </view>
     </view>
-   
+    <view class="default" wx:if="{{item.default}}">默认</view>
   </view>
+  <image bindtap="datatap" data-id="{{item}}" class="img2" style="margin-top:30rpx" src="{{imgUrl}}"></image> 
   
 </view>

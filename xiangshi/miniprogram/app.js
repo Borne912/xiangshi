@@ -10,6 +10,8 @@ App({
     date: year + '-' + month + '-' + day,
     // 默认地点鸿博园
     location : "鸿博园",
+    // 默认地址
+    address: [],
     // 楼层
     floor : 1,
     // 窗口

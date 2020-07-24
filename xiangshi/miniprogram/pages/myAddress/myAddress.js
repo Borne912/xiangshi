@@ -25,6 +25,7 @@ Page({
     _gender: '',
     _address: '',
     _tel: '',
+    defaultID:''
   },
   /* 弹窗 */
   showDialogBtn: function () {
@@ -125,6 +126,18 @@ Page({
       _openid:app.globalData.openid
     }).get({
       success(res) {
+        var rd = res.data
+        for(var i = 0; i< rd.length; i++) {
+           if(rd[i].default == true) {
+            //  是默认选项
+            app.globalData.address = rd[i]
+            console.log(rd[i])
+            that.setData({
+              defaultID: rd[i]._id
+            })
+          }
+        }
+       
         console.log(res.data)
         that.setData({
           information: res.data
@@ -170,6 +183,48 @@ Page({
     
     this.showDialogBtn()
 
+  },
+  selectDefault: function (e) {
+    var that = this
+    var td = this.data
+    var tdItem = this.data.information
+    var id = e.currentTarget.dataset.id
+    for(var i = 0; i< tdItem.length; i++) {
+      // 修改属性
+      var c = 'information[' + i + '].default';
+      if(tdItem[i]._id == id) { 
+        app.globalData.address = tdItem[i]  
+        that.setData({
+          [c] : true
+        })
+      }else {
+        that.setData({
+          [c] : false
+        })
+      }
+    }
+    db.collection("myAddress").where({
+      _openid: "ofl4t5MZMq5wGYXzNUYbJ_Uer8DY",
+      default: true
+    }).update({
+      data: {
+        default: false
+      },success(res) {
+        console.log('全置false成功')
+        db.collection("myAddress").where({
+          _openid: "ofl4t5MZMq5wGYXzNUYbJ_Uer8DY",
+          _id: id
+        }).update({
+          data: {
+            default: true
+          },success(res) {
+            console.log('重置true成功')
+            // that.getData()
+          }
+        })
+      }
+    })
+    console.log(app.globalData.address)
   },
   check: function (e) {
     var td = this.data
@@ -221,7 +276,8 @@ Page({
         name: td._name,
         gender: td._gender,
         address: td._address,
-        tel: td._tel 
+        tel: td._tel,
+        default: false
       },success(res) {  //回调成功
         that.getData()
         console.log('添加成功')
@@ -230,11 +286,27 @@ Page({
     
   },
   // 修改已有数据
-  changeAdd : function(e) {
+  changeAdd : function(e) { 
     var that = this
-    var td = this.data 
+    var td = this.data
     var find = td.cur
-    console.log(find)
+    var tdItem = this.data.information
+    // var id = e.currentTarget.dataset.id
+    for(var i = 0; i< tdItem.length; i++) {
+      // 修改属性
+      var a = 'information[' + i + '].address';
+      var b = 'information[' + i + '].name';
+      var c = 'information[' + i + '].gender';
+      var d = 'information[' + i + '].tel';
+      if(tdItem[i]._id == find._id) {     
+        that.setData({
+          [a] : td._address,
+          [b] : td._name,
+          [c] : td._gender,      
+          [d] : td._tel,
+        })
+      }
+    }
     db.collection("myAddress").where({
       _id: find._id,
       _openid: find._openid, 
@@ -243,9 +315,9 @@ Page({
         name: td._name,
         gender: td._gender,
         address: td._address,
-        tel: td._tel 
+        tel: td._tel,
       },success(res) {//回调成功
-          that.getData()
+          // that.getData()
           console.log('修改成功')
       } 
     })
