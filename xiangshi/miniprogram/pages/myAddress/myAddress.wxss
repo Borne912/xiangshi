@@ -27,6 +27,8 @@
   margin-left: 20rpx;
   margin-right: 20rpx;
   border-radius: 30rpx;
+  display: flex;
+  flex-direction: row;
 }
 .window_add {
   position: relative;
@@ -42,14 +44,39 @@
   margin-left: 35rpx;
   display: flex;
 }
+.default {
+  background-color: #FFA155;
+  width: 120rpx;
+  height: 56rpx;
+  border-radius: 20rpx;
+  line-height: 60rpx;
+  text-align: center;
+  /* position: absolute; */
+  position: relative;
+  top: -110rpx;
+  left: 470rpx;
+  
+}
 
-.img {
+.img1 {
   height: 65rpx;
   width: 65rpx;
   position: absolute;
-  right: 25rpx;
+
+  right: 20rpx;
   /* background: red; */
   top: -12rpx;
+}
+
+.img2 {
+  height: 65rpx;
+  width: 65rpx;
+  position: absolute;
+  position: relative;
+  /* right: 25rpx; */
+  left: 15rpx;
+  /* background: red; */
+  top: 15rpx;
 }
 /* ********************************************** */
 /* 自定义输入弹窗 */

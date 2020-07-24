@@ -1,16 +1,10 @@
 {
-  "pages": [
+  "pages": ["pages/myAddress/myAddress",
     "pages/food/food",
     "pages/health/health",
-    "pages/todayDiet/todayPage",
-<<<<<<< HEAD
+    "pages/todayDiet/todayPage",  
     
-    "pages/myAddress/myAddress",
-    "pages/mine/mine",    
-=======
-    "pages/myAddress/myAddress",
     "pages/mine/mine",  
->>>>>>> afe7d741d9c9b1e6f457c2b1e55a22c96324a71e
     "pages/tangshi_page/tangshi",
     "pages/recDiet/recDiet",
     "pages/addFood/addFood",
