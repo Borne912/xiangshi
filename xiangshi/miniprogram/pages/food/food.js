@@ -131,15 +131,15 @@ Page({
       var that =this;
       //console.log(app.globalData.location)
       that.setData({
-        location: app.globalData.location
+        loc: app.globalData.location
       })
-      //console.log(that.data.location)
+      console.log(that.data.loc)
       db.collection("outside-take-out").where({
         location:that.data.loc
       }).get({
         success(res){
           app.globalData.takeout_foodtype = res.data[0].name;
-          //console.log("查询数据成功",app.globalData.takeout_foodtype)
+          //console.log("查询数据成功",res.data)
           tmp = res.data
           //console.log(tmp[1].name)
           that.setData({

@@ -31,7 +31,11 @@ App({
 
     openid: '', //用户的唯一标识码
     /*当前选中的外卖食物类型*/
-    takeout_foodtype:''
+    takeout_foodtype:'',
+    /*将食物添加到订单*/
+    takeout_addfood:[],
+    /*外卖菜品数量*/
+    takeout_numb:0
   },
   onLaunch: function () {
   wx.cloud.init({
