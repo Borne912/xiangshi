@@ -93,6 +93,11 @@
   height: 172rpx;
   width: 676rpx;
 }
+.comment-div .recommend-tag-content .recommend-tag-name{
+  color: rgba(77, 63, 63, 1);
+  font-size: 32rpx;
+  font-family: PingFangSC-regular;
+}
 
 .comment-div .customize-tag-content{
   position: absolute;
@@ -103,21 +108,42 @@
   width: 676rpx;
 }
 
-.comment-div .recommend-tag-name{
+.comment-div .customize-tag-content .recommend-tag-name{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-div .recommend-tag-font{
   height: 44rpx;
   width: 676rpx;
   text-align: left;
+}
+
+.comment-div .recommend-tag-font text{
   color: rgba(77, 63, 63, 1);
   font-size: 32rpx;
   font-family: PingFangSC-regular;
 }
 
+.comment-div .recommend-tag-image{
+  margin-right: 32rpx;
+  width: 38rpx;
+  height: 38rpx;
+}
+
+.comment-div .recommend-tag-image image{
+  width: 38rpx;
+  height: 38rpx;
+}
+
 .comment-div .recommend-tag-wrap{
-  margin-right: 44rpx;
+  margin-right: 12rpx;
   margin-top: 15rpx;
   display: inline-block;
-  height: 40rpx;
-  line-height: 40rpx;
+  height: 52rpx;
+  line-height: 52rpx;
   border-radius: 30rpx;
   background-color: rgba(255, 242, 232, 1);
   text-align: center;
@@ -126,7 +152,7 @@
 
 .comment-div .recommend-tag-wrap text{
   color: rgba(255, 161, 85, 1);
-  margin: 10rpx 12rpx 8rpx 16rpx;
+  margin: 0rpx 12rpx 0rpx 16rpx;
   font-size: 24rpx;
   font-family: PingFangSC-regular;
 }

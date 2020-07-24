@@ -27,7 +27,9 @@ App({
 
     tel: '', //用户手机号码
 
-    openid: '', //用户的唯一标识码
+    openid: 'ofl4t5MZMq5wGYXzNUYbJ_Uer8DY', //用户的唯一标识码
+    
+    address: '', //用户收货地址
     /*当前选中的外卖食物类型*/
     takeout_foodtype:'',
     /*将食物添加到订单*/

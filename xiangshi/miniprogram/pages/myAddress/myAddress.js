@@ -121,7 +121,9 @@ Page({
   /* 读取地址数据 */
   getData: function(e) {
     var that = this
-    db.collection("myAddress").get({
+    db.collection("myAddress").where({
+      _openid:app.globalData.openid
+    }).get({
       success(res) {
         console.log(res.data)
         that.setData({

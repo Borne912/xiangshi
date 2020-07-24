@@ -98,7 +98,7 @@
   height: 214rpx;
 }
 .dish .dish-bt .bt-image{
-  padding: 0 0 0 0;
+  padding: 24rpx 24rpx 24rpx 24rpx;
   background-repeat:no-repeat;
   border:none;
   width: 48rpx;
