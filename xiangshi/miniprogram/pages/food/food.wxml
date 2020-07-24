@@ -5,7 +5,7 @@
 			<navigator url="../location/location">
 				<view class="navigt-content">
 					<view>
-						<image src="../../images/location.png" class="navigt-image"></image>
+						<image src="../../images/location.svg" class="navigt-image"></image>
 					</view>
 					<view>
 						<text class="navigt-font">{{loc}}</text>

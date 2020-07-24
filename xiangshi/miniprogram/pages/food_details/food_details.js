@@ -27,7 +27,7 @@ Page({
   getData: function (e) {
     let that = this
     // that.data.metal_datas = []
-    console.log(app.globalData.curDish)
+    //console.log(app.globalData.curDish)
     db.collection("dishes").where({
       loc: app.globalData.location,
     // floor:app.globalData.floor,
@@ -35,7 +35,7 @@ Page({
       name: app.globalData.curDish
     }).get({
       success(res) {
-        console.log(res.data[0])
+        //console.log(res.data[0])
         that.setData({
           cur : res.data[0],
           metal_datas: res.data[0].metal,
@@ -107,7 +107,7 @@ Page({
   addData: function(e) {
     var dishes = app.globalData.dishes
     dishes.push(this.data.cur)
-    console.log('添加成功!',this.data.cur.name); 
+    //console.log('添加成功!',this.data.cur.name); 
     this.writeData(this.data.cur)
     wx.showToast({
       title: '添加成功',

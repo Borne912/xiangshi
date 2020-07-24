@@ -14,10 +14,10 @@
 		</view> -->
 	</view>
 	<view class="dish-block">
-		<block wx:for="{{takeout}}" wx:key="{{idx}}" wx:for-index="idx" wx:for-item="take_out">
+		<block wx:for="{{takeout}}" wx:for-index="idx" wx:for-item="take_out" wx:key="_id">
 			<view class="dish">
-				<view class="dish-content1">
-					<image class="dish-image" src="{{take_out.imgUrl}}"></image>
+				<view class="dish-content1" bindtap="selectFood" data-id="{{take_out.name}}">
+					<image class="dish-image" src="{{take_out.imgurl}}"></image>
 				</view>
 				<view class="dish-content2">
 					<view class="dish-information">
@@ -25,29 +25,29 @@
 							<text>{{take_out.name}}</text>
 						</view>
 						<view class="dish-type">
-							<text>{{take_out.type}}</text>
+							<text>{{take_out.leixing}}</text>
 						</view>
 						<view class="dish-message">
-							<text class="sale">月售{{take_out.sales}}</text>
-							<text class="praise">赞{{take_out.votes}}</text>
+							<text class="sale">月售{{take_out.yueshou}}</text>
+							<text class="praise">赞{{take_out.zan}}</text>
 							<text class="price">{{take_out.price}}元/份</text>
 						</view>
 						<view class="dish-element">
 							<view class="dish-element-block1">
 								<view>
-									<text>碳水：{{take_out.nutrition_facts.carbohydrate}}g</text>
+									<text>碳水：{{take_out.yingyang.tanshui}}</text>
 								</view>
 								<view>
-									<text>蛋白：{{take_out.nutrition_facts.protein}}g</text>
+									<text>蛋白：{{take_out.yingyang.danbai}}</text>
 								</view>
 							</view>
 							<view class="dish-element-block2">
-								<text>脂肪：{{take_out.nutrition_facts.fat}}g</text>
+								<text>脂肪：{{take_out.yingyang.zhifang}}</text>
 							</view>
 						</view>
 					</view>
 					<view class="dish-bt">
-						<button class="bt-image" style="background-image:url(../../images/add.svg);"></button>
+						<button class="bt-image" style="background-image:url(../../images/add.svg);" bindtap="Add_dishes" data-name="{{take_out.name}}" data-id="{{idx+1}}" data-price="{{take_out.price}}" data-imgurl="{{take_out.imgurl}}"></button>
 					</view>
 				</view>
 			</view>
@@ -57,7 +57,7 @@
 		<view class="shopping-icon">
 			<view class="shopping-content">
 				<view class="num-content">
-					<view class="num-icon">1</view>
+					<view class="num-icon">{{numb}}</view>
 				</view>
 				<view class="shopping-cart">
 					<image class="shopping-cart-image" src="../../images/shopping_cart.svg"></image>

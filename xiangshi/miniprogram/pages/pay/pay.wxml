@@ -20,40 +20,42 @@
 				</view>
 			</view>
 		</view>
-		<view class="basket-block2">
-			<view class="rd-content">
-				<radio checked="{{checked}}" class="check-all" color="rgba(255, 161, 85, 1)" bindtap="checkTap"></radio>
-			</view>
-			<view class="dish-content">
-				<view class="image-content">
-					<image class="dish-image"></image>
+		<block wx:for="{{food_list}}" wx:if="{{item.numb>0}}">
+			<view class="basket-block2">
+				<view class="rd-content">
+					<radio checked="{{checked}}" class="check-all" color="rgba(255, 161, 85, 1)" bindtap="checkTap"></radio>
 				</view>
-				<view class="dish-message">
-					<view class="dish-name">
-						<text>木须肉盖饭</text>
+				<view class="dish-content">
+					<view class="image-content">
+						<image class="dish-image" src="{{item.imgurl}}"></image>
 					</view>
-					<view class="dish-comment">
-						<text>不辣</text>
-					</view>
-					<view class="dish-sundry">
-						<view class="dish-price">
-							<text>8.4元/份</text>
+					<view class="dish-message">
+						<view class="dish-name">
+							<text>{{item.name}}</text>
 						</view>
-						<view class="dish-num">
-							<view class="dish-bt1">
-								<button class="bt bt-add" style="background-image:url(../../images/add.svg);"></button>
+						<view class="dish-comment">
+							<text>不辣</text>
+						</view>
+						<view class="dish-sundry">
+							<view class="dish-price">
+								<text>{{item.price}}元/份</text>
 							</view>
-							<view class="number">
-								<text>1</text>
-							</view>
-							<view class="dish-bt2">
-								<button class="bt bt-add" style="background-image:url(../../images/sub.svg);"></button>
+							<view class="dish-num">
+								<view class="dish-bt1">
+									<button class="bt bt-add" style="background-image:url(../../images/add.svg);" bindtap="Addfood" data-name="{{item.name}}"></button>
+								</view>
+								<view class="number">
+									<text>{{item.numb}}</text>
+								</view>
+								<view class="dish-bt2">
+									<button class="bt bt-add" style="background-image:url(../../images/sub.svg);" bindtap="Subfood" data-name="{{item.name}}"></button>
+								</view>
 							</view>
 						</view>
 					</view>
 				</view>
 			</view>
-		</view>
+		</block>
 		<view class="order">
 			<view class="order-time">
 				<view class="time-label">
@@ -69,11 +71,11 @@
 				</view>
 				<navigator url="../comment/comment">
 					<view class="comment">
-					<view class="comment-font"><text>口味、偏好等要求</text></view>
-					<view class="comment-logo">
-						<image src="../../images/arrow.svg"></image>
+						<view class="comment-font"><text>口味、偏好等要求</text></view>
+						<view class="comment-logo">
+							<image src="../../images/arrow.svg"></image>
+						</view>
 					</view>
-				</view>
 				</navigator>
 			</view>
 		</view>
@@ -81,7 +83,7 @@
 	<view class=" payment">
 		<view class="price-content">
 			<text class="price-label">合计</text>
-			<text class="price">¥18.0</text>
+			<text class="price">¥{{total}}</text>
 		</view>
 		<view class="bt-content">
 			<button class="button-pay" color="#FFA155">确认支付</button>
