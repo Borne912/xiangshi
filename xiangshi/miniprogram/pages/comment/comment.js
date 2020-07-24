@@ -35,6 +35,15 @@ Page({
       }
     })
     //读取推荐标签数据
-    
+    db.collection('comment_tag').where({
+      type:"recommend"
+    }).get({
+      success:function(res){
+        console.log(res.data)
+        that.setData({
+          recommend_tag:res.data
+        })
+      }
+    })
   },
 })

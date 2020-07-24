@@ -19,9 +19,12 @@
 			<view class="recommend-tag-name">
 			<text>推荐标签</text>
 			</view>
-			<view class="recommend-tag-wrap">
-				<text class="recommend-tag">请勿打电话，短信通知即可</text>
-			</view>
+			<block wx:for="{{recommend_tag}}">
+				<view class="recommend-tag-wrap">
+					<text class="recommend-tag">{{item.content}}</text>
+				</view>
+			</block>
+			
 		</view>
 		<view class="customize-tag-content">
 			<view class="recommend-tag-name">

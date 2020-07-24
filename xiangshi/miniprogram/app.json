@@ -1,9 +1,9 @@
 {
-  "pages": ["pages/myAddress/myAddress",
+  "pages": [
     "pages/food/food",
+    "pages/myAddress/myAddress",
     "pages/health/health",
     "pages/todayDiet/todayPage",  
-    
     "pages/mine/mine",  
     "pages/tangshi_page/tangshi",
     "pages/recDiet/recDiet",

@@ -1,14 +1,4 @@
 /* miniprogram/pages/pay/pay.wxss */
-.cover{
-  width: 750rpx;
-  height: 1486rpx;
-  line-height: 40rpx;
-  border-radius: 0rpx;
-  background-color: rgba(255, 242, 232, 1);
-  text-align: center;
-  overflow: hidden;
-}
-
 .adress-content{
   position: absolute;
   width: 750rpx;
