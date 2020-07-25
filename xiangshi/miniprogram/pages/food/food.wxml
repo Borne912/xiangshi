@@ -127,7 +127,7 @@
 		<!-- 本周推荐 -->
 		<view class="week-recommend">
 			<view bindtap="selectWindow" data-id="{{week_window}}">
-				<image class="wr-image1"></image>
+				<image class="wr-image1" src="{{week_window.imgurl}}"></image>
 				<view class="wr-fontcover">
 					<view class="wr-font1">{{floors[week_window.floor]}}层{{windows[week_window.window]}}号窗口</view>
 					<view class="wr-fontcover-imagecover">
@@ -203,14 +203,14 @@
 				</scroll-view>
 			</view>
 		</view>
-		<!-- 这一部分应该改成3个窗口循环(有函数以及数据库信息(2020.7.13)) -->
+		<!-- 这一部分应该改成3个窗口循环(有函数以及数据库信息) -->
 		<view class="star-windows">
 			<view class="star-tag">
 				<text class="star-tag-font">明星窗口</text>
 			</view>
 			<view class="star-item item1" wx:for="{{stars_windows}}" bindtap="selectWindow" data-id="{{item}}">
 				<view class="star-item-content1">
-					<image class="star-item-image"></image>
+					<image class="star-item-image" src="{{item.imgurl}}"></image>
 				</view>
 				<view class="star-item-content2">
 					<view class="star-item-font1">
