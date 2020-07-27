@@ -29,10 +29,10 @@
 			</view>
 		</view>
 		<view class="font_recommend">
-			<view class="fr fr1">{{font_recommend[0].name}}</view>
-			<view class="fr fr2">{{font_recommend[1].name}}</view>
-			<view class="fr fr3">{{font_recommend[2].name}}</view>
-			<view class="fr fr4">{{font_recommend[3].name}}</view>
+			<view class="fr fr1" bindtap="selectFood" data-id="{{font_recommend[0].name}}">{{font_recommend[0].name}}</view>
+			<view class="fr fr2" bindtap="selectFood" data-id="{{font_recommend[1].name}}">{{font_recommend[1].name}}</view>
+			<view class="fr fr3" bindtap="selectFood" data-id="{{font_recommend[2].name}}">{{font_recommend[2].name}}</view>
+			<view class="fr fr4" bindtap="selectFood" data-id="{{font_recommend[3].name}}">{{font_recommend[3].name}}</view>
 		</view>
 		<view class="catalog">
 			<view class="label-wrapper">

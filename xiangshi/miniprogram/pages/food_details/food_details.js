@@ -82,6 +82,7 @@ Page({
     db.collection('history').add({
       data:{
         _id : id,
+        _openid: app.globalData.openid,
         name : e.name,
         loc : e.loc,
         floor : e.floor,

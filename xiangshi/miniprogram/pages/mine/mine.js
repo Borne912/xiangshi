@@ -96,7 +96,9 @@ Page({
   getData: function (e) {
     var that =this
     db.collection("history").where({
-      date: app.globalData.date
+      // 限制为本机用户
+      date: app.globalData.date,
+      _openid: app.globalData.openid,
     }).get({
       success(res) {
         console.log(res.data)
