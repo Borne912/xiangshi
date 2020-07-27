@@ -128,6 +128,16 @@ Page({
     })
     that.onLoad()
   },
+  // 跳转评论
+  selectComment: function (e) {
+    var id = e.currentTarget.dataset.id
+    app.globalData.readyComment = id
+    console.log(id)
+    wx.navigateTo({
+      url: '../writeComment/writeComment',
+    })
+    console.log('跳转至评论') 
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
