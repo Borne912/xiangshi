@@ -5,7 +5,8 @@
 </view>
 <!-- 咨询业务 -->
 <view class="window_ques">
-  <view class="choice">请选择您要咨询的业务
+  <view class="choice">
+   <view>请选择您要咨询的业务</view>
    <view class="allChoice">全部业务
     <image class="imgSet1" src="{{imgUrl}}"></image>
    </view>
