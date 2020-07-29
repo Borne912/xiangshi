@@ -123,7 +123,7 @@ Page({
   getData: function(e) {
     var that = this
     db.collection("myAddress").where({
-      _openid:app.globalData.openid
+       _openid: app.globalData.openid
     }).get({
       success(res) {
         var rd = res.data
@@ -204,7 +204,7 @@ Page({
       }
     }
     db.collection("myAddress").where({
-      _openid: "ofl4t5MZMq5wGYXzNUYbJ_Uer8DY",
+      _openid: app.globalData.openid,
       default: true
     }).update({
       data: {
@@ -212,7 +212,7 @@ Page({
       },success(res) {
         console.log('全置false成功')
         db.collection("myAddress").where({
-          _openid: "ofl4t5MZMq5wGYXzNUYbJ_Uer8DY",
+          _openid: app.globalData.openid,
           _id: id
         }).update({
           data: {

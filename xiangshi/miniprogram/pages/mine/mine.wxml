@@ -38,7 +38,7 @@
 							<view style="margin-top:15rpx">￥{{item.price}}</view>
 						</view>	
 	
-						<image  class='goto' src="../../images/arrow_orange.svg"></image>					
+						<image class='goto' bindtap="selectComment" data-id="{{item}}" src="../../images/arrow_orange.svg"></image>					
 					</view>
 				
 				</view>

@@ -18,7 +18,8 @@
     "pages/comment/comment",
     "pages/food_details/food_details",
     "pages/location/location",
-    "pages/myService/myService"
+    "pages/myService/myService",
+    "pages/writeComment/writeComment"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

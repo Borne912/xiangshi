@@ -16,6 +16,8 @@ App({
     window : 1,
     // 当前选中菜名
     curDish: '',
+    // 待评论菜
+    readyComment: [],
     // 饮食记录
     dishes:[],
     // 健康界面的今日饮食(4餐信息)

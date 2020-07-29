@@ -1,0 +1,18 @@
+<!--miniprogram/pages/writeComment/writeComment.wxml-->
+<!-- 写评价页 -->
+
+<view class="bg_3"></view>
+<image class="img" src="{{cur.imgurl}}" mode="aspectFit"></image>
+<!-- 食物介绍 -->
+<view class="head">
+<view style="color:#FFA155;font-size:35rpx;margin-bottom:10rpx;">菜名: 
+{{cur.name}}</view>
+
+<!-- 用餐评价 -->
+<view class="rate">
+  <view class="font_main" style="position:relative;top:10rpx;      margin-left:30rpx">用餐评价:</view>
+  <input class="cmm" placeholder="请输入评价" bindinput="inputCmm" ></input>
+</view>
+<!-- <view style="font-size:28rpx">{{cur.introduction}}</view> -->
+<button class="btn" bindtap="comment">确认评价</button>
+</view>

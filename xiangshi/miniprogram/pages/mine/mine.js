@@ -96,8 +96,9 @@ Page({
   getData: function (e) {
     var that =this
     db.collection("history").where({
+      // 限制为本机用户
       date: app.globalData.date,
-      _openid:app.globalData.openid
+      _openid: app.globalData.openid,
     }).get({
       success(res) {
         console.log(app.globalData.date)
@@ -127,6 +128,16 @@ Page({
       myAccount : tmp
     })
     that.onLoad()
+  },
+  // 跳转评论
+  selectComment: function (e) {
+    var id = e.currentTarget.dataset.id
+    app.globalData.readyComment = id
+    console.log(id)
+    wx.navigateTo({
+      url: '../writeComment/writeComment',
+    })
+    console.log('跳转至评论') 
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
