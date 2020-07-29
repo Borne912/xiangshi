@@ -1,12 +1,9 @@
 /* miniprogram/pages/pay/pay.wxss */
-.cover{
-  width: 750rpx;
-  height: 1486rpx;
-  line-height: 40rpx;
-  border-radius: 0rpx;
-  background-color: rgba(255, 242, 232, 1);
-  text-align: center;
-  overflow: hidden;
+.main-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .adress-content{
@@ -17,6 +14,7 @@
   background-color: rgba(255, 161, 85, 1);
   text-align: center;
   border: 2rpx solid rgba(255, 255, 255, 0);
+  z-index: 0;
 }
 
 .adress-content .adress-div{
@@ -51,10 +49,26 @@
   font-family: PingFangSC-regular;
 }
 
+.placeholder{
+  z-index: 1;
+  width: 750rpx;
+  height: 200rpx;
+}
+
+.shopping-basket-wrapper{
+  width: 750rpx;
+  /* margin-top: 224rpx; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
 .shopping-basket{
-  position: absolute;
+  /* position: absolute;
   left: 20rpx;
-  top: 224rpx;
+  top: 224rpx; */
   width: 710rpx;
   /* height: 608rpx; */
   line-height: 40rpx;
@@ -69,7 +83,7 @@
   border-radius: 20rpx 20rpx 0rpx 0rpx;
   border-bottom: 2rpx solid rgba(232, 232, 232, 1);
   width: 710rpx;
-  height: 104rpx;
+  height: 70rpx;
 }
 
 .shopping-basket .basket-block1 .check-all{
@@ -82,10 +96,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  position: absolute;
   text-align: left;
-  left: 30rpx;
-  top: 28rpx;
+  margin-left: 20rpx;
+  margin-top: 28rpx;
   width: 132rpx;
   height: 48rpx;
 }
@@ -221,9 +234,20 @@
   font-family: PingFangSC-regular;
 }
 
-.shopping-basket .order{
-  position: absolute;
+.order-wrapper{
+  z-index: 1;
+  width: 750rpx;
   margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.order{
+  /* position: absolute;
+  z-index: 1;
+  margin-top: 20rpx; */
   width: 710rpx;
   height: 200rpx;
   line-height: 40rpx;
@@ -233,7 +257,7 @@
   border: 2rpx solid rgba(255, 255, 255, 0);
 }
 
-.shopping-basket .order-time{
+.order-time{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -242,7 +266,7 @@
   height: 100rpx;
 }
 
-.shopping-basket .order-comment{
+.order-comment{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -251,7 +275,7 @@
   height: 100rpx;
 }
 
-.shopping-basket .order-time .time-label text{
+.order-time .time-label text{
   margin-left: 30rpx;
   width: 128rpx;
   height: 44rpx;
@@ -261,7 +285,7 @@
   font-family: PingFangSC-regular;
 }
 
-.shopping-basket .order-time .time text{
+.order-time .time text{
   margin-right: 40rpx;
   width: 98rpx;
   height: 44rpx;
@@ -271,7 +295,7 @@
   font-family: PingFangSC-regular;
 }
 
-.shopping-basket .order-comment .comment-label text{
+.order-comment .comment-label text{
   margin-left: 30rpx;
   width: 128rpx;
   height: 44rpx;
@@ -281,14 +305,14 @@
   font-family: PingFangSC-regular;
 }
 
-.shopping-basket .order-comment .comment{
+.order-comment .comment{
   display: flex;
   justify-content: space-around;
   flex-direction: row;
   align-items: center;
 }
 
-.shopping-basket .order-comment .comment text{
+.order-comment .comment text{
   width: 256rpx;
   height: 44rpx;
   color: rgba(179, 177, 177, 1);
@@ -297,10 +321,19 @@
   font-family: PingFangSC-regular;
 }
 
-.shopping-basket .order-comment .comment image{
+.order-comment .comment image{
   margin: 6rpx 16rpx 0rpx 0rpx;
   width: 44rpx;
   height: 44rpx;
+}
+
+.payment-wrapper{
+  width: 750rpx;
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .payment{
@@ -308,16 +341,13 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  left: 0rpx;
-  top: 1104rpx;
-  width: 750rpx;
+  width: 710rpx;
   height: 98rpx;
   line-height: 40rpx;
-  border-radius: 0rpx;
   background-color: #FFFFFF;
   text-align: center;
   border: 2rpx solid rgba(255, 255, 255, 0);
+  border-radius:100rpx;
 }
 
 .payment .price-content .price-label{
@@ -338,15 +368,116 @@
   text-align: left;
   font-family: PingFangSC-regular;
 }
+
 .payment .bt-content .button-pay{
   width: 212rpx;
   height: 98rpx;
   line-height: 98rpx;
-  border-radius: 0rpx;
+  border-bottom-right-radius: 100rpx;
+  border-top-right-radius: 100rpx;
   background-color: rgba(255, 161, 85, 1);
   color: rgba(255, 255, 255, 1);
   font-size: 32rpx;
   text-align: center;
   font-family: -apple-system;
   border: 2rpx solid rgba(255, 255, 255, 0);
+}
+
+.payment-wrapper .confirmpay .button-pay{
+  width: 710rpx;
+  height: 98rpx;
+  line-height: 98rpx;
+  border-radius: 100rpx;
+  background-color: rgba(255, 161, 85, 1);
+  color: rgba(255, 255, 255, 1);
+  font-size: 32rpx;
+  text-align: center;
+  font-family: -apple-system;
+  border: 2rpx solid rgba(255, 255, 255, 0);
+}
+
+.payStatus-wrapper{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 40rpx;
+  width: 710rpx;
+  height: 142rpx;
+}
+
+.payStatus-wrapper .block{
+  /* width: 84rpx; */
+  height: 142rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.payStatus-wrapper .block .time-wrapper .inactive{
+  color: rgba(0, 0, 0, 1);
+  font-size: 32rpx;
+  font-family: PingFangSC-regular;
+}
+
+.payStatus-wrapper .block .time-wrapper .active{
+  color: rgba(255, 161, 85, 1);
+  font-size: 32rpx;
+  font-family: PingFangSC-regular;
+}
+
+.payStatus-wrapper .block .icon-wrapper .inactive{
+  width: 15rpx;
+  height: 15rpx;
+  background-color: rgba(232, 232, 232, 1);
+  text-align: center;
+  border: 8rpx solid rgba(255, 255, 255, 0);
+  border-radius: 50%;
+}
+
+.payStatus-wrapper .block .icon-wrapper .active{
+  width: 15rpx;
+  height: 15rpx;
+  background-color: rgba(255, 161, 85, 1);
+  text-align: center;
+  border: 8rpx solid rgba(255, 255, 255, 0);
+  border-radius: 50%;
+}
+
+.payStatus-wrapper .block .topic-wrapper .inactive{
+  color: rgba(0, 0, 0, 1);
+  font-size: 32rpx;
+  font-family: PingFangSC-regular;
+}
+
+.payStatus-wrapper .block .topic-wrapper .inactive{
+  color: rgba(0, 0, 0, 1);
+  font-size: 32rpx;
+  font-family: PingFangSC-regular;
+}
+
+.payStatus-wrapper .block .topic-wrapper .active{
+  color: rgba(255, 161, 85, 1);
+  font-size: 32rpx;
+  font-family: PingFangSC-regular;
+}
+
+.payStatus-wrapper .pmgressbar{
+  width: 110rpx;
+  height: 142rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.payStatus-wrapper .pmgressbar view{
+  width: 110rpx;
+  height: NaNpx;
+  border: 3rpx dashed rgba(232, 232, 232, 1);
+}
+
+.payStatus-wrapper .pmgressbar .active{
+  background-color: rgba(255, 161, 85, 1);
 }

@@ -101,6 +101,7 @@ Page({
       _openid: app.globalData.openid,
     }).get({
       success(res) {
+        console.log(app.globalData.date)
         console.log(res.data)
         var h = 240 * res.data.length + 20
         that.setData({

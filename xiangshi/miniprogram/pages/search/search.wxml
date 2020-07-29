@@ -5,7 +5,9 @@
 <view class="bg_10"></view>
 
 <view class="search">
-			<input class="search-input" placeholder="请输入菜名" bindinput="dishInput"></input>
+      <view class="input-wrapper">
+       <input class="search-input" placeholder="请输入菜名" bindinput="dishInput"></input>
+      </view>
 			<image src="../../images/search.svg" class="search-search-image" bindtap="searchTap"></image>
 			<image src="../../images/microphone.svg" class="search-listen-image"></image>
 </view>

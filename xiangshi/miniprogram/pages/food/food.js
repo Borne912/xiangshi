@@ -210,15 +210,19 @@ Page({
       //console.log("在这",reg)
       if (reg.currentTarget.dataset.id == 1) {
         app.globalData.takeout_foodtype = "米饭";
+        app.globalData.takeout_takeMeals.location = that.data.loc + " " + "一层" + " " + "一号"; 
       } 
       else if (reg.currentTarget.dataset.id == 2) {
         app.globalData.takeout_foodtype = "汉堡";
+        app.globalData.takeout_takeMeals.location = that.data.loc + " " + "二层" + " " + "一号";
       }
       else if (reg.currentTarget.dataset.id == 3) {
         app.globalData.takeout_foodtype = "面条";
+        app.globalData.takeout_takeMeals.location = that.data.loc + " " + "三层" + " " + "一号";
       }
       else{
         app.globalData.takeout_foodtype = "包子";
+        app.globalData.takeout_takeMeals.location = that.data.loc + " " + "四层" + " " + "一号";
       }
       wx.navigateTo({
         url: '../takeout/takeout',

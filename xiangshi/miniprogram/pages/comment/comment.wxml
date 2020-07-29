@@ -3,41 +3,56 @@
 	<view class="adress-content">
 		<view class="adress-div">
 			<view class="adress-block block1">
-				<text class="adress-font">鸿博楼 一层 一号窗口取餐</text>
+				<text class="adress-font">{{adress.location}}窗口取餐</text>
 			</view>
 			<view class="adress-block block2">
-				<text class="contacts">王女士</text>
-				<text class="tel">18811518026</text>
+				<text class="contacts">{{adress.name}}</text>
+				<text class="tel">{{adress.tel}}</text>
 			</view>
 		</view>
 	</view>
-	<view class="comment-div">
-		<view class="comment-input">
-			<textarea class="comment-rctb" auto-focus="true"></textarea>
-		</view>
-		<view class="recommend-tag-content">
-			<view class="recommend-tag-name">
-			<text>推荐标签</text>
+	<form bindsubmit="submitComment">
+		<view class="comment-div">
+			<view class="comment-input">
+				<textarea class="comment-rctb" auto-focus="true" placeholder="请输入您的备注，如口味喜好、忌口等" placeholder-style="color: rgba(179, 177, 177, 1);font-size: 16px;" value="{{textarea_content}}" name="input"></textarea>
 			</view>
-			<view class="recommend-tag-wrap">
-				<text class="recommend-tag">请勿打电话，短信通知即可</text>
-			</view>
-		</view>
-		<view class="customize-tag-content">
-			<view class="recommend-tag-name">
-				<view class="recommend-tag-font">
-					<text>自定标签</text>
-				</view> 
-				<view class="recommend-tag-image">
-					<image src="../../images/update.svg"></image>
+			<view class="recommend-tag-content">
+				<view class="recommend-tag-name">
+				<text>推荐标签</text>
 				</view>
+				<block wx:for="{{recommend_tag}}">
+					<view class="recommend-tag-wrap">
+						<text class="recommend-tag" bindtap="selectedTag" data-content="{{item.content}}">{{item.content}}</text>
+					</view>
+				</block>
 			</view>
-			<block wx:for="{{custom_tag}}">
-				<view class="recommend-tag-wrap" style="background-color:#FFFFFF; border: 2rpx solid rgba(255, 230, 210, 1);">
-					<text class="recommend-tag">{{item.content}}</text>
+			<view class="customize-tag-content">
+				<view class="recommend-tag-name">
+					<view class="recommend-tag-font">
+						<text>自定标签</text>
+					</view> 
+					<view class="recommend-tag-image" bindtap="addTag">
+						<image src="../../images/update.svg"></image>
+					</view>
 				</view>
-			</block>
+				<block wx:for="{{custom_tag}}">
+					<view class="recommend-tag-wrap" style="background-color:#FFFFFF; border: 2rpx solid rgba(255, 230, 210, 1);">
+						<text class="recommend-tag" bindtap="selectedTag" data-content="{{item.content}}">{{item.content}}</text>
+					</view>
+				</block>
+			</view>
 		</view>
-	</view>
-  <button class="commit-trap">确认</button>
+		<button class="commit-trap" form-type="submit">确认</button>
+	</form>
+	<form bindsubmit="submitTag">
+		<popup
+			id="popup"
+			cancelText="取消"
+			confirmText="确认"
+			title="添加标签"
+			phContent = "请输入想要添加的标签"
+			class="popup-window"
+			bind:cancelEvent="popupCancel">
+		</popup>
+	</form>
 </view>

@@ -1,13 +1,11 @@
 //app.js
 // 以下计算日期
-const now = new Date()
-var year = now.getFullYear();
-var month = (now.getMonth()+1);
-var day = now.getDate();
+var util = require('utils/utils.js');
+var time = util.formatTime(new Date());
 App({
   globalData: {// 全局变量
     // 今日日期
-    date: year + '-' + month + '-' + day,
+    date: time.date,
     // 默认地点鸿博园
     location : "鸿博园",
     // 默认地址
@@ -31,15 +29,18 @@ App({
 
     tel: '', //用户手机号码
 
-    openid: 'ofl4t5MZMq5wGYXzNUYbJ_Uer8DY', //用户的唯一标识码
+    openid: 'ofl4t5K3mXcvbChc7Z63bQkNSjBM', //用户的唯一标识码
     
     address: '', //用户收货地址
-    /*当前选中的外卖食物类型*/
-    takeout_foodtype:'',
-    /*将食物添加到订单*/
-    takeout_addfood:[],
-    /*外卖菜品数量*/
-    takeout_numb:0
+    /*外卖用到的一些全局变量*/
+    takeout_foodtype:'', //当前选中的外卖食物类型
+    takeout_addfood:[], //将食物添加到订单
+    
+    takeout_numb:0, //外卖菜品数量
+
+    takeout_comment:'', //外卖备注
+
+    takeout_takeMeals: {location:'',name:'',tel:''} //取餐信息
   },
   onLaunch: function () {
   wx.cloud.init({

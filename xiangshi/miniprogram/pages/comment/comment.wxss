@@ -74,6 +74,7 @@
   background-color: rgba(255, 230, 210, 1);
   text-align: center;
   border: 2rpx solid rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 1);
 }
 
 .comment-div .comment-input .comment-rctb{
