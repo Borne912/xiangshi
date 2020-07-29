@@ -3,90 +3,129 @@
 	<view class="adress-content">
 		<view class="adress-div">
 			<view class="adress-block block1">
-				<text class="adress-font">鸿博楼 一层 一号窗口取餐</text>
+				<text class="adress-font">{{adress.location}}窗口取餐</text>
 			</view>
 			<view class="adress-block block2">
-				<text class="contacts">王女士</text>
-				<text class="tel">18811518026</text>
+				<text class="contacts">{{adress.name}}</text>
+				<text class="tel">{{adress.tel}}</text>
 			</view>
 		</view>
 	</view>
-	<view class="shopping-basket">
-		<view class="basket-block1">
-			<view class="rd-content">
-				<radio checked="{{checked}}" class="check-all" color="rgba(255, 161, 85, 1)" bindtap="checkTap" data-id="0"></radio>
-				<view>
-					<text class="rd-font">全选</text>
+	<view class="main-wrapper">
+		<view class="placeholder"></view>
+		<view class="shopping-basket-wrapper">
+			<view class="shopping-basket">
+				<view class="basket-block1" wx:if="{{!pay}}">
+					<view class="rd-content">
+						<radio checked="{{checked}}" class="check-all" color="rgba(255, 161, 85, 1)" bindtap="checkTap" data-id="0"></radio>
+						<view>
+							<text class="rd-font">全选</text>
+						</view>
+					</view>
 				</view>
+				<block wx:for="{{food_list}}" wx:if="{{item.numb>0}}">
+					<view class="basket-block2">
+						<view class="rd-content" wx:if="{{!pay}}">
+							<radio checked="{{item.checked}}" class="check-all" color="rgba(255, 161, 85, 1)" bindtap="checkTap" data-id="{{index+1}}"></radio>
+						</view>
+						<view class="dish-content">
+							<view class="image-content">
+								<image class="dish-image" src="{{item.imgurl}}"></image>
+							</view>
+							<view class="dish-message">
+								<view class="dish-name">
+									<text>{{item.name}}</text>
+								</view>
+								<view class="dish-comment">
+									<text>不辣</text>
+								</view>
+								<view class="dish-sundry">
+									<view class="dish-price">
+										<text>{{item.price}}元/份</text>
+									</view>
+									<view class="dish-num">
+										<view class="dish-bt1">
+											<button wx:if="{{!pay}}" class="bt bt-add" style="background-image:url(https://7869-xiangshi-yqpne-1302514195.tcb.qcloud.la/image/icon/add.svg?sign=a6d64d0f38e7bdd9cee5d5291dd4112d&t=1595604191);" bindtap="Addfood" data-name="{{item.name}}"></button>
+										</view>
+										<view class="number">
+											<text>{{item.numb}}</text>
+										</view>
+										<view wx:if="{{!pay}}" class="dish-bt2">
+											<button class="bt bt-add" style="background-image:url(https://7869-xiangshi-yqpne-1302514195.tcb.qcloud.la/image/icon/sub.svg?sign=e941654dbadc5c8a477019e86145410b&t=1595605049);" bindtap="Subfood" data-name="{{item.name}}"></button>
+										</view>
+									</view>
+								</view>
+							</view>
+						</view>
+					</view>
+				</block>
 			</view>
 		</view>
-		<block wx:for="{{food_list}}" wx:if="{{item.numb>0}}">
-			<view class="basket-block2">
-				<view class="rd-content">
-					<radio checked="{{item.checked}}" class="check-all" color="rgba(255, 161, 85, 1)" bindtap="checkTap" data-id="{{index+1}}"></radio>
-				</view>
-				<view class="dish-content">
-					<view class="image-content">
-						<image class="dish-image" src="{{item.imgurl}}"></image>
+		<view class="order-wrapper" wx:if="{{!pay}}">
+			<view class="order">
+				<view class="order-time">
+					<view class="time-label">
+						<text>取餐时间</text>
 					</view>
-					<view class="dish-message">
-						<view class="dish-name">
-							<text>{{item.name}}</text>
+					<picker mode="time" bindchange="selectedTime">
+						<view class="time">
+						 <text>{{time}}</text>
 						</view>
-						<view class="dish-comment">
-							<text>不辣</text>
-						</view>
-						<view class="dish-sundry">
-							<view class="dish-price">
-								<text>{{item.price}}元/份</text>
-							</view>
-							<view class="dish-num">
-								<view class="dish-bt1">
-									<button class="bt bt-add" style="background-image:url(https://7869-xiangshi-yqpne-1302514195.tcb.qcloud.la/image/icon/add.svg?sign=a6d64d0f38e7bdd9cee5d5291dd4112d&t=1595604191);" bindtap="Addfood" data-name="{{item.name}}"></button>
-								</view>
-								<view class="number">
-									<text>{{item.numb}}</text>
-								</view>
-								<view class="dish-bt2">
-									<button class="bt bt-add" style="background-image:url(https://7869-xiangshi-yqpne-1302514195.tcb.qcloud.la/image/icon/sub.svg?sign=e941654dbadc5c8a477019e86145410b&t=1595605049);" bindtap="Subfood" data-name="{{item.name}}"></button>
-								</view>
-							</view>
-						</view>
+					</picker>
+				</view>
+				<view class="order-comment">
+					<view class="comment-label">
+						<text>订单备注</text>
 					</view>
-				</view>
-			</view>
-		</block>
-		<view class="order">
-			<view class="order-time">
-				<view class="time-label">
-					<text>取餐时间</text>
-				</view>
-				<view class="time">
-					<text>12:12</text>
-				</view>
-			</view>
-			<view class="order-comment">
-				<view class="comment-label">
-					<text>订单备注</text>
-				</view>
-				<navigator url="../comment/comment">
-					<view class="comment">
-						<view class="comment-font"><text>口味、偏好等要求</text></view>
+					<view class="comment" bindtap="pageJumps">
+						<view class="comment-font">
+							<text>{{comment}}</text>
+						</view>
 						<view class="comment-logo">
 							<image src="../../images/arrow.svg"></image>
 						</view>
 					</view>
-				</navigator>
+				</view>
 			</view>
 		</view>
-	</view>
-	<view class=" payment">
-		<view class="price-content">
-			<text class="price-label">合计</text>
-			<text class="price">¥{{total}}</text>
+		<view class="payStatus-wrapper" wx:if="{{pay}}">
+			<block wx:for="{{payStatus}}">
+				<view class="block">
+					<view class="time-wrapper">
+						<text class="{{item.status == 0?'inactive':'active'}}">{{item.time}}</text>
+					</view>
+					<view class="icon-wrapper">
+						<view class="{{item.status == 0?'inactive':'active'}}"></view>
+					</view>
+					<view class="topic-wrapper">
+						<text class="{{item.status == 0?'inactive':'active'}}">{{item.topic}}</text>
+					</view>
+				</view>
+				<view wx:if="{{index < 3}}" class="pmgressbar">
+					<view class="{{item.status == 0?'':'active'}}"></view>
+				</view>
+			</block>
 		</view>
-		<view class="bt-content">
-			<button class="button-pay" color="#FFA155">确认支付</button>
+		<view class="payment-wrapper" wx:if="{{!pay}}">
+			<view class="payment">
+				<view class="price-content">
+					<text class="price-label">合计</text>
+					<text class="price">¥{{total}}</text>
+				</view>
+				<view class="bt-content">
+					<button class="button-pay" color="#FFA155" bindtap="confirmPay">确认支付</button>
+				</view>
+			</view>
+		</view>
+		<view class="payment-wrapper" wx:if="{{pay == true&&payStatus[3].status == 0}}">
+			<view class="bt-content confirmpay">
+				<button class="button-pay" color="#FFA155" bindtap="cancelOrder">取消订单</button>
+			</view>
+		</view>
+		<view class="payment-wrapper" wx:if="{{payStatus[3].status == 1}}">
+			<view class="bt-content confirmpay">
+				<button class="button-pay" color="#FFA155" bindtap="completeOrder">订单完成</button>
+			</view>
 		</view>
 	</view>
 </view>

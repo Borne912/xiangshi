@@ -1,8 +1,8 @@
 <!--pages/takeout/takeout.wxml-->
 <view class="cover">
 	<view class="list">
-		<block wx:for="{{navigation}}" >
-			<view class="list-content1 {{Seletctd_Condition==index+1?'selected-item':''}}"  data-id="{{index+1}}" bindtap="ChangeCondition">
+		<block wx:for="{{navigation}}">
+			<view class="list-content1 {{Seletctd_Condition==index+1?'selected-item':''}}" data-id="{{index+1}}" bindtap="ChangeCondition">
 				<text class="list-font">{{item}}</text>
 			</view>
 		</block>
@@ -47,22 +47,20 @@
 						</view>
 					</view>
 					<view class="dish-bt">
-						<button class="bt-image" style="background-image:url(https://7869-xiangshi-yqpne-1302514195.tcb.qcloud.la/image/icon/add.svg?sign=a6d64d0f38e7bdd9cee5d5291dd4112d&t=1595604191);" bindtap="Add_dishes" data-name="{{take_out.name}}" data-id="{{idx+1}}" data-price="{{take_out.price}}" data-imgurl="{{take_out.imgurl}}" ></button>
+						<button class="bt-image" style="background-image:url(https://7869-xiangshi-yqpne-1302514195.tcb.qcloud.la/image/icon/add.svg?sign=a6d64d0f38e7bdd9cee5d5291dd4112d&t=1595604191);" bindtap="Add_dishes" data-_id="{{take_out._id}}" data-name="{{take_out.name}}" data-id="{{idx+1}}" data-price="{{take_out.price}}" data-imgurl="{{take_out.imgurl}}"></button>
 					</view>
 				</view>
 			</view>
 		</block>
 	</view>
-	<navigator url="../pay/pay">
-		<view class="shopping-icon">
-			<view class="shopping-content">
-				<view class="num-content">
-					<view class="num-icon">{{numb}}</view>
-				</view>
-				<view class="shopping-cart">
-					<image class="shopping-cart-image" src="../../images/shopping_cart.svg"></image>
-				</view>
+	<view class="shopping-icon" bindtap="NavigateToPay">
+		<view class="shopping-content">
+			<view class="num-content">
+				<view class="num-icon">{{numb}}</view>
+			</view>
+			<view class="shopping-cart">
+				<image class="shopping-cart-image" src="../../images/shopping_cart.svg"></image>
 			</view>
 		</view>
-	</navigator>
+	</view>
 </view>

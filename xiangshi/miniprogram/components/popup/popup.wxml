@@ -1,0 +1,24 @@
+<!--components/popup/popup.wxml-->
+<block wx:if="{{showModal}}">
+	<view class="modal-mask" catchtouchmove="preventTouchMove"></view>
+	<view class="modal-dialog">
+		<view class='m-title'>
+			{{title}}
+		</view>
+		<view class="m-info">
+			<view class="textarea-wrapper">
+				<textarea placeholder="{{phContent}}" name="input"></textarea>
+			</view>
+			<slot name="content">
+			</slot>
+		</view>
+		<view class="modal-footer">
+			<view class="btn-footer btn-l-footer">
+				<button form-type="submit">{{confirmText}}</button>
+			</view>
+			<view class="btn-footer btn-r-footer" bindtap="_onCancel">
+				<button>{{cancelText}}</button>
+			</view>
+		</view>
+	</view>
+</block>

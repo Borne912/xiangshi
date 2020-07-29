@@ -96,9 +96,11 @@ Page({
   getData: function (e) {
     var that =this
     db.collection("history").where({
-      date: app.globalData.date
+      date: app.globalData.date,
+      _openid:app.globalData.openid
     }).get({
       success(res) {
+        console.log(app.globalData.date)
         console.log(res.data)
         var h = 240 * res.data.length + 20
         that.setData({

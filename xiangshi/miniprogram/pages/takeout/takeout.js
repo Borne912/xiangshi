@@ -148,12 +148,13 @@ Page({
   Add_dishes:function(res){
     var that = this;
     var flag = false;
-    var tmp = {name:"",numb:0,price:"",imgurl:"",checked:true};
+    var tmp = {_id:"",name:"",numb:0,price:"",imgurl:"",checked:true};
     const date = app.globalData.takeout_addfood;
     app.globalData.takeout_numb = app.globalData.takeout_numb+1;
     that.setData({
       numb:app.globalData.takeout_numb
     })
+    //console.log(res.currentTarget.dataset)
     for (let i = 0; i < date.length; i++) {
       if(date[i].name == res.currentTarget.dataset.name){
         date[i].numb = date[i].numb + 1;
@@ -166,6 +167,7 @@ Page({
       tmp.numb = 1;
       tmp.price = res.currentTarget.dataset.price;
       tmp.imgurl = res.currentTarget.dataset.imgurl;
+      tmp._id =  res.currentTarget.dataset._id;
       app.globalData.takeout_addfood.push(tmp);
     }
     console.log(app.globalData.takeout_addfood)
@@ -178,5 +180,23 @@ Page({
     wx.navigateTo({
       url: '../food_details/food_details',
     })
+
   },
+
+  //跳转到支付页
+  NavigateToPay:function(){
+    const that = this;
+    if(that.data.numb >0) {
+      wx.navigateTo({
+        url: '../pay/pay',
+      })
+    }
+    else {
+      wx.showToast({
+        title: '请选择食物！',
+        icon: 'none',
+        duration: 2000
+      })
+    }
+  }
 })
