@@ -373,10 +373,10 @@ Page({
     //根据打印纸张的宽度，自行调整内容的格式，可参考下面的样例格式
     let that = this;
     var myDate = new Date();
-    // 订餐时间
-    var dingCan_time = myDate.toLocaleString('chinese', { hour12: false });
-    //取餐时间
-    var quCan_time = myDate.toLocaleDateString() + ' ' + that.data.time;
+    // 订餐时间(当前时间)
+    var dingCan_time = that.getCurTime()
+    //取餐时间(当前年/月/日 + 自选时间)
+    var quCan_time = that.getCurTime().split(' ')[0] + ' ' + that.data.time;
     var list = that.data.food_list
     var loc = that.data.adress.location.substring(0,3)
     var floor =  that.data.adress.location.substring(4,5) + '层'
@@ -581,5 +581,17 @@ Page({
         }
       })
     }
-}
+  },
+  getCurTime: function (e) {
+    var now = new Date()
+    var year = now.getFullYear().toString();
+    var month =(now.getMonth() < 9 ? '0' : '')+(now.getMonth()+1);
+    var day = (now.getDate() < 10 ? '0' : '')+(now.getDate());
+    var hour = (now.getHours()<10 ? '0' : '') + now.getHours().toString()
+    var minute = (now.getMinutes()<10 ? '0' : '') + now.getMinutes().toString()
+    var second =(now.getSeconds()<10 ? '0' : '') + now.getSeconds().toString()
+    var time = hour+':'+ minute + ':' + second
+    var res = year +'/'+ month+'/' + day +' '+ time
+    return res
+  }
 })
