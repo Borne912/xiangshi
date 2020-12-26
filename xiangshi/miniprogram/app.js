@@ -29,7 +29,7 @@ App({
 
     tel: '', //用户手机号码
 
-    openid: 'ofl4t5K3mXcvbChc7Z63bQkNSjBM', //用户的唯一标识码
+    openid: '', //用户的唯一标识码
     
     address: '', //用户收货地址
     /*外卖用到的一些全局变量*/
