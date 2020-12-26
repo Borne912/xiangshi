@@ -374,7 +374,7 @@ Page({
     let that = this;
     var myDate = new Date();
     // 订餐时间
-    var dingCan_time = myDate.toLocaleString('chinese', { hour12: false });;
+    var dingCan_time = myDate.toLocaleString('chinese', { hour12: false });
     //取餐时间
     var quCan_time = myDate.toLocaleDateString() + ' ' + that.data.time;
     var list = that.data.food_list
@@ -384,18 +384,17 @@ Page({
     var usrname = app.globalData.takeout_takeMeals.name
     // 电话
     var tel = app.globalData.takeout_takeMeals.tel 
-    var comment_tmp = app.globalData.takeout_comment
-    var cmm = ''
-    
-    if(comment_tmp.length >= 30) {
-      cmm += comment_tmp.substring(0,15) + '<BR>' + comment_tmp.substring(15,28) + '...' + '<BR>';
+    var cmm = app.globalData.takeout_comment
+    //处理备注(长度超过15, 超过30)
+    if(cmm.length > 15) {
+      var end = 28
+      if(cmm.length < 28) {
+        end = cmm.length
+      }
+      cmm = cmm.substring(0,15) + '<BR>' + cmm.substring(15,end) + '...';
     }
-
-    
+    cmm += '<BR>'
     console.log(cmm)
-    // 处理备注(每行字数限制)
-
-
     var orderInfo = '<CB>' + loc + '</CB><BR>';
     orderInfo += '<CB>' + floor + window + '</CB><BR>';
     orderInfo += '名称　　　　　 单价  数量 金额<BR>'
