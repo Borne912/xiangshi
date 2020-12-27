@@ -17,10 +17,7 @@
 			<view class="shopping-basket">
 				<view class="basket-block1" wx:if="{{!pay}}">
 					<view class="rd-content">
-						<radio checked="{{checked}}" class="check-all" color="rgba(255, 161, 85, 1)" bindtap="checkTap" data-id="0"></radio>
-						<view>
-							<text class="rd-font">全选</text>
-						</view>
+							<radio checked="{{checked}}" class="check-all" color="rgba(255, 161, 85, 1)" bindtap="checkTap" data-id="0">全选</radio>
 					</view>
 				</view>
 				<block wx:for="{{food_list}}" wx:if="{{item.numb>0}}">

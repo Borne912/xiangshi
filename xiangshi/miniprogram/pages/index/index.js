@@ -13,6 +13,7 @@ Page({
     openid: '',
     session_key: '',
     WeChatChecked: true,
+    visitor:true //判断是否是第一次登录
   },
 
   /**
@@ -29,33 +30,34 @@ Page({
           nickName: res.userInfo.nickName,
           avatarUrl: res.userInfo.avatarUrl,
         })
-
-        //将用户数据添加到云端 
-        db.collection('UsersInfo').add({
-          data: {
-            nickName: that.data.nickName,
-            avatarUrl: that.data.avatarUrl,
-            telephone: ''
-          },
-          success: function(res){
-            console.log("上传成功：",res)
-          }
-        })
-        //登录成功，页面跳转
-        wx.showLoading({
-          title:"登录中，请稍后",
-          success: function(res){
-            console.log(res)
-            setTimeout(function(){
-              wx.hideLoading()
-            },1500)
-            setTimeout(function(){
-              wx.switchTab({
-                url: '../food/food'
-              })
-            },2000)
-          }
-        })
+        //将用户数据添加到云端
+        if(that.data.visitor == true) {
+          db.collection('UsersInfo').add({
+            data: {
+              nickName: that.data.nickName,
+              avatarUrl: that.data.avatarUrl,
+              telephone: ''
+            },
+            success: function(res){
+              console.log("上传成功：",res)
+            }
+          })
+          //登录成功，页面跳转
+          wx.showLoading({
+            title:"登录中，请稍后",
+            success: function(res){
+              console.log(res)
+              setTimeout(function(){
+                wx.hideLoading()
+              },1500)
+              setTimeout(function(){
+                wx.switchTab({
+                  url: '../food/food'
+                })
+              },2000)
+            }
+          })
+        }
       },
     })
   },
@@ -92,6 +94,7 @@ Page({
           that.setData({
             nickName: res.data[0].nickName,
             avatarUrl: res.data[0].avatarUrl,
+            visitor:false
           })
           if(res.data[0]._openid == that.data.openid)
           {

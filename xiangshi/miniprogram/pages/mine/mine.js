@@ -49,7 +49,7 @@ Page({
    */
   bindSubmit: function(res){
     var that = this;
-    if(res.detail.value.input!="")
+    if(res.detail.value.input!=""&&res.detail.value.input!="请输入手机号")
     {
       app.globalData.tel = res.detail.value.input;
       that.setData({
@@ -62,7 +62,7 @@ Page({
       })
       .update({
         data:{
-          tel: that.data.tel
+          telephone: that.data.tel
         },
       })
 
@@ -74,11 +74,20 @@ Page({
     }
     else
     {
-      wx.showToast({
-        title: '修改失败',
-        icon: 'none',
-        duration: 1500
-      })
+      if(res.detail.value.input == "请输入手机号") {
+        wx.showToast({
+          title: '号码输入为空！',
+          icon: 'none',
+          duration: 1500
+        })
+      }
+      else {
+        wx.showToast({
+          title: '修改失败',
+          icon: 'none',
+          duration: 1500
+        })
+      }
     }
   },
 
@@ -158,7 +167,8 @@ Page({
       success: function(res){
         that.setData({
           nickName: res.data[0].nickName,
-          avatarUrl: res.data[0].avatarUrl
+          avatarUrl: res.data[0].avatarUrl,
+          tel:res.data[0].telephone!=""?res.data[0].telephone:'请添加电话号码'
         })
       }
     })

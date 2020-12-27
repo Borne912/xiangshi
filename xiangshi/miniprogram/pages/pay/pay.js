@@ -98,6 +98,7 @@ Page({
     const data = that.data.food_list;
     var checked = that.data.checked;
     var tmp = 0;
+    var j = 0;
     //console.log(res.currentTarget.dataset.id)
     if(res.currentTarget.dataset.id == 0)
     {
@@ -133,6 +134,27 @@ Page({
         })
       }
       
+    }
+    //解决全选rd和局部三个rd的联动问题
+    if(res.currentTarget.dataset.id>0) {
+      if(data[res.currentTarget.dataset.id-1].checked == false) {
+        that.setData({
+          checked:false
+        })
+      }
+      else {
+        //console.log(data[res.currentTarget.dataset.id-1].checked)
+        for (j = 0; j < data.length; j++) {
+          if(data[j].checked == false) {
+            break;
+          }
+        }
+        if(j == data.length) {
+          that.setData({
+            checked:true
+          })
+        }
+      }
     }
   },
 
