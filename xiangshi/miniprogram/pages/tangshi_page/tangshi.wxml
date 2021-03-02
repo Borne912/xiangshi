@@ -23,7 +23,7 @@
   <!-- 最后一行只有两个 -->
    <view  wx:for="{{1}}" wx:for-index="i" class="everyrow">
     <view wx:for="{{2}}" wx:for-index="j" class="row-cols">
-     <view class='{{cnts[9+j]<5?"quick":cnts[9+j]<10?"mid":"slow"}}'>
+     <view class='{{cnts[8+j]<5?"quick":cnts[8+j]<10?"mid":"slow"}}'>
       {{9+j}}</view>
     </view>
   </view> 

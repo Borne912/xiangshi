@@ -1,7 +1,8 @@
 // miniprogram/pages/tangshi_page/tangshi.js
 // 堂食食堂细页
 const db_windows = wx.cloud.database().collection("style_windows")
-const db_dishes= wx.cloud.database().collection("dishes")
+const db_dishes = wx.cloud.database().collection("dishes")
+const db_numbers = wx.cloud.database().collection("curr_per_nums")
 let tmp
 let food_tmp
 const app = getApp()
@@ -11,8 +12,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    // 窗口排队人数(1-12窗口)
-    cnts: [8,3,4,5,2,10,4,11,3],
+    // 窗口排队人数(1-10窗口)
+    cnts: [0,0,0,0,0,0,0,0,0,0],
+    // cnts: [8,3,4,5,2,10,4,11,3,6],
     // 3个按钮(列)
     window_id: 1,
     buttons_cols: [{id: 1, name: '综合排序', checked: true},
@@ -57,6 +59,18 @@ Page({
         console.log(res.data)
         that.setData({
           dishes: res.data,
+        })
+      }
+    })
+    // 根据食堂+楼层确定窗口人数
+    db_numbers.where({
+      loc: app.globalData.location,
+      floor:app.globalData.floor
+    }).get({
+      success(res){
+        console.log(res.data[0].numbers)
+        that.setData({
+          cnts: res.data[0].numbers,
         })
       }
     })
