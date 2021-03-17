@@ -79,11 +79,26 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {   
+    let that = this
     this.getData()
     this.setData({
       cnts : this.data.cnts,
       height: 100*this.data.cnts.length,    
     })
+    setInterval(function(){
+      db_numbers.where({
+        loc: app.globalData.location,
+        floor:app.globalData.floor
+      }).get({
+        success(res){
+          console.log(res.data[0].numbers)
+          that.setData({
+            cnts: res.data[0].numbers,
+          })
+          console.log('刷新排队人数成功!')
+        }
+      })
+    },30000)
   },
   // 横着的按钮切换
   radioButtonTap : function (e){   
