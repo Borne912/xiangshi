@@ -91,11 +91,11 @@
         src="cloud://xiangshi-yqpne.7869-xiangshi-yqpne-1302514195/image/banner/图片 5@1x.png" mode="aspectFill"></image>
 
       <view class="swipertop"
-        style="width: 230rpx; height: 57rpx; display: block; box-sizing: border-box; position: relative; left: -225rpx; top: -277rpx; margin: auto">
+        style="width: 230rpx; height: 57rpx; display: block; box-sizing: border-box; position: relative; left: -237rpx; top: -279rpx; margin: auto">
         周边精选
       </view>
       <view class="swiperbtm"
-        style="width: 230rpx; height: 57rpx; display: block; box-sizing: border-box; position: relative; left: 225rpx; top: -162rpx; margin: auto">
+        style="width: 230rpx; height: 57rpx; display: block; box-sizing: border-box; position: relative; left: 237rpx; top: -162rpx; margin: auto">
         <text class="text-orange text-lg" style="font-size:26rpx">火炉火自助烤肉
 </text>
       </view>
