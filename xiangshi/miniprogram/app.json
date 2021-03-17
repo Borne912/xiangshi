@@ -1,12 +1,13 @@
 {
   "pages": [
+    "pages/home/home",
     "pages/index/index",
     "pages/food/food",
     "pages/pay/pay",
     "pages/myAddress/myAddress",
     "pages/health/health",
-    "pages/todayDiet/todayPage",  
-    "pages/mine/mine",  
+    "pages/todayDiet/todayPage",
+    "pages/mine/mine",
     "pages/tangshi_page/tangshi",
     "pages/recDiet/recDiet",
     "pages/addFood/addFood",
@@ -19,7 +20,15 @@
     "pages/food_details/food_details",
     "pages/location/location",
     "pages/myService/myService",
-    "pages/writeComment/writeComment"
+    "pages/writeComment/writeComment",
+    "pages/mall/mall",
+    "components/waterfall/waterfall",
+    "pages/List/list",
+    "pages/Near recommend/Near recommend",
+    "pages/school_food/school_food",
+    "pages/addgo/addgo",
+    "pages/note/note",
+    "pages/user/user"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -34,16 +43,27 @@
     "selectedColor": "#FFA155",
     "list": [
       {
-        "pagePath": "pages/health/health",
-        "iconPath": "images/health.png",
-        "text": "健康",
-        "selectedIconPath": "images/health_selected.png"
+        "pagePath": "pages/home/home",
+        "iconPath": "images/home.png",
+        "text": "首页",
+        "selectedIconPath": "images/home_selected.png"
       },
       {
-        "pagePath": "pages/food/food",
-        "iconPath": "images/food.png",
-        "text": "饮食",
-        "selectedIconPath": "images/food_selected.png"
+        "pagePath": "pages/mall/mall",
+        "iconPath": "images/mall.png",
+        "text": "商城",
+        "selectedIconPath": "images/mall_selected.png"
+      },
+      {
+        "pagePath": "pages/addgo/addgo",
+        "iconPath": "images/add.png",
+        "selectedIconPath": "images/add.png"
+      },
+      {
+        "pagePath": "pages/note/note",
+        "iconPath": "images/notice.png",
+        "text": "通知",
+        "selectedIconPath": "images/notice_selected.png"
       },
       {
         "pagePath": "pages/mine/mine",

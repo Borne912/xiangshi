@@ -1,0 +1,49 @@
+<!--miniprogram/pages/note/note.wxml-->
+<view>
+  <view class="search" bindtap="searchJump">
+	  <!-- <input class="search-input">
+	  </input> -->
+  	<view class="serch-wrapper">
+  	  <view class="search-input">
+	  </view>
+  		<view class="search_icon1">
+  			<image src="../../images/search.svg" class="search-search-image"></image>
+	  	</view>
+			<view class="search_icon2">
+				<image src="../../images/microphone.svg" class="search-listen-image"></image>
+			</view>
+		</view>
+  </view>
+  <view class="font1">
+    <view class="image-font">
+      <image src="../../images/mine.png" class="imageset"></image>
+      <text class="font1-text">赞</text>
+    </view>
+    <view class="image-font">
+      <image src="../../images/mine.png" class="imageset"></image>
+      <text class="font1-text" >评论</text>
+    </view>
+    <view class="image-font">
+      <image src="../../images/mine.png" class="imageset"></image>
+      <text class="font1-text">好友</text>
+    </view>
+    <view class="image-font">
+      <image src="../../images/mine.png" class="imageset"></image>
+      <text class="font1-text">通知</text>
+    </view>
+  </view>
+  <view class="font2">
+    <view class= "image-font2">
+			<image class="imageset2" src="../../images/mine.png"></image>
+		</view>
+		<view class="font2-content2">
+      <view class="content2-text1">
+        <view class="recommend-text1">客服小助手</view>
+        <view class="time-wrapper">{{date}}</view>
+        <image class="imageset3" src="../../images/mine.png"></image>
+		  </view>
+      <view class="recommend-text2">您的消费卷已到账</view>
+      <view class="recommend-text3">欢迎前来消费</view>
+		</view>
+  </view>
+</view>

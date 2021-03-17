@@ -1,0 +1,65 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "List",
+          "pathName": "pages/List/list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/Near recommend/Near recommend",
+          "pathName": "pages/Near recommend/Near recommend",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/school_food/school_food",
+          "pathName": "pages/school_food/school_food",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/addgo/addgo",
+          "pathName": "pages/addgo/addgo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/note/note",
+          "pathName": "pages/note/note",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/user/user",
+          "pathName": "pages/user/user",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/home/home",
+          "pathName": "pages/home/home",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/mall/mall",
+          "pathName": "pages/mall/mall",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

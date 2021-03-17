@@ -1,0 +1,77 @@
+
+<!-- 上传 S -->
+<view>
+<view class="img-list">
+    <!-- 上传列表 -->
+    <view class="upload-video">
+      <block wx:if="{{src != ''}}">
+        <video src="{{src}}" class="img-li"></video>
+        <image class="icon-deletes" src="../../images/no.png"  bindtap="deleteVideo"></image>
+      </block>
+    </view>
+    <block wx:for="{{imgList}}" wx:key="index">
+      <view class="img-li">
+        <view class="img-li" bindtap="previewImg">
+          <image class="uploading-icon" src="{{item}}"></image>
+        </view>
+        <image class="icon-delete" src="../../images/no.png" bindtap="deleteImg"></image>
+      </view>
+    </block>
+    <!-- 上传图片/视频 S -->
+    <view class="img-li" wx:if="{{imgList.length<=5}}" bindtap="actioncnt">
+      <image class="uploading-icon"src="../../images/upload.png" ></image>
+    </view>
+  </view>
+    <!-- 上传图片/视频 E -->
+
+    <view class='toast-main'>
+      <view class='toast-input'>
+        <input placeholder='这里是标题哦' bindinput='setValue' data-name='stuEidtName'></input>
+      </view>
+    </view>
+    <view class='toast-main2'>
+      <view class='toast-input2'>
+        <input placeholder='这里是正文哦' bindinput='setValue' data-name='stuEidtName'></input>
+      </view>
+    </view>
+    <view class="topbar">
+      <image class="image-01" src="../../images/no.png" bindtap="deleteImg"></image>
+      <text class="text-01">参与话题</text>
+    </view>
+    <view class="topbar01">
+      <image class="image-01" src="../../images/no.png" bindtap="deleteImg"></image>
+      <view class="text-01">
+        <view class="text02">添加地点</view>
+        <view class="text03">你可能选择</view>
+      </view>
+      <view class="font001">
+        <view class="font1-text2">选择更多</view>
+        <image class="font1-image1" src="../../images/go.png"></image>
+      </view>
+    </view>
+    <view class="topbar">
+      <image class="image-01" src="../../images/no.png" bindtap="deleteImg"></image>
+      <text class="text-01">鸿博园餐厅</text>
+    </view>
+    <view class="topbar">
+      <image class="image-01" src="../../images/no.png" bindtap="deleteImg"></image>
+      <text class="text-01">国贸购物广场</text>
+    </view>
+    <view class="topbar">
+      <image class="image-01" src="../../images/no.png" bindtap="deleteImg"></image>
+      <text class="text-01">星巴克咖啡厅</text>
+    </view>
+    <view class="topbar">
+      <image class="image-01" src="../../images/no.png" bindtap="deleteImg"></image>
+      <text class="text-01">东北澡堂</text>
+    </view>
+    <view class="end">
+      <view class = "end-font1">
+        <image class="image-03" src="../../images/no.png" bindtap="baocun1"></image>
+        <text class="text-end1">存为草稿</text>
+      </view>
+      <view class = "end-font2" bindtap="baocun2">
+        <text class="text-end2">选择发送</text>
+      </view>
+    </view>
+</view>

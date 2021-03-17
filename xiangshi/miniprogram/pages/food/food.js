@@ -40,6 +40,7 @@ Page({
             font_recommend: tmp,
             loc: app.globalData.location
           })
+          console.log(res.data)
         }
       })
       /**************************************/

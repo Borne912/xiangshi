@@ -1,0 +1,55 @@
+
+.waterfall-container{
+  position: relative;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.water-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: -50%;          /* 防止一开始图片位置堆积在一个地方 */
+  border-radius: 10rpx;
+  overflow: hidden;
+  background: #cccccc;
+}
+.water-item image{
+  width: 100%;
+}
+.title{
+  padding: 16rpx 16rpx 0 16rpx;
+  font-size: 28rpx;
+  color: #333333;
+  font-weight: 600;
+}
+.water-content{
+  background: #ffffff;
+}
+.basic-info{
+  padding: 16rpx;
+  font-size: 28rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.price{
+  color: red;
+  font-size: 26rpx;
+}
+.evaluation{
+  font-size: 24rpx;
+  color: #999999;
+}
+.lazyimg{
+  border-top-left-radius: 14rpx;
+  border-top-right-radius: 14rpx;
+  transition: opacity .5s ease;
+  opacity: 0;
+}
+.loadimg{
+	opacity: 1;
+}

@@ -124,8 +124,21 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
+  // getuserinfo(e){
+  //   wx.cloud.callFunction({
+  //     name: "getUserInfo",
+  //     data:{
+  //       cloudID: e.detail.cloudID
+  //     },
+  //     success: res => {
+  //       console.log(res)
+  //     }
+  //   })
+  //   },
   onLoad: function (options) {
     this.getData()
+    this.getuserinfo(options)
+    console.log(options)
   },
   // 点击我的账单
   selectAccount: function (e) {
@@ -165,6 +178,7 @@ Page({
     })
     .get({
       success: function(res){
+        console.log(res.data)
         that.setData({
           nickName: res.data[0].nickName,
           avatarUrl: res.data[0].avatarUrl,

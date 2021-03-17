@@ -1,0 +1,38 @@
+<!--miniprogram/pages/List/list.wxml-->
+
+<view class="container container-food">
+	<view class="cover">
+    <view class="option">
+      <block wx:for="{{selects}}">
+        <view class = " {{index == clickID ? 'selected':'normal' }}" id="{{index}}" bindtap="changepage" style="width: 183rpx; height: 59rpx; display: block; box-sizing: border-box">{{item}}</view>
+      </block>
+    </view>
+    <!--推荐窗口 -->
+    <view class="recommend-content">
+			<view class="recommend"wx:for="{{year_food}}"data-id="{{item}}">
+				<view class= "recommend-item-content1">
+					<image class="recommend-item-image" src="{{item.imgurl}}"></image>
+				</view>
+				<view class="recommend-item-content2">
+					<view class="recommend-text1">{{item.name}}</view>
+					<view class="recommend-text2">{{item.loc}} {{item.loc_floor}}楼 {{item.loc_windows}}号窗口</view>
+					<view class="recommend-font1">
+						<image class='imgList0' hidden='{{!dianzhan3[item.id_num]}}' bindtap='zan2' src='../../images/dianzan-1.png'></image>
+						<image class='imgList0' hidden='{{dianzhan3[item.id_num]}}' bindtap='zan2'  src='../../images/dianzan-2.png'></image>
+						<view class="recommend-text3">{{item.zan}}</view>
+					</view>
+				</view>
+				<view class="recommend-item-content3">
+					<view class="recommend-font1">
+						<view class="recommend-text4">了解更多</view>
+						<image class='imgList1' src='../../images/go.png'></image>
+					</view>
+					<view class="recommend-font1">
+						<view class="recommend-text4">收藏一下</view>
+						<image class='imgList1' src='../../images/love.png'></image>
+					</view>
+				</view>
+			</view>
+    </view>
+  </view>
+</view>

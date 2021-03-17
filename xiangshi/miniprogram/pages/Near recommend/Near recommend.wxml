@@ -1,0 +1,132 @@
+<!--miniprogram/pages/Near recommend.wxml-->
+<view class="container container-food">
+	<view class="cover">
+    <view class="option">
+      <block wx:for="{{selects}}">
+        <view class = " {{index == clickID ? 'selected':'normal' }}" id="{{index}}" bindtap="changepage">{{item}}</view>
+      </block>
+    </view>
+    <view class="hidden1" hidden= "{{changepage0}}">
+      <view class="search" bindtap="searchJump">
+	  		<!-- <input class="search-input">
+	  		</input> -->
+  			<view class="serch-wrapper">
+  				<view class="search-input">
+	  			</view>
+  				<view class="search_icon1">
+  					<image src="../../images/search.svg" class="search-search-image"></image>
+	  			</view>
+			  	<view class="search_icon2">
+				  	<image src="../../images/microphone.svg" class="search-listen-image"></image>
+				  </view>
+			  </view>
+      </view>
+      <view class="mybelike">
+        <view class="mybelike-font1">
+          <view class="font1-text1">可能喜欢</view>
+          <view class="font1-text2">查看全部</view>
+          <image class="font1-image1" src="../../images/jiantou.png"></image>
+        </view>
+        <view class="mybelike-font2">
+			    <scroll-view class="rw-scroll" scroll-x="true">
+            <view class="font2-like"wx:for="{{recommend_food1}}"data-id="{{item}}">
+              <view class="image-font">
+                <image class="no-image" src="../../images/no.png"></image>
+                <image class="image1" src="{{item.imgurl}}"></image>
+              </view>
+              <view class="image-name">{{item.name}}</view>
+              <view class="image-information">粉丝{{item.zan}} 内容100</view>
+              <view class="text0000">"备受欢迎"</view>
+              <view class="textfont0">关注</view>
+            </view>
+			    </scroll-view>
+        </view>
+      </view>
+	  </view>
+    
+    <view class="recommend-content"hidden= "{{changepage1}}">
+			<view class="recommend"wx:for="{{recommend_food1}}"data-id="{{item}}">
+        <view class="recommend-item-content2">
+					<view class="recommend-text1">{{item.name}}</view>
+					<view class="recommend-text2">{{item.centece}}</view>
+					<view class="recommend-font1">
+						<image class='imgList0'  src='../../images/weizhi.png'></image>
+						<view class="recommend-text3">{{item.loc}}</view>
+          </view>
+          <view class="recommend-font1">
+						<image class='imgList0' src='../../images/love.png'></image>
+            <view class="recommend-text3">{{item.zan}}</view>
+            <image class='imgList0' src='../../images/look.png'></image>
+            <view class="recommend-text3">{{item.look}}</view>
+            <image class='imgList0' src='../../images/dianzan-1.png'></image>
+						<view class="recommend-text3">{{item.zan}}</view>
+					</view>
+        </view>
+				<view class= "recommend-item-content1">
+					<image class="recommend-item-image" src="{{item.imgurl}}"></image>
+				</view>
+			</view>
+		</view>
+    <view class="recommend-content2"hidden= "{{!changepage1}}">
+      <view class="content2-font1">
+        <view class="content2-font1-text1">美食专家</view>
+      </view>
+      <!--美食专家 -->
+		  <view class="specialist-content" style="width: 700rpx; height: 818rpx; display: block; box-sizing: border-box">
+			  <view class="specialist"wx:for="{{recommend_name}}"data-id="{{item}}">
+          <view class="recommend-font00">
+            <view class="recommend-text00" style="width: 108rpx; height: 150rpx; display: block; box-sizing: border-box">{{item.id_num}}</view>
+            <image class="specialist-item-image3" src="{{item.imgurl}}" style="width: 167rpx; height: 150rpx; display: block; box-sizing: border-box"></image>
+         </view>
+          <view class= "specialist-item-content2">
+           <view class="specialist-font1" style="width: 378rpx; height: 92rpx; display: flex; box-sizing: border-box">
+              <view class="specialist-item-text1" style="width: 284rpx; height: 50rpx; display: block; box-sizing: border-box">{{item.name}}</view>
+              <view class="specialist-item-text2" style="width: 146rpx; height: 50rpx; display: block; box-sizing: border-box">了解更多</view>
+              <image class='imgList1' src='../../images/go.png'></image>
+           </view>
+           <view class="centence-font" style="width: 322rpx; height: 36rpx; display: block; box-sizing: border-box">{{item.name}}</view>
+            <view class="specialist-font2" style="width: 378rpx; height: 66rpx; display: flex; box-sizing: border-box">
+	  					<image class='imgList0' src='../../images/love.png'></image>
+              <view class="specialist-text3">{{item.zan}}</view>
+              <image class='imgList0' src='../../images/look.png'></image>
+             <view class="specialist-text3">{{item.zan}}</view>
+             <image class='imgList0' src='../../images/dianzan-1.png'></image>
+	  					<view class="specialist-text3">{{item.zan}}</view>
+	  				</view>
+          </view>
+        </view>
+        <view class="font00">展开更多</view>
+      </view>
+      <!--美食新探 -->
+      <view class="content2-font1">
+        <view class="content2-font1-text1">美食新探</view>
+      </view>
+      <!--美食新探 -->
+		  <view class="specialist-content" style="width: 700rpx; height: 762rpx; display: block; box-sizing: border-box">
+			  <view class="specialist"wx:for="{{recommend_name}}"data-id="{{item}}">
+          <view class="recommend-font00">
+            <view class="recommend-text00" style="width: 108rpx; height: 150rpx; display: block; box-sizing: border-box">{{item.id_num}}</view>
+            <image class="specialist-item-image3" src="{{item.imgurl}}" style="width: 167rpx; height: 150rpx; display: block; box-sizing: border-box"></image>
+         </view>
+          <view class= "specialist-item-content2">
+           <view class="specialist-font1" style="width: 378rpx; height: 92rpx; display: flex; box-sizing: border-box">
+              <view class="specialist-item-text1" style="width: 284rpx; height: 50rpx; display: block; box-sizing: border-box">{{item.name}}</view>
+              <view class="specialist-item-text2" style="width: 146rpx; height: 50rpx; display: block; box-sizing: border-box">了解更多</view>
+              <image class='imgList1' src='../../images/go.png'></image>
+           </view>
+           <view class="centence-font" style="width: 322rpx; height: 36rpx; display: block; box-sizing: border-box">{{item.name}}</view>
+            <view class="specialist-font2" style="width: 378rpx; height: 66rpx; display: flex; box-sizing: border-box">
+	  					<image class='imgList0' src='../../images/love.png'></image>
+              <view class="specialist-text3">{{item.zan}}</view>
+              <image class='imgList0' src='../../images/look.png'></image>
+             <view class="specialist-text3">{{item.zan}}</view>
+             <image class='imgList0' src='../../images/dianzan-1.png'></image>
+	  					<view class="specialist-text3">{{item.zan}}</view>
+	  				</view>
+          </view>
+        </view>
+      </view>
+      <view class="font00" style="width: 750rpx; height: 54rpx; display: block; box-sizing: border-box">展开更多</view>
+    </view>
+  </view>
+</view>

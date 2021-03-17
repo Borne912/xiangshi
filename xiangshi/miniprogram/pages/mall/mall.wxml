@@ -1,0 +1,252 @@
+<!--miniprogram/pages/mall/mall.wxml-->
+<view>
+  <view>
+    <view class="navigation">
+      <navigator url="../location/location">
+        <view class="navigt-content">
+          <view>
+            <!-- <image src="../../images/location.svg" class="navigt-image"></image> -->
+          </view>
+          <view>
+            <!-- <text class="navigt-font">北京科技大学</text> -->
+            <!-- <text class="navigt-font">{{location}}</text> -->
+          </view>
+        </view>
+      </navigator>
+    </view>
+    <!-- 搜索 -->
+    <!-- <wux-search-bar clear maxlength="8" value="{{ value }}" controlled bind:change="onChange" bind:confirm="onConfirm"
+      bind:clear="onClear" bind:cancel="onCancel" placeholder="输入活动名称" /> -->
+
+
+    <view class="search" bindtap="searchJump">
+      <!-- <input class="search-input">
+			</input> -->
+      <view class="serch-wrapper">
+        <view class="search-input">
+        </view>
+        <view class="search_icon1">
+          <image src="../../images/search.svg" class="search-search-image"></image>
+        </view>
+        <view class="search_icon2">
+          <image src="../../images/microphone.svg" class="search-listen-image"></image>
+        </view>
+      </view>
+    </view>
+
+
+    <!-- 分页 -->
+    <scroll-view scroll-x class="bg-white nav">
+      <view class="flex text-center" style="background-color:#FFF2E8">
+        <view class="cu-item flex-sub {{0==TabCur?'text-orange cur':''}}" bindtap="tabSelect" data-id="{{0}}">
+          <text class="text-bold  text-xxl">好吃的</text>
+        </view>
+        <view class="cu-item flex-sub {{1==TabCur?'text-orange cur':''}}" bindtap="tabSelect" data-id="{{1}}">
+          <text class="text-bold  text-xxl">好玩的</text>
+        </view>
+        <view class="cu-item flex-sub {{2==TabCur?'text-orange cur':''}}" bindtap="tabSelect" data-id="{{2}}">
+          <text class="text-bold  text-xxl">好用的</text>
+        </view>
+      </view>
+    </scroll-view>
+
+    <!-- 缺个滑动 -->
+
+
+
+    <!-- 分页 -->
+    <scroll-view scroll-x class="bg-white nav">
+      <view class="flex text-center" style="background-color:#FFF2E8">
+        <view class="cu-item flex-sub {{0==TabCur2?'text-orange cur':''}}" bindtap="tabSelect2" data-id="{{0}}">
+          <text class="text-bold  text-xl">精选推荐</text>
+        </view>
+        <view class="cu-item flex-sub {{1==TabCur2?'text-orange cur':''}}" bindtap="tabSelect2" data-id="{{1}}">
+          <text class="text-bold  text-xl">最新推荐</text>
+        </view>
+        <view class="cu-item flex-sub">
+          <button class="cu-btn round bg-orange "><text class="cuIcon-write"></text>写推荐</button>
+        </view>
+      </view>
+    </scroll-view>
+
+    <!-- 卡片 -->
+
+    <view wx:for="{{datalist}}" wx:for-index="j" wx:for-item="items" wx:key="">
+
+      <view class="cu-card dynamic {{isCard?'no-card':''}} ">
+        <view class="cu-item shadow radius " style="background-color:RGB(255,230,210)">
+
+          <view class="cu-list menu-avatar">
+            <view class="cu-item" style="background-color:RGB(255,230,210)">
+              <view class="cu-avatar round lg"
+                style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"
+                bindtap="touser"></view>
+              <view class="content flex-sub">
+                <!-- <view class="text-grey">昵称</view> -->
+                <view class="text-gray text-sm flex justify-between">
+                  {{datalist[j].username}}
+                  <view class="text-gray text-sm">
+                    <text class="cuIcon-attentionfill margin-lr-xs"></text> {{datalist[j].look }}
+                    <text class="cuIcon-appreciatefill margin-lr-xs"></text> {{datalist[j].zan }}
+                    <text class="cuIcon-messagefill margin-lr-xs"></text> 30
+                    <button class="cu-btn round line-orange" style="margin-left:10rpx">关注</button>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+
+          <view class="solid-bottom text-xl padding" style="margin-top:-35rpx">
+            <text class="text-black text-bold">{{datalist[j].title }}</text>
+          </view>
+          <view class="text-content">
+            {{datalist[j].content }}
+          </view>
+          <!-- 这里是三张例图 -->
+          <view class="bg-white padding" style="background-color:RGB(255,230,210)">
+            <view class="grid col-3 grid-square">
+              <view class="bg-img">
+                <image src="{{datalist[j].img1 }}"></image>
+              </view>
+              <view class="bg-img">
+                <image src="{{datalist[j].img2 }}"></image>
+              </view>
+              <view class="bg-img">
+                <image src="{{datalist[j].img3 }}"></image>
+              </view>
+              <!-- <image  class="bg-img" wx:for="{{3}}" wx:key
+              src="/../../../images/16861593521653_.pic_hd.jpg"></image> -->
+            </view>
+          </view>
+
+          <!-- 这里是商品信息 -->
+          <view class="padding bg-white margin">
+            <view class="flex flex-wrap">
+              <view class="bg-img basis-xs  radius"
+               style="width:150rpx;height:100%;flex-basis: 25%;">
+               <image src="{{datalist[j].imgT }}" mode="widthFix"></image>
+              </view>
+
+              <view class="basis-sm  margin-xs padding-sm radius" style="flex-basis:45%">
+                <view class="text-black text-bold text-lg">{{datalist[j].titleT }}</view>
+                <view style="position: relative; left: 0rpx; top: 38rpx">{{datalist[j].contentT }}</view>
+              </view>
+
+              <view class="   radius" style="flex-basis:20%">
+                <view class="text-gray text " style="position: relative; left: 36rpx; top: 31rpx">
+                  <text class="cuIcon-appreciatefill margin-lr-xs"></text> {{datalist[j].zanT }}
+                  <!-- {{datalist[j].count}} -->
+
+                </view>
+                <view class="text-gray text " style="position: relative; left: 36rpx; top: 71rpx">
+
+                  <text class="cuIcon-likefill margin-lr-xs"></text> {{datalist[j].loveT }}
+                  <!-- {{datalist[j].count}} -->
+                </view>
+              </view>
+
+            </view>
+          </view>
+
+
+
+
+
+        </view>
+
+      </view>
+
+    </view>
+
+  
+
+    <!-- 卡片 -->
+    <view wx:for="{{datalist}}" wx:for-index="j" wx:for-item="items" wx:key="">
+
+<view class="cu-card dynamic {{isCard?'no-card':''}} ">
+  <view class="cu-item shadow radius " style="background-color:RGB(255,230,210)">
+
+    <view class="cu-list menu-avatar">
+      <view class="cu-item" style="background-color:RGB(255,230,210)">
+        <view class="cu-avatar round lg"
+          style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"
+          bindtap="touser"></view>
+        <view class="content flex-sub">
+          <!-- <view class="text-grey">昵称</view> -->
+          <view class="text-gray text-sm flex justify-between">
+            {{datalist[j].username}}
+            <view class="text-gray text-sm">
+              <text class="cuIcon-attentionfill margin-lr-xs"></text> {{datalist[j].look }}
+              <text class="cuIcon-appreciatefill margin-lr-xs"></text> {{datalist[j].zan }}
+              <text class="cuIcon-messagefill margin-lr-xs"></text> 30
+              <button class="cu-btn round line-orange" style="margin-left:10rpx">关注</button>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="solid-bottom text-xl padding" style="margin-top:-35rpx">
+      <text class="text-black text-bold">{{datalist[j].title }}</text>
+    </view>
+    <view class="text-content">
+      {{datalist[j].content }}
+    </view>
+    <!-- 这里是三张例图 -->
+    <view class="bg-white padding" style="background-color:RGB(255,230,210)">
+      <view class="grid col-3 grid-square">
+        <view class="bg-img">
+          <image src="{{datalist[j].img1 }}"></image>
+        </view>
+        <view class="bg-img">
+          <image src="{{datalist[j].img2 }}"></image>
+        </view>
+        <view class="bg-img">
+          <image src="{{datalist[j].img3 }}"></image>
+        </view>
+        <!-- <image  class="bg-img" wx:for="{{3}}" wx:key
+        src="/../../../images/16861593521653_.pic_hd.jpg"></image> -->
+      </view>
+    </view>
+
+    <!-- 这里是商品信息 -->
+    <view class="padding bg-white margin">
+      <view class="flex flex-wrap">
+        <view class="bg-img basis-xs  radius"
+         style="width:150rpx;height:100%;flex-basis: 25%;">
+         <image src="{{datalist[j].imgT }}" mode="widthFix"></image>
+        </view>
+
+        <view class="basis-sm  margin-xs padding-sm radius" style="flex-basis:45%">
+          <view class="text-black text-bold text-lg">{{datalist[j].titleT }}</view>
+          <view style="position: relative; left: 0rpx; top: 38rpx">{{datalist[j].contentT }}</view>
+        </view>
+
+        <view class="   radius" style="flex-basis:20%">
+          <view class="text-gray text " style="position: relative; left: 36rpx; top: 31rpx">
+            <text class="cuIcon-appreciatefill margin-lr-xs"></text> {{datalist[j].zanT }}
+            <!-- {{datalist[j].count}} -->
+
+          </view>
+          <view class="text-gray text " style="position: relative; left: 36rpx; top: 71rpx">
+
+            <text class="cuIcon-likefill margin-lr-xs"></text> {{datalist[j].loveT }}
+            <!-- {{datalist[j].count}} -->
+          </view>
+        </view>
+
+      </view>
+    </view>
+
+
+
+
+
+  </view>
+
+</view>
+
+</view>
+    
+  </view>
+</view>

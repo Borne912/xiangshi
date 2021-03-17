@@ -1,0 +1,18 @@
+<view class="waterfall-container" style="height:{{ height }}px">
+  <view 
+    class="water-item" 
+    wx:for="{{ waterfallarr }}" 
+    id="waterfall-item-id-{{ index }}" 
+    wx:key="this" 
+    style="width:{{ itemwidth }}px;height:auto;top:{{ allPositionArr[index].top }}px;left:{{ allPositionArr[index].left }}px">
+    <image 
+      class="lazyimg {{ item.show ? 'loadimg' : '' }}" 
+      src="{{ item.image_url }}" 
+      mode="widthFix" 
+      data-index="{{ index }}" 
+      bindload="loadImgFinish"></image>
+    <view class="water-content">
+      <slot name="slot{{ index }}"></slot>
+    </view>
+  </view>
+</view>

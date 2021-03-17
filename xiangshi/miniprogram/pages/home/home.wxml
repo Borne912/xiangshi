@@ -1,0 +1,165 @@
+<view class="container ">
+  <view class="">
+    <view class="navigation">
+      <navigator url="../location/location">
+        <view class="navigt-content">
+          <view>
+            <image src="../../images/location.svg" class="navigt-image"></image>
+          </view>
+          <view>
+            <text class="navigt-font">北京科技大学</text>
+            <!-- <text class="navigt-font">{{location}}</text> -->
+          </view>
+        </view>
+      </navigator>
+    </view>
+
+
+    <!-- 四个按钮 -->
+    <view class="label-wrapper">
+      <navigator url="/pages/food/food" open-type="navigate" hover-class="other-navigator-hover" class="plate-item">
+        <view class="plate-img">
+          <image src="{{a1src}}"></image>
+        </view>
+        <text class="plate-info">
+          {{text1}}
+        </text>
+      </navigator>
+      <navigator url="/pages/school_food/school_food" open-type="navigate" hover-class="other-navigator-hover"
+        class="plate-item">
+        <view class="plate-img">
+          <image src="{{a2src}}"></image>
+        </view>
+        <text class="plate-info">
+          {{text2}}
+        </text>
+      </navigator>
+      <navigator url="/pages/Near recommend/Near recommend" open-type="navigate" hover-class="other-navigator-hover"
+        class="plate-item">
+        <view class="plate-img">
+          <image src="{{a4src}}"></image>
+        </view>
+        <text class="plate-info">
+          {{text3}}
+        </text>
+      </navigator>
+      <navigator url="/pages/health/health" open-type="navigate" hover-class="other-navigator-hover" class="plate-item">
+        <view class="plate-img">
+          <image src="{{a3src}}"></image>
+        </view>
+        <text class="plate-info">
+          {{text4}}
+        </text>
+      </navigator>
+    </view>
+
+    <!-- 分割线 -->
+    <!-- <view class="divLine"></view> -->
+
+
+    <!-- 滑窗 -->
+    <view style="width: 750rpx; height: 590rpx; display: block; box-sizing: border-box">
+      <swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true"
+        autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3"
+        indicator-active-color="#0081ff">
+        <swiper-item wx:for="{{swiperList}}" wx:key class="">
+          <view class="swiper-item">
+
+            <image style="border-radius: 50rpx;" src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}">
+            </image>
+            <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}"
+              objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+
+            <view class="swipertop"
+              style="width: 230rpx; height: 57rpx; display: block; box-sizing: border-box; position: absolute; left: -2rpx; top: -3rpx; margin: auto">
+              VR 实景
+            </view>
+            <view class="swiperbtm"
+              style="width: 230rpx; height: 57rpx; display: block; box-sizing: border-box; position: absolute; left: 379rpx; top: 258rpx; margin: auto">
+              <text class="text-orange">鸿博园</text>
+            </view>
+          </view>
+        </swiper-item>
+      </swiper>
+    </view>
+
+
+
+<!-- 一张图片 -->
+    <view style="width:100%;height:300rpx;border-radius: 15px;">
+      <image style="width: 90%; height: 280rpx; border-radius: 50rpx; position: relative; left: 40rpx; top: -5rpx"
+        src="cloud://xiangshi-yqpne.7869-xiangshi-yqpne-1302514195/image/banner/图片 5@1x.png" mode="aspectFill"></image>
+
+      <view class="swipertop"
+        style="width: 230rpx; height: 57rpx; display: block; box-sizing: border-box; position: relative; left: -225rpx; top: -291rpx; margin: auto">
+        周边精选
+      </view>
+      <view class="swiperbtm"
+        style="width: 230rpx; height: 57rpx; display: block; box-sizing: border-box; position: relative; left: 225rpx; top: -118rpx; margin: auto">
+        <text class="text-orange text-lg">火炉火自助烤肉
+</text>
+      </view>
+
+    </view>
+
+
+
+
+
+    <view>
+      <scroll-view class="hot-box" scroll-y="true" upper-threshold="50" lower-threshold="100"
+        bindscrolltolower="scrolltolower" style="height:100%">
+
+
+        <view class="hot-box-main WxMasonryView" style="background-color:#FFF2E8">
+          <!-- <block wx:for="{{datalist}}" wx:for-item="item" wx:for-index="i" wx:key=""> -->
+          <!-- <view class="hot-box-top">
+                        <text class="hot-box-title">{{datalist[i].dateDay}}</text>
+                    </view> -->
+          <view class="WxMasonry radius" wx:for="{{datalist}}" wx:for-index="j" wx:for-item="items" wx:key="">
+            <navigator id="{{datalist[j]._id}}" url="../detail/detail?id={{datalist[j]._id}}">
+              <image class="WxMasonryImage" id="{{j}}" mode="widthFix" bindload="WxMasonryImageLoad"
+                src="{{datalist[j].imgurl}}" />
+              <view class="list-box-title">{{datalist[j].comment}}</view>
+              <!-- 头像昵称点赞 -->
+              <view class="cu-list menu-avatar">
+                <view class="cu-item"
+                  style="width: 347rpx; height: 50rpx; display: flex; box-sizing: border-box; position: ; left: 0rpx; top: 3rpx">
+                  <view class="cu-avatar round sm"
+                    style="background-image: url({{datalist[j].avaurl}}); position: absolute; left: 0rpx; top: -2rpx">
+                  </view>
+                  <view class="content flex-sub">
+                    <!-- <view class="text-grey">昵称</view> -->
+                    <view class="text-gray text-sm flex justify-between"
+                      style="width: 272rpx; height: 43rpx; display: flex; box-sizing: border-box; position: relative; left: -85rpx; top: -3rpx">
+                      {{datalist[j].username}}
+                      <view class="text-gray text-sm">
+                        <!-- <text class="cuIcon-attentionfill margin-lr-xs"></text> 10 -->
+                        <text class="cuIcon-appreciatefill margin-lr-xs"></text> {{datalist[j].zan}}
+                        <!-- <text class="cuIcon-messagefill margin-lr-xs"></text> 30 -->
+                        <!-- <button class="cu-btn round line-orange" style="margin-left:10rpx">关注</button> -->
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </navigator>
+          </view>
+          <!-- </block> -->
+        </view>
+
+
+
+        <view hidden="{{hotshidden}}" class=" solids-bottom padding-xs flex align-center justify-center">
+          <view wx:if="{{hothidden}}">
+            <image src="/static/loading.gif" mode="aspectFill" />
+          </view>
+          <view class=" flex solid-bottom text-xl padding justify-center" wx:else>
+            <text class="text-black text-bold "> 没有更多了 </text>
+          </view>
+        </view>
+
+      </scroll-view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,124 @@
+/* miniprogram/pages/List/list.wxss */
+.option{
+  display: flex;
+  flex-direction: row;
+  width: 750rpx;
+  margin-top: 30rpx;
+  font-size: 45rpx;
+  justify-content: center;
+}
+.selected{
+  text-align: center;
+  width:20%;
+  color: #ff9900;
+  border-bottom:#ff9900 2px solid ;
+}
+.normal{
+  text-align: center;
+  width:20%;
+  color:gray
+}
+
+.recommend-content{
+  position: relative;
+  padding-top: 18rpx;
+  margin: 34rpx 30rpx 0rpx 18rpx;
+  height: 592rpx;
+  width: 688rpx;
+}
+.recommend{
+  display: flex;
+  flex-direction: row;
+  width: 688rpx;
+  height: 226rpx;
+  margin-bottom: 20rpx;
+  line-height: 10rpx;
+  margin-top: 28rpx;
+  border-radius: 30rpx 30rpx 30rpx 30rpx;
+  text-align: center;
+  border: 2rpx solid rgba(255, 255, 255, 0);
+  background-color: rgb(250, 226, 207);
+}
+.recommend-content.recommend-item-content1{
+  position: absolute;
+  top: 18rpx;
+  left: 14rpx;
+  width: 140rpx;
+  height: 140rpx;
+  display: inline-block;
+}
+.recommend-item-image{
+  width: 180rpx;
+  height: 180rpx;
+  margin-top: 25rpx;
+  margin-left: 20rpx;
+  border-radius: 30rpx;
+}
+.recommend-content.recommend-item-content2{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top:18rpx;
+  left: 176rpx;
+  height: 140rpx;
+  width: 308rpx;
+}
+.recommend-text1{
+  margin-top:38rpx;
+  margin-left: 20rpx;
+  text-align:left;
+  color: rgba(77, 63, 63, 1);
+  font-size: 34rpx;
+  font-family: PingFangSC-regular;
+  width: 308rpx;
+}
+.recommend-text2{
+  margin-left: 20rpx;
+  display: flex;
+  margin-top: 50rpx;
+  flex-direction: row;
+  font-size: 25rpx;
+  width: 308rpx;
+}
+.recommend-font1{
+  display: flex;
+  flex-direction: row;
+  margin-top: 35rpx;
+  width: 308rpx;
+}
+.imgList0{
+  height: 50rpx;
+  width: 50rpx;
+  margin-left: 20rpx;
+}
+.recommend-text3{
+  margin-left: 15rpx;
+  font-size: 25rpx;
+  margin-top: 20rpx;
+}
+.recommend-content.recommend-item-content3{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top:18rpx;
+  text-align:right;
+  left: 676rpx;
+  height: 140rpx;
+  width: 200rpx;
+}
+.recommend-text4{
+  margin-top:28rpx;
+  text-align:right;
+  font-size: 25rpx;
+}
+.imgList1{
+  margin-top:5rpx;
+  height: 50rpx;
+  width: 50rpx;
+  margin-right: 20rpx;
+}
+.recommend-text5{
+  margin-top:118rpx;
+  text-align:right;
+  margin-left: 120rpx;
+}

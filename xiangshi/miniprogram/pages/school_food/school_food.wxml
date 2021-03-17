@@ -1,0 +1,137 @@
+<!--miniprogram/pages/school_food/school_food.wxml-->
+<view class="container container-food">
+	<view class="cover">
+  	<view class="rolling_window" bindtap="changepage">
+			<scroll-view class="rw-scroll" scroll-x="true">
+				<view class="rw-elem elem1"bindtap="selectmouth"data-id = "1">
+					<view class="rw-elem-tag">
+						<text class="rw-elem-tag-font">月榜单</text>
+					</view>
+					<view class="rw-elem-elem">
+						<!-- 月榜单 -->
+						<view class="rw-elem-image-div" >
+								<text class = "text0">1.</text>
+								<view class="rw-elem-text1">{{month_food[0].name}}</view>
+								<image class="rw-elem-image" src="{{month_food[0].imgurl}}"></image>
+						</view>
+						<view class="rw-elem-image-div" >
+								<text class = "text1">2.</text>
+								<view class="rw-elem-text2">{{month_food[1].name}}</view>
+								<image class="rw-elem-image" src="{{month_food[1].imgurl}}"></image>
+						</view>
+						<view class="rw-elem-image-div" >
+								<text class = "text1">3.</text>
+								<view class="rw-elem-text2">{{month_food[2].name}}</view>
+								<image class="rw-elem-image" src="{{month_food[2].imgurl}}"></image>
+						</view>
+					</view>
+				</view>
+				<view class="rw-elem elem2">
+					<view class="rw-elem-tag">
+						<text class="rw-elem-tag-font">周榜单</text>
+					</view>
+					<view class="rw-elem-elem"bindtap="selectFood" data-id="{{week_food[0].name}}">
+						<!--周榜单 -->
+						<view class="rw-elem-image-div elem-image1">
+							<text class = "text0">1.</text>
+							<view class="rw-elem-text1">{{week_food[0].name}}</view>
+							<image class="rw-elem-image" src="{{week_food[0].imgurl}}"></image>
+						</view>
+						<view class="rw-elem-image-div elem-image2" >
+							<text class = "text1">2.</text>
+							<view class="rw-elem-text2">{{week_food[1].name}}</view>
+							<image class="rw-elem-image" src="{{week_food[1].imgurl}}"></image>
+						</view>
+						<view class="rw-elem-image-div elem-image2" >
+							<text class = "text1">3.</text>
+							<view class="rw-elem-text2">{{week_food[2].name}}</view>
+							<image class="rw-elem-image" src="{{week_food[2].imgurl}}"></image>
+						</view>
+					</view>
+        </view>
+				<view class="rw-elem elem2">
+					<view class="rw-elem-tag">
+						<text class="rw-elem-tag-font">日榜单</text>
+					</view>
+					<view class="rw-elem-elem"bindtap="selectFood" data-id="{{day_food[0].name}}">
+						<!--日榜单 -->
+						<view class="rw-elem-image-div elem-image1">
+							<text class = "text0">1.</text>
+							<view class="rw-elem-text1">{{day_food[0].name}}</view>
+							<image class="rw-elem-image" src="{{day_food[0].imgurl}}"></image>
+						</view>
+						<view class="rw-elem-image-div elem-image2" >
+							<text class = "text1">2.</text>
+							<view class="rw-elem-text2">{{day_food[1].name}}</view>
+							<image class="rw-elem-image" src="{{day_food[1].imgurl}}"></image>
+						</view>
+						<view class="rw-elem-image-div elem-image2" >
+							<text class = "text1">3.</text>
+							<view class="rw-elem-text2">{{day_food[2].name}}</view>
+							<image class="rw-elem-image" src="{{day_food[2].imgurl}}"></image>
+						</view><!--榜单内框中一行按行显示结束 -->
+					</view><!--榜单内框让每行按列显示结束 -->
+        </view><!--榜单显示结束（加上了标题） -->
+			</scroll-view><!--三榜单循环结束 -->
+		</view><!--榜单行显示结束 -->
+			<!--心动投票 -->
+  	<view class="show-rote" style = "height:{{height1}}rpx;">
+			<view class="show-rote-text-font">
+				<text class="show-rote-text">心动投票</text>
+			</view>
+			<view class="show-rote-elem like0"style = "height:{{height1-16}}rpx;">
+				<view class="show-rote-like">
+					<view class="rote-text">{{xindong[0].name}}</view>
+					<image class="rote-image" src = "{{xindong[0].imgurl}}" ></image>
+					<view class="rote-proportion elem-test1" hidden= "{{dianzhan}}" style="width:{{width1}}rpx;">
+						<view class="rote-proportion-text">70%</view>
+					</view>
+					<image class='imgList' hidden='{{!dianzhan1}}' bindtap='zan1'  src='../../images/dianzan-1.png'></image>
+     			<image class='imgList' hidden='{{dianzhan1}}' bindtap='zan1'  src='../../images/dianzan-2.png'></image>
+				</view>
+				<view class="show-rote-like rote-vs">
+					<view class = "rote-vs-text">VS</view>
+				</view>
+				<view class="show-rote-like like1">
+					<view class="rote-text">{{xindong[1].name}}</view>
+					<image class="rote-image" src = "{{xindong[1].imgurl}}" ></image>
+					<view class="rote-proportion elem-test2" hidden= "{{dianzhan}}"style="width:{{240-width1}}rpx;">
+						<view class="rote-proportion-text">30%</view>
+					</view>
+					<image class='imgList' hidden='{{!dianzhan2}}' bindtap='zan2' src='../../images/dianzan-1.png'></image>
+     			<image class='imgList' hidden='{{dianzhan2}}' bindtap='zan2'  src='../../images/dianzan-2.png'></image>
+				</view>
+			</view>
+		</view>
+		<!--推荐窗口 -->
+		<view class="recommend-content">
+			<view class="recommend"wx:for="{{recommend_food}}"data-id="{{item}}">
+				<view class= "recommend-item-content1">
+					<image class="recommend-item-image" src="{{item.imgurl}}"></image>
+				</view>
+				<view class="recommend-item-content2">
+					<view class="recommend-text1">{{item.name}}</view>
+					<view class="recommend-text2">{{item.loc}} {{item.loc_floor}}楼 {{item.loc_windows}}号窗口</view>
+					<view class="recommend-font1">
+						<image class='imgList0' hidden='{{!dianzhan3[item.id_num]}}' bindtap='zan2' src='../../images/dianzan-1.png'></image>
+						<image class='imgList0' hidden='{{dianzhan3[item.id_num]}}' bindtap='zan2'  src='../../images/dianzan-2.png'></image>
+						<view class="recommend-text3">{{item.zan}}</view>
+					</view>
+				</view>
+				<view class="recommend-item-content3">
+					<view class="recommend-font1">
+						<view class="recommend-text4">了解更多</view>
+						<image class='imgList1' src='../../images/go.png'></image>
+					</view>
+					<view class="recommend-font1">
+						<view class="recommend-text4">收藏一下</view>
+						<image class='imgList1' src='../../images/love.png'></image>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+
+
+
